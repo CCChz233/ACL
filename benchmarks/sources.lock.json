@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "pinned_on": "2026-10-12",
+  "benchmarks": [
+    {
+      "id": "swe-bench-pro-v2",
+      "kind": "github_archive",
+      "repository": "scaleapi/SWE-bench_Pro-os",
+      "revision": "66f92766bba642462d4bbe5479e83f91f9211862",
+      "local_dir": "repos/SWE-bench_Pro-os",
+      "tasks_dir": "v2/tasks",
+      "task_count": 642,
+      "catalog": "swe_bench_pro_v2_tasks.csv",
+      "official_checksums": "v2/SHA256SUMS"
+    },
+    {
+      "id": "terminal-bench-4.0.0",
+      "kind": "github_archive",
+      "repository": "harbor-framework/terminal-bench",
+      "revision": "452bf305c6daa62fc59061d22133a7cbc7c1572e",
+      "local_dir": "repos/terminal-bench-4",
+      "tasks_dir": "tasks",
+      "task_count": 66,
+      "catalog": "terminal_bench_4_tasks.csv"
+    },
+    {
+      "id": "terminal-bench-2.1",
+      "kind": "github_archive",
+      "repository": "harbor-framework/terminal-bench-2-1",
+      "revision": "7131e4375048a0e408a8fb404b5f499d726b695b",
+      "local_dir": "repos/terminal-bench-2-1",
+      "tasks_dir": "tasks",
+      "task_count": 89,
+      "catalog": "terminal_bench_2_1_tasks.csv"
+    },
+    {
+      "id": "swe-bench-verified",
+      "kind": "huggingface_test_data",
+      "repository": "SWE-bench/SWE-bench_Verified",
+      "revision": "78f471bf655a3137b2e8a75af1501690ec009ec3",
+      "local_dir": "benchmarks/datasets/swe-bench-verified",
+      "task_count": 500,
+      "catalog": "swe-bench-verified-tasks.csv",
+      "files": [
+        {
+          "path": "data/test-00000-of-00001.parquet",
+          "sha256": "030cfd7f2a704c4c0226e7f104c725a3b41230b1d3517f9c915ad7ea5be3fa25",
+          "bytes": 6304616
+        }
+      ]
+    },
+    {
+      "id": "swe-bench-verified-mini",
+      "kind": "huggingface_test_data",
+      "repository": "MariusHobbhahn/swe-bench-verified-mini",
+      "revision": "d5ecda1cc7c3dd1e8bbbfbee78655daad673135e",
+      "local_dir": "benchmarks/datasets/swe-bench-verified-mini",
+      "task_count": 50,
+      "catalog": "swe-bench-verified-mini-tasks.csv",
+      "files": [
+        {
+          "path": "data/test-00000-of-00001.parquet",
+          "sha256": "f9ba19dea78884f1081355d2d8afb671899981f24180aa0c4c1aa14d2c23e855",
+          "bytes": 181086
+        }
+      ]
+    }
+  ]
+}

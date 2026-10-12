@@ -1,0 +1,8 @@
+{
+  "verified_mini_subset_of_verified": true,
+  "verified_mini_shared_tasks": 50,
+  "terminal_4_and_2_1_shared_task_names": [],
+  "terminal_shared_names_do_not_establish_identical_task_content": true,
+  "benchmark_entries": 1347,
+  "entries_are_not_unique_independent_tasks": true
+}
