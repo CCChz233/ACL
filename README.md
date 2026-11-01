@@ -51,6 +51,7 @@ ACL/
 | 找准备、运行和维护命令 | [scripts/](scripts/README.md) |
 | 查其他文档 | [文档导航](docs/README.md) |
 | 恢复源码与依赖 | [运行说明](docs/operations/runtime.md) |
+| 把仓库和本地包放到新机器 | 下文「到一台新机器」 |
 
 ## 只读检查项目
 
@@ -68,4 +69,42 @@ VIRTUAL_ENV="$PWD/.venv" uv run --active --no-project --no-env-file --offline py
 - SWE Mini50 的全部任务镜像本地长期保留，运行后不删除镜像；项目目录占用不包含 Docker 的外部镜像存储。
 - `.venv` 与 `.venv-terminal` 是两套不同运行环境，`.cache` 是缓存；本次不混装依赖或删除资源。
 
-上游源码、下载数据、大型结果、导出文档和密钥不提交 Git；版本与数据来源按固定清单恢复。`.env` 留在根目录，密钥不写入配置、日志或文档。
+上游源码、下载数据、大型结果、导出报告和密钥不进 Git。2026-11-01 打好的本地包是 `acl-local-assets.tar`（约 7.8 GB），和仓库分开保存。`.env` 留在根目录，密钥不写入配置、日志或文档。
+
+## 仓库和本地包
+
+GitHub 上的 [ACL](https://github.com/CCChz233/ACL) 是项目代码：`acl_*` 运行包、`configs/`、`scripts/`、`tests/`、`docs/`、各目录 README、`pyproject.toml` 和 `uv.lock`。
+
+`acl-local-assets.tar` 在仓库根目录解包后，补上 Git 里没有的这些路径：
+
+| 包内路径 | 内容 |
+|---|---|
+| `experiments/runs/` | 实验账本、轨迹和评分 |
+| `frameworks/` | 钉住的上游框架源码 |
+| `benchmarks/sources/` | Benchmark 源码 |
+| `references/papers/` | 论文和阅读材料 |
+| `reports/exports/` | 报告、审计和演示文稿 |
+| `agents/mini-swe-agent/` | 钉住的 mini-SWE-agent 源码 |
+| `.env` | DeepSeek 端点、模型和密钥 |
+
+`work/`、`outputs/`、`RSI必看/` 是指向 `experiments/runs`、`reports/exports`、`references/papers` 的链接，包里没有再放一份。`.venv` 和 `.venv-terminal` 在新机器上重建。SWE Mini50 的 Docker 镜像不在仓库里，也不在这个包里；要在新机器上直接评测，需另行导出本机 Docker 镜像。
+
+## 到一台新机器
+
+在服务器上克隆代码，把 `acl-local-assets.tar` 拷到机器上，然后在仓库根目录解包：
+
+```sh
+git clone git@github.com:CCChz233/ACL.git
+cd ACL
+tar -xf /路径/acl-local-assets.tar
+```
+
+解包后根目录应能看到 `.env`。没有这个文件时，按 [.env.example](.env.example) 新建，填写已授权的 `DEEPSEEK_API_KEY`。接着安装依赖并做不调用模型的检查：
+
+```sh
+python3.12 scripts/prepare_agent_sources.py
+uv --native-tls sync --locked --extra dev --python python3.12
+.venv/bin/python -m acl_rsi --config configs/full-cycle-50.json doctor
+```
+
+`prepare_agent_sources.py` 核对已经解包的固定源码，缺失时才克隆。`doctor` 只报告版本、端点和密钥是否存在。更早的运行入口和历史协议见 [运行说明](docs/operations/runtime.md)。
