@@ -96,13 +96,18 @@ python3.12 scripts/cache_swe_mini_images.py fill
 python3.12 scripts/cache_swe_mini_images.py status
 ```
 
-`fill` 只下载清单里缺失的 `linux/amd64` 镜像，已有且 ID 相符的不重复拉取。本机这 50 个镜像合计约 48 GB，服务器需要留出相应空间；空闲不足 4 GiB 时脚本会停止。服务器访问不了 Docker Hub 时，在已有镜像的机器上导出再拷过去：
+`fill` 只下载清单里缺失的 `linux/amd64` 镜像，已有且 ID 相符的不重复拉取。空闲不足 4 GiB 时脚本会停止。这 50 个镜像共享底层，2026-11-01 导出的 `swe-mini50-images.tar` 是 9.0 GB。服务器不联网时，把这个包拷过去后执行：
+
+```sh
+docker load -i /路径/swe-mini50-images.tar
+python3.12 scripts/cache_swe_mini_images.py status
+```
+
+`status` 应为 50/50。这些镜像长期保留，不要放进 `docker image prune`。需要在另一台机器上重新导出时：
 
 ```sh
 docker save $(python3.12 -c 'import json; print(" ".join(i["image"] for i in json.load(open("configs/swe-mini-image-cache.json"))["images"]))') -o swe-mini50-images.tar
 ```
-
-在服务器上执行 `docker load -i swe-mini50-images.tar`，然后再跑上面的 `status`。这些镜像长期保留，不要放进 `docker image prune`。
 
 ## 到一台新机器
 
