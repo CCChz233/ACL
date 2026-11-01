@@ -1,0 +1,47 @@
+{
+  "name": "RSIHub",
+  "source": "frameworks/rsihub",
+  "url": "https://github.com/simple-agent-lab/RSIHub.git",
+  "revision": "d6554299c58bf0fe2db04ddda0277f9db67ea680",
+  "license": "Apache-2.0",
+  "paper": "https://arxiv.org/abs/2610.32253",
+  "checked_on": "2026-11-01",
+  "files": {
+    "README.md": "0aaa0d4c40042ef66ec1daa090ef5111a3b1f4ce09296caab367f95db4afc4fc",
+    "LICENSE": "75efa07c4d2afb14d8226cf00b7763dd2ec1c5585a9dfe919881a3a3fef2ddac",
+    "NOTICE": "334c3515746dcff599d49e4b9c6a613858c7544efddfe04dcaf71f44367f3d43",
+    "pyproject.toml": "363e62b1f45c5b1419e7d18a751c6413af49f198fc0bb4df7d4ed50a01dfe536",
+    "src/evolve/frozen/interfaces.py": "a38744b169aa23ba4e4004a60348dc4860d07eb69a897710c4c3eb4769fd2740",
+    "src/evolve/frozen/sdk.py": "bf65e8d82f40d8f318e06ba726004d6ff48b454374298834b574a4b8051aa850",
+    "src/evolve/frozen/config.py": "963df5a24d78818e8bd143fe450b51b4f4fac84386d4e399ac8faa6f75bf44a4",
+    "library/analyze/ahe.py": "acbcd224577d233aa77cfffd39b56c294ff47fc635060417bdaf9003848114ff",
+    "library/analyze/trajectory_only.py": "33b85ffd51022e68b156cc440c3a6679731613e3c7a53304b48138c8b3fee729",
+    "library/mutate/ahe.py": "7953d316acb12b0e5f3baefe1452fb99658cd0fbcfd4942ee12dda0e0a5bd2e8",
+    "recipes/ahe/evolve.yaml": "702a3b4c51575544ee4716df4d817b8aa2201b7428a6acc277e755a9fbf86131"
+  },
+  "provider": {
+    "model": "deepseek-flash",
+    "api_base": "https://api.deepseek.com",
+    "thinking": false,
+    "limits": {
+      "max_calls": 0,
+      "max_tokens": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "protocol": {
+    "role": "intended experimental substrate; source pin only",
+    "native_loop": "select → rollout → analyze → mutate → guardrail → evaluate → absorb",
+    "evidence_hook": "library/analyze and mutate retained-context config",
+    "evaluator_engine": "harbor",
+    "upstream_default_agent": "mini-swe-agent at recipe revision 388da74aad620a384ab47669b17c52133e30e7c3",
+    "local_recipe": "configs/rsihub/deepseek-flash/evolve.yaml",
+    "local_model": "deepseek/deepseek-flash",
+    "local_api_base": "https://api.deepseek.com",
+    "local_agent_not_substituted": true,
+    "paid_runs_started": true,
+    "paid_trial": "experiments/runs/rsihub-deepseek-trial1",
+    "paid_trial_status": "workspace-host3 finished exit 0. cancel-async-tasks genesis 1.0 (usd 0.005288184) and gen-1 candidate 1.0 (usd 0.022645134); mutate kept, five files changed, mutate usd 0.054333108. Arm64 rebuild of the pinned amd64 task image. One task, not an official RSIHub score.",
+    "installed_into_project_venv": false
+  }
+}

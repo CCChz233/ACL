@@ -1,0 +1,98 @@
+{
+  "scope": "Completed 50-task baseline, 50-task RSI candidate and cumulative168-call search. Earlier single-task engineering runs excluded. Copied baseline and failed search evidence counted only once.",
+  "groups": {
+    "baseline": {
+      "usage": {
+        "calls": 1153,
+        "prompt_tokens": 15211404,
+        "completion_tokens": 232003,
+        "total_tokens": 15443407,
+        "prompt_cache_hit_tokens": 14582784,
+        "prompt_cache_miss_tokens": 628620
+      },
+      "missing_token_fields": {},
+      "raw_responses": 1153,
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 1153
+      }
+    },
+    "candidate": {
+      "usage": {
+        "calls": 1317,
+        "prompt_tokens": 18752015,
+        "completion_tokens": 253371,
+        "total_tokens": 19005386,
+        "prompt_cache_hit_tokens": 18053888,
+        "prompt_cache_miss_tokens": 698127
+      },
+      "missing_token_fields": {},
+      "raw_responses": 1317,
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 1317
+      }
+    },
+    "search": {
+      "usage": {
+        "calls": 168,
+        "prompt_tokens": 1038124,
+        "completion_tokens": 29729,
+        "total_tokens": 1067853,
+        "prompt_cache_hit_tokens": 770432,
+        "prompt_cache_miss_tokens": 267692
+      },
+      "missing_token_fields": {},
+      "raw_responses": 168,
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 168
+      }
+    }
+  },
+  "total_unique_calls": 2638,
+  "total_tokens": 35516646,
+  "verified_token_identities": [
+    "total_tokens=prompt_tokens+completion_tokens",
+    "prompt_tokens=cache_hit_tokens+cache_miss_tokens"
+  ],
+  "existing": [
+    "per-call input/output/cache tokens and reservation accounting",
+    "local ledger UUID, search role, returned model, reservation timestamp, status",
+    "raw response body ID, created timestamp, system_fingerprint, finish_reason",
+    "per-task worker elapsed seconds and raw tool outputs with return codes",
+    "task/base commit, dataset/config/runner/harness hashes, image digests",
+    "candidate diff, proposal, critic, smoke, decisions, final selected version",
+    "official patch application and per-test FAIL_TO_PASS/PASS_TO_PASS results for submitted patches",
+    "baseline reuse and diagnostic recovery provenance; failed-attempt costs; cleanup checks"
+  ],
+  "gaps": {
+    "future_instrumentation": [
+      "API request start/end/latency and HTTP request IDs/status codes in structured events",
+      "sanitized exact API request payload including actual tools, tool choice, extra_body and omitted-parameter list",
+      "explicit supported sampling parameters or explicit unsupported/default status",
+      "unified experiment/run/attempt/candidate/parent/role/task/trial IDs across all events",
+      "separate image pull, worker, grading and end-to-end wall times; peak resource metrics if needed"
+    ],
+    "derived_from_existing_artifacts": [
+      "role-level and stage-level token/cache totals",
+      "tool call counts and durations where timestamps support them; output truncation events and context-size estimates clearly labeled estimated",
+      "failure taxonomy and paired task transitions",
+      "context/patch/proposal sizes and edit categories"
+    ],
+    "research_protocol": [
+      "feedback/selection/heldout split manifest with hashes and usage role",
+      "independent search replicate IDs and repeated task execution design",
+      "operational D/P/I/V stage definitions and intervention provenance, distinct from native RRSI role names"
+    ],
+    "billing": [
+      "timestamped price schedule and estimated cost by input-cache-hit/input-cache-miss/output",
+      "currency and estimate-versus-provider-billed distinction; actual invoice reconciliation when available"
+    ]
+  },
+  "limitations": [
+    "Current temperature/top_p use provider defaults and no seed was supplied; historical actual defaults cannot be recovered from local records.",
+    "Response model and fingerprint do not establish an immutable weight snapshot.",
+    "Raw API response is stored, not a standalone exact serialized request for every call.",
+    "Per-task worker seconds are not per-call latency or total experiment wall time.",
+    "Internal zero cost placeholders and charged_tokens are not currency billing.",
+    "No per-step container filesystem snapshots or hidden reasoning traces."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "purpose": "dgm-hard10-one-generation-development",
+  "dataset": "benchmarks/datasets/swe-bench-verified-mini/test.json",
+  "evolve_ids": [
+    "django__django-12209",
+    "django__django-11885",
+    "django__django-12273",
+    "django__django-12039",
+    "django__django-12406",
+    "sphinx-doc__sphinx-11510",
+    "sphinx-doc__sphinx-10673",
+    "sphinx-doc__sphinx-10435",
+    "sphinx-doc__sphinx-10466",
+    "sphinx-doc__sphinx-8551"
+  ],
+  "heldout_ids": [],
+  "workspace": "experiments/runs/dgm-hard10-v1",
+  "thinking": false,
+  "search": {
+    "max_calls": 80,
+    "max_tokens": 1000000,
+    "max_output_tokens": 4096
+  },
+  "target": {
+    "max_calls": 50,
+    "max_tokens": 1000000,
+    "max_output_tokens": 4096,
+    "wall_seconds": 1200,
+    "command_seconds": 60
+  },
+  "grading_seconds": 900,
+  "rrsi": {
+    "T": 0,
+    "k": 1,
+    "m": 1,
+    "b_min": 1,
+    "b_max": 1,
+    "delta": 0.0,
+    "w_s": 100.0,
+    "w_c": 0.0,
+    "w_n": 0.0,
+    "m_draft": 0,
+    "repair_rounds": 1,
+    "n_fail_traces": 1,
+    "n_success_traces": 1,
+    "invalid_missing_frac": 0.0,
+    "eval_parallel": 1
+  },
+  "image_cache": {
+    "min_free_bytes": 4294967296,
+    "mode": "local_only_retained"
+  },
+  "model": "deepseek-flash",
+  "api_base": "https://api.deepseek.com",
+  "protocol": {
+    "selection_file": "experiments/runs/hard10-selection-v1/selection.json",
+    "selection_sha256": "b2f178116b4e60d11d7788558437856939d8df47d4efe5bbf304a076ce866999",
+    "generations": 1,
+    "candidates": 1,
+    "seed": 17,
+    "new_target_executions": 10,
+    "baseline_reused": true,
+    "heldout": false,
+    "max_total_calls": 580,
+    "max_total_tokens": 11000000
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "description": "Canonical physical locations; legacy paths remain relative symlinks for frozen experiments.",
+  "sources": [
+    {"name": "RRSI", "category": "framework", "legacy": "repos/rrsi", "canonical": "frameworks/rrsi"},
+    {"name": "GEPA", "category": "framework", "legacy": "repos/gepa", "canonical": "frameworks/gepa"},
+    {"name": "Meta-Harness", "category": "framework", "legacy": "repos/meta-harness", "canonical": "frameworks/meta-harness"},
+    {"name": "DGM", "category": "framework", "legacy": "repos/dgm", "canonical": "frameworks/dgm"},
+    {"name": "ADAS", "category": "framework", "legacy": "repos/ADAS", "canonical": "frameworks/adas"},
+    {"name": "Harness²", "category": "framework", "legacy": "repos/harness2", "canonical": "frameworks/harness2"},
+    {"name": "SEAL", "category": "framework", "legacy": "repos/SEAL", "canonical": "frameworks/seal"},
+    {"name": "Absolute Zero Reasoner", "category": "framework", "legacy": "repos/Absolute-Zero-Reasoner", "canonical": "frameworks/absolute-zero"},
+    {"name": "mini-SWE-agent", "category": "agent", "legacy": "repos/mini-swe-agent", "canonical": "agents/mini-swe-agent"},
+    {"name": "SWE-bench Pro", "category": "benchmark", "legacy": "repos/SWE-bench_Pro-os", "canonical": "benchmarks/sources/swe-bench-pro"},
+    {"name": "Terminal-Bench 2.1", "category": "benchmark", "legacy": "repos/terminal-bench-2-1", "canonical": "benchmarks/sources/terminal-bench-2.1"},
+    {"name": "Terminal-Bench 4", "category": "benchmark", "legacy": "repos/terminal-bench-4", "canonical": "benchmarks/sources/terminal-bench-4"}
+  ],
+  "assets": [
+    {"name": "Research papers and reading notes", "category": "references", "legacy": "RSI必看", "canonical": "references/papers"},
+    {"name": "Exported reports", "category": "reports", "legacy": "outputs", "canonical": "reports/exports"},
+    {"name": "Experimental runs and local artifacts", "category": "experiments", "legacy": "work", "canonical": "experiments/runs"}
+  ],
+  "frozen_runtime_packages": ["acl_rsi", "acl_terminal", "acl_terminal_rsi", "acl_gepa", "acl_gepa_swe"],
+  "policy": {
+    "new_sources_use_canonical_paths": true,
+    "legacy_paths_are_compatibility_only": true,
+    "preserve_frozen_source_and_config_bytes": true,
+    "preserve_results_and_absolute_legacy_paths": true,
+    "swe_mini_images_remain_in_local_docker": true
+  }
+}

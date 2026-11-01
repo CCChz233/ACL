@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-17",
+  "purpose": "budget_diagnostic_frozen_harness_replay",
+  "status": "completed",
+  "workspace": "work/budget-recheck-50",
+  "config": "configs/budget-recheck.json",
+  "search_calls": 0,
+  "target_limits": {
+    "max_calls": 50,
+    "max_tokens": 1000000,
+    "max_output_tokens": 4096,
+    "wall_seconds": 1200,
+    "command_seconds": 60
+  },
+  "source_commits": {
+    "base": "4ff14f46023626d78c4dc24c6b321afe3adbd93c",
+    "candidate": "568ec2d7cbf39eeefad93c10178e6a3f39e22400"
+  },
+  "evaluations": {
+    "base": {
+      "exit_status": "Submitted",
+      "calls": 10,
+      "actual_tokens": 50047,
+      "resolved": true,
+      "official_report": "work/budget-recheck-50/runs/swe/jobs/base/django__django-11790/trial-0/official/acl-14b8df8a2d1e/deepseek-flash/django__django-11790/report.json",
+      "budget_stop": null
+    },
+    "candidate": {
+      "exit_status": "Submitted",
+      "calls": 10,
+      "actual_tokens": 52779,
+      "resolved": true,
+      "official_report": "work/budget-recheck-50/runs/swe/jobs/candidate/django__django-11790/trial-0/official/acl-4da47443c113/deepseek-flash/django__django-11790/report.json",
+      "budget_stop": null
+    }
+  },
+  "new_rsi_round": false,
+  "improvement_demonstrated": false,
+  "total_api_calls": 20,
+  "total_actual_tokens": 102826,
+  "limitations": [
+    "Both runs used 10 calls and less than the former 250000-token limit, so this replay does not isolate a causal budget effect.",
+    "One task and one execution per frozen harness; no statistical claim of improvement.",
+    "No new RSI search under the higher budget."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "url": "https://github.com/SWE-agent/mini-swe-agent",
+  "revision": "04d809ceab9df28f9adaed044884180159172930",
+  "download_url": "https://codeload.github.com/SWE-agent/mini-swe-agent/tar.gz/04d809ceab9df28f9adaed044884180159172930",
+  "archive_sha256": "aa3db6c58b14c5331c4ded3d86435a209ae6a2c9a2ed8d0075db846b926fb6f1",
+  "archive_bytes": 731404,
+  "local_path": "repos/mini-swe-agent",
+  "download_kind": "official_source_archive",
+  "installed": true,
+  "runtime_validated": true,
+  "target_files_sha256": {
+    "src/minisweagent/agents/default.py": "e8ef8aa365942d739c2ec5cb0879f60f377d2dc2de8ec670aaedf3bafb45a4c2",
+    "src/minisweagent/config/benchmarks/swebench.yaml": "9a9c86ac10428b86b932c972b15fefc2f7b6e92230bac5ebdc47e83232a8315e",
+    "LICENSE.md": "0f796e58f91d1c07bb2c1b1d0f8bf3a83017c3a5dec1bdc6fae733b2cd2e875b"
+  },
+  "runtime_validation_scope": "One development instance; initial harness execution and independent official scoring only. Not a full benchmark validation."
+}

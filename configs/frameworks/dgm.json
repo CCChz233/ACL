@@ -1,0 +1,45 @@
+{
+  "name": "DGM-adapted",
+  "source": "frameworks/dgm",
+  "url": "https://github.com/jennyzzt/dgm.git",
+  "revision": "a565fd2d1dca504ef5104a7cc0f3bdc4ab9b4fd2",
+  "license": "Apache-2.0",
+  "files": {
+    "README.md": "9760f30330e519946592ae88178f579dd717c3e55d3d461322e5facfa09c6bd4",
+    "LICENSE": "84b7504ce8dda1f37f592cdf67ad21371864583720d79ea289b0b0c75bfcdb17",
+    "DGM_outer.py": "239bc76f0e1b78210b8f7b3757b1082f6ca07db3537d6af50a45bf97709795ed",
+    "self_improve_step.py": "6f2ec364b11e7f6d35391ea66896fa2394cbca3bc59d68cf7352c2a77aa8cca7",
+    "llm.py": "ca6ac22d7f128180de398cec48b9f5cc1f1f49f3bf1a8e935025588d8b09570d",
+    "llm_withtools.py": "b6fa4ee18ad8b42767f7cad68bf8ed7f7937dcfaf32b85757182979bdb895836",
+    "utils/evo_utils.py": "0eb779270390f39aa0c4ff045ec9b6c3049736c6a008ae3d2e7a2df7ef253570",
+    "utils/common_utils.py": "638400ea31f05424bd87f07b51bc7a516ef7929f7ddc0e45f1a8023a3eb851b9",
+    "utils/docker_utils.py": "4f72795d21358299a2b3053e7798837a110a4a795fab8f064cdeaab759568552",
+    "prompts/self_improvement_prompt.py": "7d061402038e9ccbb120088ac849863e5880a657ad4a60122d93fdd180e908f2"
+  },
+  "provider": {
+    "model": "deepseek-flash",
+    "api_base": "https://api.deepseek.com",
+    "thinking": false,
+    "limits": {
+      "max_calls": 0,
+      "max_tokens": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "protocol": {
+    "parent_selection": "native default score_child_prop",
+    "archive_update": "native keep_all",
+    "shallow_eval": true,
+    "no_full_eval": true,
+    "parallel_workers": 1,
+    "num_evals": 1,
+    "reference_patches_visible": false,
+    "private_tests_visible": false,
+    "task_agent": "mini-swe-agent 2.4.6",
+    "editable_files": [
+      "agent.py",
+      "swebench.yaml"
+    ],
+    "paid_runs_started": false
+  }
+}

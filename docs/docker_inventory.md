@@ -1,0 +1,1 @@
+operations/docker_inventory.md

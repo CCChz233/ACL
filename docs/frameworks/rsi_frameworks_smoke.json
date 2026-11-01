@@ -1,0 +1,69 @@
+{
+  "at_utc": "2026-10-18T08:19:37.531203+00:00",
+  "kind": "offline engineering checks; not benchmark performance",
+  "model_api_calls": 0,
+  "model_tokens": 0,
+  "docker_tasks": 0,
+  "existing_environment_changed": false,
+  "extra_dependencies_directory": "work/rsi-framework-selection/extra-dependencies",
+  "harness2_demo": "work/rsi-framework-selection/harness2-demo-runs/20261018T081932124127Z/demo.json",
+  "checks": [
+    {
+      "name": "gepa-native-optimization",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.202199,
+      "log": "work/rsi-framework-selection/gepa-native-optimization.smoke.log",
+      "log_sha256": "5209c8d7a493dc1c18bde84532c40c578a7238f1055931a8a6fbb043b563bff3"
+    },
+    {
+      "name": "meta-harness-history-contracts",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 2.705268,
+      "log": "work/rsi-framework-selection/meta-harness-history-contracts.smoke.log",
+      "log_sha256": "aed91c4fa5fc5a4ceeb462ffd764067591340094f150efefa666e3ad038de1d6"
+    },
+    {
+      "name": "meta-harness-terminal-cli",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.071947,
+      "log": "work/rsi-framework-selection/meta-harness-terminal-cli.smoke.log",
+      "log_sha256": "e4350ea3892223373fc07733f7a188e2d3b719489804785dcd658b4dfbdaec24"
+    },
+    {
+      "name": "dgm-archive",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.05197,
+      "log": "work/rsi-framework-selection/dgm-archive.smoke.log",
+      "log_sha256": "eddb22018866b4baada409bd06704b8c311b7d6902ee347ebb5d48ff2165dad0"
+    },
+    {
+      "name": "dgm-deepseek-client",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 1.068451,
+      "log": "work/rsi-framework-selection/dgm-deepseek-client.smoke.log",
+      "log_sha256": "0455e039a52d73f15c51791187b2b1f7c86a8ee178b5c848c7f207fef0f5d365"
+    },
+    {
+      "name": "adas-archive-and-proposal-context",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.044073,
+      "log": "work/rsi-framework-selection/adas-archive-and-proposal-context.smoke.log",
+      "log_sha256": "636c6b7b353d36945fb643405c98d6406ac5889c2fd37e3e4751047f5a83a131"
+    },
+    {
+      "name": "harness2-deterministic-demo",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 1.260384,
+      "log": "work/rsi-framework-selection/harness2-deterministic-demo.smoke.log",
+      "log_sha256": "759e952a97dce8d96a800ad96a50df3ec76c3748a8762ae2767a52c6378fb7aa"
+    }
+  ],
+  "script_sha256": "adaec60c27de35f59759c78904d651e04d3ac8f6bb514cd43867314191ef4ca7"
+}

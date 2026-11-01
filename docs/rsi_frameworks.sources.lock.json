@@ -1,0 +1,210 @@
+{
+  "retrieved_at_utc": "2026-10-18T08:06:44.148143+00:00",
+  "metadata_source": "GitHub REST API /repos/{owner}/{repo}, unauthenticated",
+  "selected_rule": "Official research release with identifiable academic/lab provenance, >=1000 stars, no-weight-training search relevant to agent designs/harnesses; not a global exhaustive ranking.",
+  "cloned_frameworks": [
+    {
+      "name": "GEPA",
+      "github_repo": "gepa-ai/gepa",
+      "url": "https://github.com/gepa-ai/gepa.git",
+      "local_path": "repos/gepa",
+      "revision": "f1cfdee2856e9dc4b5b4dc5cc2e391d0aa20d819",
+      "stars_snapshot": 7028,
+      "license": "MIT",
+      "research_affiliation": "UC Berkeley、Stanford 等论文作者团队；作者维护组织",
+      "shallow_clone": true,
+      "root_file_sha256": {
+        "LICENSE": "10c47467a961feb40adf3294fe27dd9cba79d4d1b7cf27173b1c34586d4126c3",
+        "pyproject.toml": "e244032a50d44ad7d033298a0a05ef4e0085207632c6a32cf032ae512cb64e6d",
+        "README.md": "10d7f30035b21bb38fde51fb3ccc0fc64d5e8b64ab51c09731606132782a57b2",
+        "AGENTS.md": "84777c6f7920db4bd5cb8560f793557a5454c6afa01119ec6cf9655872725a4a"
+      }
+    },
+    {
+      "name": "Meta-Harness",
+      "github_repo": "stanford-iris-lab/meta-harness",
+      "url": "https://github.com/stanford-iris-lab/meta-harness.git",
+      "local_path": "repos/meta-harness",
+      "revision": "8123ccabe2b19fa1123090b2e5f1bacc20963ce8",
+      "stars_snapshot": 1673,
+      "license": "MIT",
+      "research_affiliation": "Stanford IRIS 机构仓库；论文还含 MIT、KRAFTON 作者",
+      "shallow_clone": true,
+      "root_file_sha256": {
+        "LICENSE": "6fda8a33f4381e19a48a6a597ff8353cc9fbe97eccc1377a5fb6dd6f9ed49f76",
+        "README.md": "4f8c70a0e19127198d7165a7f2f4db1c41710dfbce485f4302ab1f8aec2d5584"
+      }
+    },
+    {
+      "name": "DGM",
+      "github_repo": "jennyzzt/dgm",
+      "url": "https://github.com/jennyzzt/dgm.git",
+      "local_path": "repos/dgm",
+      "revision": "a565fd2d1dca504ef5104a7cc0f3bdc4ab9b4fd2",
+      "stars_snapshot": 2425,
+      "license": "Apache-2.0",
+      "research_affiliation": "UBC、Vector Institute、Sakana AI 合作；作者官方仓库",
+      "shallow_clone": true,
+      "root_file_sha256": {
+        "LICENSE": "84b7504ce8dda1f37f592cdf67ad21371864583720d79ea289b0b0c75bfcdb17",
+        "README.md": "9760f30330e519946592ae88178f579dd717c3e55d3d461322e5facfa09c6bd4"
+      }
+    },
+    {
+      "name": "ADAS",
+      "github_repo": "ShengranHu/ADAS",
+      "url": "https://github.com/ShengranHu/ADAS.git",
+      "local_path": "repos/ADAS",
+      "revision": "2702bee8fefda42255efc5be9f60e3bd3db96ae4",
+      "stars_snapshot": 1650,
+      "license": "Apache-2.0",
+      "research_affiliation": "UBC、Vector Institute 作者团队；作者官方仓库",
+      "shallow_clone": true,
+      "root_file_sha256": {
+        "LICENSE": "2591bb5c650dc96c48e4244d52c7bc179ff904e3129d65dcb9180bc726a4b3ad",
+        "README.md": "0e57018546d045e1452ba90e0b61c37da0c964a451ee4dcc82cbbb53fd046b96"
+      }
+    },
+    {
+      "name": "Harness²",
+      "github_repo": "google-research/harness2",
+      "url": "https://github.com/google-research/harness2.git",
+      "local_path": "repos/harness2",
+      "revision": "1cfe254e8d25b15f37048c3730134686abe60335",
+      "stars_snapshot": 2208,
+      "license": "Apache-2.0",
+      "research_affiliation": "Google Research 机构仓库",
+      "shallow_clone": true,
+      "root_file_sha256": {
+        "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "pyproject.toml": "c78fd0d09d2f92bf796871c168b548dd4d33e21566dbb582e343266e24a0bada",
+        "README.md": "17639ac4194bb5c042cbf645430a772ae9be81baee95ab41eaea73cafa138f23"
+      }
+    }
+  ],
+  "survey": [
+    {
+      "repo": "gepa-ai/gepa",
+      "stars": 7028,
+      "forks": 583,
+      "default_branch": "main",
+      "pushed_at": "2026-10-13T18:24:21Z",
+      "archived": false,
+      "size_kb": 119478,
+      "license": "MIT",
+      "url": "https://github.com/gepa-ai/gepa",
+      "description": "Optimize prompts, code, and more with AI-powered Reflective Optimization"
+    },
+    {
+      "repo": "stanford-iris-lab/meta-harness",
+      "stars": 1673,
+      "forks": 169,
+      "default_branch": "main",
+      "pushed_at": "2026-10-02T03:56:17Z",
+      "archived": false,
+      "size_kb": 1843,
+      "license": "MIT",
+      "url": "https://github.com/stanford-iris-lab/meta-harness",
+      "description": "Official code for Meta-Harness (2603.28052)"
+    },
+    {
+      "repo": "jennyzzt/dgm",
+      "stars": 2425,
+      "forks": 452,
+      "default_branch": "main",
+      "pushed_at": "2025-08-13T10:40:14Z",
+      "archived": false,
+      "size_kb": 8954,
+      "license": "Apache-2.0",
+      "url": "https://github.com/jennyzzt/dgm",
+      "description": "Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents"
+    },
+    {
+      "repo": "ShengranHu/ADAS",
+      "stars": 1650,
+      "forks": 239,
+      "default_branch": "main",
+      "pushed_at": "2025-01-28T06:37:51Z",
+      "archived": false,
+      "size_kb": 11533,
+      "license": "Apache-2.0",
+      "url": "https://github.com/ShengranHu/ADAS",
+      "description": "[ICLR 2025] Automated Design of Agentic Systems"
+    },
+    {
+      "repo": "MaximeRobeyns/self_improving_coding_agent",
+      "stars": 409,
+      "forks": 70,
+      "default_branch": "master",
+      "pushed_at": "2025-04-23T23:28:42Z",
+      "archived": false,
+      "size_kb": 730,
+      "license": "MIT",
+      "url": "https://github.com/MaximeRobeyns/self_improving_coding_agent",
+      "description": "A coding agent framework, that works on its own codebase."
+    },
+    {
+      "repo": "google-research/rrsi",
+      "stars": 1541,
+      "forks": 147,
+      "default_branch": "main",
+      "pushed_at": "2026-09-23T22:16:25Z",
+      "archived": false,
+      "size_kb": 2468,
+      "license": "Apache-2.0",
+      "url": "https://github.com/google-research/rrsi",
+      "description": null
+    },
+    {
+      "repo": "stanfordnlp/dspy",
+      "stars": 38676,
+      "forks": 3432,
+      "default_branch": "main",
+      "pushed_at": "2026-10-16T19:33:56Z",
+      "archived": false,
+      "size_kb": 188727,
+      "license": "MIT",
+      "url": "https://github.com/stanfordnlp/dspy",
+      "description": "DSPy: The framework for programming—not prompting—language models"
+    },
+    {
+      "repo": "microsoft/agent-lightning",
+      "stars": 18739,
+      "forks": 1781,
+      "default_branch": "main",
+      "pushed_at": "2026-10-09T07:47:53Z",
+      "archived": false,
+      "size_kb": 50112,
+      "license": "MIT",
+      "url": "https://github.com/microsoft/agent-lightning",
+      "description": "The absolute trainer to light up AI agents."
+    },
+    {
+      "repo": "algorithmicsuperintelligence/openevolve",
+      "stars": 7584,
+      "forks": 1186,
+      "default_branch": "main",
+      "pushed_at": "2026-10-13T20:32:01Z",
+      "archived": false,
+      "size_kb": 7373,
+      "license": "Apache-2.0",
+      "url": "https://github.com/algorithmicsuperintelligence/openevolve",
+      "description": "Open-source implementation of AlphaEvolve"
+    },
+    {
+      "repo": "google-research/harness2",
+      "stars": 2208,
+      "forks": 189,
+      "default_branch": "main",
+      "pushed_at": "2026-10-14T02:22:51Z",
+      "archived": false,
+      "size_kb": 7298,
+      "license": "Apache-2.0",
+      "url": "https://github.com/google-research/harness2",
+      "description": null
+    }
+  ],
+  "existing_rrsi_path": "repos/rrsi",
+  "new_paid_runs_authorized_by_this_manifest": false,
+  "additional_retrieved_at_utc": "2026-10-18T08:13:43.321167+00:00"
+}

@@ -1,0 +1,48 @@
+{
+  "purpose": "gepa-adapted-terminal-one-candidate-integration-v1",
+  "workspace": "work/gepa-terminal-v1",
+  "api_base": "https://api.deepseek.com",
+  "model": "deepseek-flash",
+  "thinking": false,
+  "task_ids": [
+    "make-mips-interpreter",
+    "headless-terminal",
+    "merge-diff-arc-agi-task",
+    "build-cython-ext",
+    "nginx-request-logging",
+    "configure-git-webserver",
+    "gcode-to-text",
+    "db-wal-recovery",
+    "financial-document-processor",
+    "regex-log",
+    "adaptive-rejection-sampler",
+    "raman-fitting"
+  ],
+  "target": {
+    "max_calls": 50,
+    "max_tokens": 1000000,
+    "max_output_tokens": 4096,
+    "command_seconds": 60
+  },
+  "search": {
+    "max_calls": 80,
+    "max_tokens": 1000000,
+    "max_output_tokens": 4096
+  },
+  "gepa": {
+    "seed": 0,
+    "max_new_candidates": 1,
+    "full_batch_reflection": true,
+    "cache_evaluation": true,
+    "merge": false,
+    "acceptance": "strict_improvement",
+    "reuse_frozen_baseline": true
+  },
+  "evaluation": {
+    "invalid_grading": "abort_without_numeric_score",
+    "automatic_paid_retries": false,
+    "image_identity": "exact_original_baseline_id",
+    "checkpoint": "docker_commit_after_agent_before_grader; retain_only_invalid_trial",
+    "scope": "same12 development comparison, no heldout claim"
+  }
+}

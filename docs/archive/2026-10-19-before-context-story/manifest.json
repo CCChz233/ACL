@@ -1,0 +1,42 @@
+{
+  "reason": "用户以最新粘贴故事替换旧研究主线",
+  "archived_on": "2026-10-19",
+  "files": [
+    {
+      "original": "docs/research_story.md",
+      "archived": "docs__research_story.md",
+      "sha256": "b782dbfec523da922f56e166fbfc34104ce59c8207d7fef2c4221a85e2c5b822"
+    },
+    {
+      "original": "docs/research_plan.md",
+      "archived": "docs__research_plan.md",
+      "sha256": "ee2fae400a0088bb74087a55211ba25a150a788c6ed1ab95ca432a6d781a19a7"
+    },
+    {
+      "original": "docs/next_steps.md",
+      "archived": "docs__next_steps.md",
+      "sha256": "7cbcf64f75919a5422d80d0a2d097137c0b1b71e8147fb4ce3a5b7921dd6f13d"
+    },
+    {
+      "original": "docs/harness_baselines.md",
+      "archived": "docs__harness_baselines.md",
+      "sha256": "8a612fc2f5731d232d5f7f22c936ab351a83a65b4f07b8f9c9bcdc0c86d2677d"
+    },
+    {
+      "original": "README.md",
+      "archived": "root__README.md",
+      "sha256": "971569d0a139a030da31e9647a18ab465d5b361102925749fedfcbfed454a7c1"
+    },
+    {
+      "original": "docs/README.md",
+      "archived": "docs__README.md",
+      "sha256": "2f339272630b546a59a307f189db10eb8700ad80631f926d214955a58aac3f61"
+    },
+    {
+      "original": "experiments/README.md",
+      "archived": "experiments__README.md",
+      "sha256": "85cc560e79c80166ddf60459c3c7942da49de7621576f3300b3c824b8e7e63f2"
+    }
+  ],
+  "user_input_sha256": "5b00f575210fe2fbe172c2e3197c6fc416e2d7cbb9188891441c261d44bb1086"
+}

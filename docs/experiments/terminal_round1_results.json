@@ -1,0 +1,296 @@
+{
+  "status": "network_blocked_incomplete",
+  "audit_policy": "Require binary reward plus complete official pytest/CTRF tests matching baseline; raw evidence unchanged.",
+  "candidate_commit": "94ba950",
+  "baseline_passed": 7,
+  "total": 12,
+  "baseline_score": 0.5833333333333334,
+  "valid_evaluations": 2,
+  "invalid_grading": 1,
+  "pending": 9,
+  "valid_subset_passed": 1,
+  "candidate_passed": null,
+  "candidate_score": null,
+  "delta_percentage_points": null,
+  "new_passes": [],
+  "regressions": [],
+  "search_usage": {
+    "calls": 41,
+    "completed": 41,
+    "prompt_tokens": 198608,
+    "completion_tokens": 13292,
+    "total_tokens": 211900,
+    "prompt_cache_hit_tokens": 105856,
+    "prompt_cache_miss_tokens": 92752,
+    "api_seconds": 83.42597198486328
+  },
+  "candidate_usage": {
+    "calls": 89,
+    "completed": 89,
+    "prompt_tokens": 1208533,
+    "completion_tokens": 27182,
+    "total_tokens": 1235715,
+    "prompt_cache_hit_tokens": 1155200,
+    "prompt_cache_miss_tokens": 53333,
+    "api_seconds": 157.6605052947998
+  },
+  "combined_usage": {
+    "calls": 130,
+    "completed": 130,
+    "prompt_tokens": 1407141,
+    "completion_tokens": 40474,
+    "total_tokens": 1447615,
+    "prompt_cache_hit_tokens": 1261056,
+    "prompt_cache_miss_tokens": 146085,
+    "api_seconds": 241.0864772796631
+  },
+  "search_calls_by_role": {
+    "analyst": 2,
+    "digester": 30,
+    "propose": 7,
+    "critic": 2
+  },
+  "paired_tasks": [
+    {
+      "task_id": "make-mips-interpreter",
+      "category": "software-engineering",
+      "baseline": 0.0,
+      "state": "valid",
+      "raw_reward": 0.0,
+      "candidate": 0.0,
+      "invalid_reason": null,
+      "exception": null,
+      "test_count": 3,
+      "stop": "token_reservation",
+      "usage": {
+        "calls": 34,
+        "completed": 34,
+        "prompt_tokens": 844534,
+        "completion_tokens": 13625,
+        "total_tokens": 858159,
+        "prompt_cache_hit_tokens": 806144,
+        "prompt_cache_miss_tokens": 38390,
+        "api_seconds": 72.96830987930298
+      }
+    },
+    {
+      "task_id": "headless-terminal",
+      "category": "software-engineering",
+      "baseline": 1.0,
+      "state": "valid",
+      "raw_reward": 1.0,
+      "candidate": 1.0,
+      "invalid_reason": null,
+      "exception": null,
+      "test_count": 7,
+      "stop": "Submitted",
+      "usage": {
+        "calls": 31,
+        "completed": 31,
+        "prompt_tokens": 241931,
+        "completion_tokens": 10123,
+        "total_tokens": 252054,
+        "prompt_cache_hit_tokens": 234752,
+        "prompt_cache_miss_tokens": 7179,
+        "api_seconds": 57.826103925704956
+      }
+    },
+    {
+      "task_id": "merge-diff-arc-agi-task",
+      "category": "debugging",
+      "baseline": 1.0,
+      "state": "invalid_grading",
+      "raw_reward": 0.0,
+      "candidate": null,
+      "invalid_reason": "missing_official_test_record",
+      "exception": null,
+      "test_count": 0,
+      "stop": "Submitted",
+      "usage": {
+        "calls": 24,
+        "completed": 24,
+        "prompt_tokens": 122068,
+        "completion_tokens": 3434,
+        "total_tokens": 125502,
+        "prompt_cache_hit_tokens": 114304,
+        "prompt_cache_miss_tokens": 7764,
+        "api_seconds": 26.86609148979187
+      }
+    },
+    {
+      "task_id": "build-cython-ext",
+      "category": "debugging",
+      "baseline": 1.0,
+      "state": "pending",
+      "raw_reward": null,
+      "candidate": null,
+      "stop": null,
+      "usage": {
+        "calls": 0,
+        "completed": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "api_seconds": 0
+      }
+    },
+    {
+      "task_id": "nginx-request-logging",
+      "category": "system-administration",
+      "baseline": 1.0,
+      "state": "pending",
+      "raw_reward": null,
+      "candidate": null,
+      "stop": null,
+      "usage": {
+        "calls": 0,
+        "completed": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "api_seconds": 0
+      }
+    },
+    {
+      "task_id": "configure-git-webserver",
+      "category": "system-administration",
+      "baseline": 1.0,
+      "state": "pending",
+      "raw_reward": null,
+      "candidate": null,
+      "stop": null,
+      "usage": {
+        "calls": 0,
+        "completed": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "api_seconds": 0
+      }
+    },
+    {
+      "task_id": "gcode-to-text",
+      "category": "file-operations",
+      "baseline": 0.0,
+      "state": "pending",
+      "raw_reward": null,
+      "candidate": null,
+      "stop": null,
+      "usage": {
+        "calls": 0,
+        "completed": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "api_seconds": 0
+      }
+    },
+    {
+      "task_id": "db-wal-recovery",
+      "category": "file-operations",
+      "baseline": 0.0,
+      "state": "pending",
+      "raw_reward": null,
+      "candidate": null,
+      "stop": null,
+      "usage": {
+        "calls": 0,
+        "completed": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "api_seconds": 0
+      }
+    },
+    {
+      "task_id": "financial-document-processor",
+      "category": "data-processing",
+      "baseline": 1.0,
+      "state": "pending",
+      "raw_reward": null,
+      "candidate": null,
+      "stop": null,
+      "usage": {
+        "calls": 0,
+        "completed": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "api_seconds": 0
+      }
+    },
+    {
+      "task_id": "regex-log",
+      "category": "data-processing",
+      "baseline": 1.0,
+      "state": "pending",
+      "raw_reward": null,
+      "candidate": null,
+      "stop": null,
+      "usage": {
+        "calls": 0,
+        "completed": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "api_seconds": 0
+      }
+    },
+    {
+      "task_id": "adaptive-rejection-sampler",
+      "category": "scientific-computing",
+      "baseline": 0.0,
+      "state": "pending",
+      "raw_reward": null,
+      "candidate": null,
+      "stop": null,
+      "usage": {
+        "calls": 0,
+        "completed": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "api_seconds": 0
+      }
+    },
+    {
+      "task_id": "raman-fitting",
+      "category": "scientific-computing",
+      "baseline": 0.0,
+      "state": "pending",
+      "raw_reward": null,
+      "candidate": null,
+      "stop": null,
+      "usage": {
+        "calls": 0,
+        "completed": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "api_seconds": 0
+      }
+    }
+  ],
+  "selection": "eval_invalid; retain original harness; no measured candidate rejection",
+  "scope": "Same 12 development tasks, one semantic candidate; no heldout or full accuracy claim.",
+  "resume_constraints": "No automatic paid retry. Third task lost container state; its saved trajectory cannot replace a valid original grade.",
+  "audit_script_sha256": "cae76bc75f15e363190de00d29daa545343e1c5023aebe1807e546bb3505d6f1"
+}

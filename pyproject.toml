@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "acl-rsi"
+version = "0.1.0"
+description = "RRSI experiments with mini-SWE-agent and independently graded SWE-bench tasks"
+requires-python = ">=3.12"
+dependencies = [
+  "rrsi==0.1.0",
+  "mini-swe-agent==2.4.6",
+  "swebench==4.1.0",
+  "openai>=2.0",
+  "httpx>=0.28",
+  "truststore>=0.10",
+  "python-dotenv>=1.0",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9.0"]
+
+[project.scripts]
+acl-rsi = "acl_rsi.cli:main"
+acl-gepa-terminal = "acl_gepa.run:main"
+
+[tool.setuptools.packages.find]
+include = ["acl_rsi*", "acl_terminal*", "acl_gepa*", "acl_frameworks*", "acl_dgm*", "acl_rsihub*", "acl_unified*", "acl_multiround*"]
+
+[tool.uv.sources]
+rrsi = {path = "frameworks/rrsi", editable = true}
+mini-swe-agent = {path = "agents/mini-swe-agent", editable = true}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

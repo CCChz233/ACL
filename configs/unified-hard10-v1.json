@@ -1,0 +1,116 @@
+{
+  "purpose": "unified-five-frameworks-hard10-one-candidate",
+  "dataset": "benchmarks/datasets/swe-bench-verified-mini/test.json",
+  "evolve_ids": [
+    "django__django-12209",
+    "django__django-11885",
+    "django__django-12273",
+    "django__django-12039",
+    "django__django-12406",
+    "sphinx-doc__sphinx-11510",
+    "sphinx-doc__sphinx-10673",
+    "sphinx-doc__sphinx-10435",
+    "sphinx-doc__sphinx-10466",
+    "sphinx-doc__sphinx-8551"
+  ],
+  "heldout_ids": [],
+  "workspace": "/Users/chz/code/ACL/experiments/runs/unified-hard10-v1",
+  "thinking": false,
+  "search": {
+    "max_calls": 80,
+    "max_tokens": 1000000,
+    "max_output_tokens": 4096
+  },
+  "target": {
+    "max_calls": 50,
+    "max_tokens": 1000000,
+    "max_output_tokens": 4096,
+    "wall_seconds": 1200,
+    "command_seconds": 60
+  },
+  "grading_seconds": 900,
+  "rrsi": {
+    "T": 1,
+    "k": 1,
+    "m": 1,
+    "b_min": 1,
+    "b_max": 1,
+    "delta": 0.0,
+    "w_s": 100.0,
+    "w_c": 0.0,
+    "w_n": 0.0,
+    "m_draft": 0,
+    "repair_rounds": 1,
+    "n_fail_traces": 3,
+    "n_success_traces": 1,
+    "invalid_missing_frac": 0.0,
+    "eval_parallel": 1
+  },
+  "image_cache": {
+    "min_free_bytes": 4294967296,
+    "mode": "local_only_retained"
+  },
+  "model": "deepseek-flash",
+  "api_base": "https://api.deepseek.com",
+  "protocol": {
+    "frameworks": [
+      "harnessfix",
+      "meta-harness",
+      "gepa",
+      "rrsi",
+      "dgm"
+    ],
+    "seed": 17,
+    "rounds": 1,
+    "candidate_cap": 1,
+    "all_task_ids": [
+      "django__django-12209",
+      "django__django-11885",
+      "django__django-12273",
+      "django__django-12039",
+      "django__django-12406",
+      "sphinx-doc__sphinx-11510",
+      "sphinx-doc__sphinx-10673",
+      "sphinx-doc__sphinx-10435",
+      "sphinx-doc__sphinx-10466",
+      "sphinx-doc__sphinx-8551"
+    ],
+    "development_ids": [
+      "django__django-12209",
+      "django__django-12406",
+      "sphinx-doc__sphinx-10466",
+      "sphinx-doc__sphinx-10673"
+    ],
+    "hf_train_ids": [
+      "django__django-12209",
+      "sphinx-doc__sphinx-10673"
+    ],
+    "hf_selection_ids": [
+      "django__django-12406",
+      "sphinx-doc__sphinx-10466"
+    ],
+    "report_ids": [
+      "django__django-11885",
+      "django__django-12273",
+      "django__django-12039",
+      "sphinx-doc__sphinx-11510",
+      "sphinx-doc__sphinx-10435",
+      "sphinx-doc__sphinx-8551"
+    ],
+    "selection_file": "experiments/runs/hard10-selection-v1/selection.json",
+    "selection_sha256": "b2f178116b4e60d11d7788558437856939d8df47d4efe5bbf304a076ce866999",
+    "split_policy": "H0-only strata: 2/repo, 1 historical pass, 3 failures with one each call/token/submitted; min SHA256 salted17; ignores all candidate outcomes",
+    "scope": "historically used development panel; sealed feedback is prospective, not unseen test data",
+    "max_target_executions": 60,
+    "max_total_calls": 3400,
+    "max_total_tokens": 65000000,
+    "baseline": "fresh ten tasks, shared by all frameworks",
+    "manual_recovery": false,
+    "candidate_tests": "scope/syntax/constructor and single/multiple tool-result contracts before paid evaluation",
+    "nomination": "native development decision; DGM archive readout uses best development accuracy, H0 on ties",
+    "report_evaluation": "raw valid candidate on six after nomination frozen, including native non-promotion; selected H0 reuses fresh baseline report",
+    "task_concurrency": 1,
+    "search_wall_seconds": 3600,
+    "framework_wall_seconds": 30000
+  }
+}

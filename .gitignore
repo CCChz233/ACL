@@ -1,5 +1,14 @@
 # Local research assets and independent upstream checkouts.
 /repos/
+/frameworks/*/
+/agents/*/
+/benchmarks/sources/
+/experiments/runs/
+/references/papers/
+/reports/exports/
+/work
+/outputs
+/RSI必看
 /RSI必看/
 /work/
 /outputs/

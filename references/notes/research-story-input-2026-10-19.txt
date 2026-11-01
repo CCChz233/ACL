@@ -1,0 +1,241 @@
+我建议你基于现有论文继续做，但不要直接在 HarnessFix 上修改几处代码，就把它当作新方法。
+
+你的研究目标已经比较明确：
+
+> 在不改变 Harness RSI 核心进化算法的前提下，通过更高效的上下文组织，减少优化模型读取历史轨迹、Harness 源码和修改记录所消耗的 Token，同时保持甚至提高自我改进效果。
+
+这应当是一篇 Efficient Harness Self-Improvement 方向的论文，而不是单纯的 Context Compression 论文。
+
+## 一、最应该作为研究基础的五篇论文
+
+我建议分成三类，其中前三篇最重要。
+
+| 论文                                                                       | 在你研究中的角色               | 优先级 |
+| ------------------------------------------------------------------------ | ---------------------- | --- |
+| [ContextEvolve](https://arxiv.org/abs/2602.02597?utm_source=chatgpt.com) | 最直接的上下文优化方法基础          | 必读  |
+| [Meta-Harness](https://arxiv.org/abs/2603.28052?utm_source=chatgpt.com)  | 完整历史驱动的 Harness 进化基础   | 必读  |
+| [HarnessFix](https://arxiv.org/abs/2606.06324?utm_source=chatgpt.com)    | 故障证据组织与 SWE-bench 实验基础 | 必读  |
+| [ACON](https://arxiv.org/abs/2510.00615?utm_source=chatgpt.com)          | 学习式上下文压缩的重要对照          | 推荐  |
+| [Evo-Harness](https://arxiv.org/abs/2608.15071?utm_source=chatgpt.com)   | 将执行上下文转化为可复用经验的相邻工作    | 推荐  |
+
+### 1. ContextEvolve：你的方法基础
+
+ContextEvolve: Multi-Agent Context Compression for Systems Code Optimization（2026）
+
+它研究的是：代码优化系统经过多轮演化后，怎样更高效地利用历史信息。
+
+作者提出三个机制：Summarizer 压缩当前代码状态、Navigator 总结优化方向、Sampler 选择有价值的历史样例。
+
+论文在 ADRS 系统代码优化任务上报告了 29% 的 Token 消耗降低。
+
+[image](https://www.google.com/s2/favicons?domain=https://arxiv.org\&sz=32)
+
+arXiv
+
+
+
+这篇与你的设想最接近。你不能只把执行日志摘要一下、再挑选几条历史记录，因为 ContextEvolve 已经研究了类似思路。
+
+你需要超越它的地方是：
+
+让上下文组织面向 Harness 修改决策，并在不同的 Harness RSI 算法中保持有效，而不是仅服务于一种代码性能优化流程。
+
+### 2. Meta-Harness：你的主要 RSI 基础
+
+Meta-Harness: End-to-End Optimization of Model Harnesses（2026）
+
+它的关键思想是向优化器开放候选 Harness 的源代码、得分及历史执行轨迹，让 Coding Agent 自主读取、分析并修改代码。
+
+论文还指出，过度压缩反馈可能让优化模型失去关键诊断信息。
+
+[image](https://www.google.com/s2/favicons?domain=https://arxiv.org\&sz=32)
+
+arXiv
+
+
+
+官方代码：[stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness?utm_source=chatgpt.com)
+
+这篇对你最有价值的是：它提供了一个能够访问丰富历史信息的 Agentic Optimizer。
+
+你可以研究优化模型到底读取了哪些文件、哪些执行步骤对修改真正有用、哪些信息只是重复消耗 Token。
+
+### 3. HarnessFix：你的 SWE-bench 实验基础
+
+From Failed Trajectories to Reliable LLM Agents: Diagnosing and Repairing Harness Flaws（2026）
+
+它使用结构化轨迹表示 HTIR，将失败步骤、相关 Harness 组件和修复操作联系起来，再进行定向修复。
+
+[image](https://www.google.com/s2/favicons?domain=https://arxiv.org\&sz=32)
+
+arXiv
+
+
+
+官方代码：[HarnessFix/HarnessFix](https://github.com/HarnessFix/HarnessFix?utm_source=chatgpt.com)
+
+对你有两个直接优势：
+
+- 已经包含 mini-swe-agent 的实验版本及 SWE-bench 运行管线。
+- 已经报告 GEPA、Meta-Harness、HarnessFix 等方法的优化 Token 与最终性能。
+
+因此，它很适合成为你的第一套可运行实验系统，而不一定是新方法的算法基础。
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+
+GitHub
+
++1
+
+
+
+## 二、真正应该跑哪些 Baseline？
+
+这里要区分两种 Baseline：
+
+- Context Baseline：证明你的上下文组织方法比已有方法更好。
+- RSI Framework Baseline：证明这种改进能够应用到不同的自我进化框架。
+
+这两组实验应该分开设计。
+
+### A. Context Baseline：直接检验你的创新
+
+| 方法                    | 实验内容                                           | 必要性        |
+| --------------------- | ---------------------------------------------- | ---------- |
+| Full Context          | 使用原框架默认的完整信息访问机制                               | 必选         |
+| Truncation            | 只保留固定长度或最近的轨迹                                  | 必选         |
+| LLM Summary           | 使用 LLM 压缩轨迹，再进行修改                              | 必选         |
+| Retrieval-based       | 检索相关历史记录与源码片段                                  | 必选         |
+| ContextEvolve-adapted | 将 Summarizer、Navigator、Sampler 适配到 Harness RSI | 强 Baseline |
+| ACON-adapted          | 使用学习式压缩策略组织优化上下文                               | 推荐         |
+| Your Method           | 面向修改决策的结构化证据和按需展开                              | 你的方法       |
+
+ContextEvolve 和 ACON 原本都不直接服务于 Harness RSI 优化器，因此需要移植。实验中应明确说明它们是适配版本，不能把适配结果冒充原论文的原生实现。
+
+这张表非常重要。
+
+因为你的创新不是比 RRSI 的搜索算法更好，而是证明：在相同 RSI 算法下，你提供的上下文比完整历史、普通摘要和已有压缩方法更高效。
+
+ACON 是 ICML 2026 论文，它通过失败反馈学习压缩策略，因此不能遗漏这种较强的学习式压缩对照。
+
+[image](https://www.google.com/s2/favicons?domain=https://proceedings.mlr.press\&sz=32)
+
+Proceedings of Machine Learning Research
+
+
+
+### B. RSI Framework Baseline：验证通用性
+
+| 框架           | 我建议的角色                  | 优先级 |
+| ------------ | ----------------------- | --- |
+| HarnessFix   | 第一套实验，适配 mini-swe-agent | P0  |
+| Meta-Harness | 第二套实验，完整历史文件访问          | P0  |
+| GEPA         | 第三套实验，反思式优化接口           | P1  |
+| RRSI         | 扩展实验，正则化进化              | P1  |
+| DGM、Harness² | 不在第一阶段实施                | P2  |
+
+为什么先做 HarnessFix 和 Meta-Harness？
+
+因为两者正好覆盖不同的上下文形态。
+
+HarnessFix 已经提供了结构化失败诊断，Meta-Harness 则强调原始历史信息的可访问性。如果你的方法能同时改善这两种不同的信息组织方式，通用性的证据会更强。
+
+之后加入 GEPA 和 RRSI：
+
+GEPA 的适配入口主要是反思数据构建；RRSI 的 Domain Adapter 明确提供 `load_trial`、`render_trace`，可控制优化器读取的轨迹证据。
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+
+GitHub
+
++1
+
+
+
+## 三、你的论文到底应该在谁的基础上创新？
+
+我建议采用下面这种结构：
+
+研究问题：Harness RSI 优化上下文存在冗余
+
+Meta-Harness / HarnessFix 展示的问题场景
+
+现有技术：摘要、检索、压缩、历史选择
+
+ContextEvolve / ACON / Evo-Harness
+
+你的方法：Edit-Aware Evolution Context
+
+面向修改决策组织证据，而不是简单压缩轨迹
+
+跨框架验证
+
+HarnessFix · Meta-Harness · GEPA · RRSI
+
+这里我特别建议你研究一个新的问题：
+
+What Information Is Necessary for Effective Harness Improvement?
+
+也就是说，一个优化器提出有效修改到底需要哪些信息？
+
+完整的 Trajectory？失败位置？前后状态？Harness 代码？历史修改结果？还是几者的特定组合？
+
+如果能通过实验识别出这些证据的重要性，并设计一种按照修改需求选择证据的机制，就不仅是上下文压缩了，还能解释为什么某些上下文组织方式有利于自我改进。
+
+不过，Evo-Harness 已经研究将噪声很大的执行上下文编译为可复用 Skills，并在 SWE-bench 等任务上评测。所以你需要把自己的贡献明确限定在优化器进行 Harness 修改时所需的证据组织，而不是泛泛的执行经验提炼。
+
+[image](https://www.google.com/s2/favicons?domain=https://arxiv.org\&sz=32)
+
+arXiv
+
+
+
+## 四、我建议你实际从哪里开始
+
+## 第一阶段：验证上下文组织是否有效
+
+Task Agent
+
+mini-swe-agent
+
+Benchmark
+
+SWE-bench
+
+RSI Framework
+
+HarnessFix
+
+Optimizer Model
+
+固定 DeepSeek
+
+第一轮只比较四种输入策略
+
+Full Context、LLM Summary、Retrieval-based、Your Method。
+
+主要记录四个指标
+
+优化器实际 Token、上下文处理额外成本、有效 Harness 修改率、独立测试集 Resolve Rate。
+
+注意，第一阶段最好先复用完全相同的执行轨迹进行上下文组织对比，不要一开始就让四套方法各自进行漫长的独立进化。这样更容易隔离上下文表示本身的效果，也能显著降低试验成本。
+
+等证明上下文组织有效，再运行完整多轮 RSI，并迁移到 Meta-Harness 和 RRSI。正式结果应同时报告固定候选预算与固定总 Token 预算下的表现。
+
+## 五、最终的论文定位
+
+我推荐的暂定题目是：
+
+Beyond Trajectory Compression: Evidence-Efficient Context for Harness Self-Improvement
+
+你的核心贡献应该是：
+
+1. 分析现有 Harness RSI 的优化上下文成本和冗余，揭示真正影响有效修改的信息。
+2. 提出一种面向 Harness 修改决策的结构化上下文组织机制，保留关键证据，支持按需检索。
+3. 在多个不同的 RSI 框架中证明，这种机制能够减少优化 Token，同时保持改进质量和泛化能力。
+
+最终建议可以归结为一句话：
+
+以 ContextEvolve 为最直接的方法对照，以 HarnessFix 为第一套实验代码基础，以 Meta-Harness 为核心 RSI 验证框架，再用 GEPA、RRSI 检验通用性。
+
+我认为现在最应该做的是先复现 HarnessFix 的一次完整优化流程，把它所有优化模型调用的上下文和 Token 消耗拆解出来。只有弄清楚 48.9M Token 中究竟哪些环节占大头，才能决定新方法应该重点优化轨迹、源码、历史记录，还是三者之间的组织关系。

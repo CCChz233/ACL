@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-17",
+  "status": "completed",
+  "config": "configs/mini50-baseline.json",
+  "workspace": "work/verified-mini-50-baseline-v2",
+  "n_tasks": 50,
+  "repositories": {
+    "django/django": 25,
+    "sphinx-doc/sphinx": 25
+  },
+  "target_max_calls_per_task": 50,
+  "target_max_tokens_per_task": 1000000,
+  "batch_max_calls": 2500,
+  "batch_max_tokens": 50000000,
+  "search_calls": 0,
+  "calls_sent": 1153,
+  "tests_passed": 18,
+  "disk_guard_min_free_bytes": 4294967296,
+  "cleanup": "owned task tags only, no force, no parent pruning, preserve preexisting image IDs",
+  "actual_tokens": 15443407,
+  "n_resolved": 31,
+  "resolved_rate": 0.62,
+  "n_completed": 50,
+  "infrastructure_failures": 0,
+  "results": "docs/mini50_results.json"
+}

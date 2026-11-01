@@ -1,0 +1,102 @@
+{
+  "checked_at_utc": "2026-10-18T08:41:39.790640+00:00",
+  "integration_status": "implemented_and_offline_verified",
+  "gepa_revision": "f1cfdee2856e9dc4b5b4dc5cc2e391d0aa20d819",
+  "baseline_passed": 7,
+  "baseline_total": 12,
+  "new_model_api_calls": 0,
+  "new_model_tokens": 0,
+  "real_candidate_accuracy": null,
+  "tests": {
+    "tests": 16,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "offline_smoke": {
+    "status": "passed",
+    "kind": "native GEPA + adapter with scripted LM and grading fixtures",
+    "model_api_calls": 0,
+    "model_tokens": 0,
+    "docker_tasks": 0,
+    "scripted_reflection_calls": 1,
+    "fresh_fixture_executions": 2,
+    "native_metric_count_including_seed_import": 4,
+    "duplicate_fixture_executions_after_cache_check": 0,
+    "real_benchmark_accuracy": null,
+    "work": "work/gepa-integration-smoke/20261018T083657847753Z"
+  },
+  "preflight": {
+    "status": "ready_for_first_image_only",
+    "model_api_calls": 0,
+    "task_count": 12,
+    "full_network_readiness_verified": false,
+    "first_image_id": "sha256:082fc8821b317f30fdfbf8d08d528874ce331c03e8083aef0406d48cdd7132a2"
+  },
+  "resources": {
+    "original_image_ids": 82,
+    "missing_original_ids": [],
+    "new_image_ids": [
+      "sha256:082fc8821b317f30fdfbf8d08d528874ce331c03e8083aef0406d48cdd7132a2"
+    ],
+    "first_image_cache": {
+      "tag": "alexgshaw/make-mips-interpreter:20251031",
+      "id": "sha256:082fc8821b317f30fdfbf8d08d528874ce331c03e8083aef0406d48cdd7132a2",
+      "size_bytes": 518975750
+    },
+    "owned_containers": [],
+    "free_gib": 13.91,
+    "new_model_api_calls": 0
+  },
+  "runtime_lock_sha256": "e7af79df75faa9f849bb9e10fde407e06ef61ec22cb3990c37c4938f0bc9ef45",
+  "config_sha256": "eff92d15e4f6c11a058713b487ca1a8d7394dc4b79f20cd402441141c0b4d8d3",
+  "baseline_and_rrsi_frozen_hashes_unchanged": true,
+  "limits": {
+    "purpose": "gepa-adapted-terminal-one-candidate-integration-v1",
+    "workspace": "work/gepa-terminal-v1",
+    "api_base": "https://api.deepseek.com",
+    "model": "deepseek-flash",
+    "thinking": false,
+    "task_ids": [
+      "make-mips-interpreter",
+      "headless-terminal",
+      "merge-diff-arc-agi-task",
+      "build-cython-ext",
+      "nginx-request-logging",
+      "configure-git-webserver",
+      "gcode-to-text",
+      "db-wal-recovery",
+      "financial-document-processor",
+      "regex-log",
+      "adaptive-rejection-sampler",
+      "raman-fitting"
+    ],
+    "target": {
+      "max_calls": 50,
+      "max_tokens": 1000000,
+      "max_output_tokens": 4096,
+      "command_seconds": 60
+    },
+    "search": {
+      "max_calls": 80,
+      "max_tokens": 1000000,
+      "max_output_tokens": 4096
+    },
+    "gepa": {
+      "seed": 0,
+      "max_new_candidates": 1,
+      "full_batch_reflection": true,
+      "cache_evaluation": true,
+      "merge": false,
+      "acceptance": "strict_improvement",
+      "reuse_frozen_baseline": true
+    },
+    "evaluation": {
+      "invalid_grading": "abort_without_numeric_score",
+      "automatic_paid_retries": false,
+      "image_identity": "exact_original_baseline_id",
+      "checkpoint": "docker_commit_after_agent_before_grader; retain_only_invalid_trial",
+      "scope": "same12 development comparison, no heldout claim"
+    }
+  }
+}

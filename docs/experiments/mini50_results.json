@@ -1,0 +1,871 @@
+{
+  "run_date": "2026-10-17",
+  "status": "completed",
+  "purpose": "verified_mini_all50_frozen_baseline",
+  "workspace": "work/verified-mini-50-baseline-v2",
+  "config": "configs/mini50-baseline.json",
+  "model": "deepseek-flash",
+  "api_base": "https://api.deepseek.com",
+  "thinking": false,
+  "n_tasks": 50,
+  "n_resolved": 31,
+  "resolved_rate": 0.62,
+  "by_repository": {
+    "django/django": {
+      "n": 25,
+      "resolved": 18
+    },
+    "sphinx-doc/sphinx": {
+      "n": 25,
+      "resolved": 13
+    }
+  },
+  "exit_status_counts": {
+    "Submitted": 38,
+    "BudgetExceeded": 8,
+    "LimitsExceeded": 4
+  },
+  "budget_stop_counts": {
+    "token_reservation": 8,
+    "call_limit": 4
+  },
+  "official_test_reports": 38,
+  "infrastructure_failures": 0,
+  "total_api_calls": 1153,
+  "actual_tokens": 15443407,
+  "charged_tokens": 15443407,
+  "rsi_rounds": 0,
+  "search_calls": 0,
+  "target_limits": {
+    "max_calls": 50,
+    "max_tokens": 1000000,
+    "max_output_tokens": 4096,
+    "wall_seconds": 1200,
+    "command_seconds": 60
+  },
+  "tests_passed": 18,
+  "versions": {
+    "mini-swe-agent": "2.4.6",
+    "rrsi": "0.1.0",
+    "swebench": "4.1.0",
+    "openai": "2.54.0"
+  },
+  "host_free_GiB": 20.75,
+  "tasks": [
+    {
+      "instance_id": "django__django-11790",
+      "repo": "django/django",
+      "base_commit": "b1d6b35e146aea83b171c1b921178bbaae2795ed",
+      "resolved": false,
+      "exit_status": "Submitted",
+      "calls": 35,
+      "actual_tokens": 387247,
+      "charged_tokens": 387247,
+      "budget_stop_reason": null,
+      "patch_sha256": "d3c38125d9ecf27293ecaa684fb40dff4eb19fb59c151fa4c4944565df5b3b2b",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11790/trial-0/official/acl-b3c81e3098a7/deepseek-flash/django__django-11790/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-11790@sha256:061b5e37b0dfc15512b9604c843618b47aece8e603d08d0926c3990e0e9b3ac4"
+      ]
+    },
+    {
+      "instance_id": "django__django-11815",
+      "repo": "django/django",
+      "base_commit": "e02f67ef2d03d48128e7a118bf75f0418e24e8ac",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 8,
+      "actual_tokens": 24869,
+      "charged_tokens": 24869,
+      "budget_stop_reason": null,
+      "patch_sha256": "e83dc1c9a5ddd5ba3dcc7c9b6ddfa4f60cc30d1d26924d849cfca561f8223b3b",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11815/trial-0/official/acl-ecf57caa3043/deepseek-flash/django__django-11815/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-11815@sha256:19b66392c9872e6d07b331b0ed59466c3e6c3588bc4cdd89f56f8767dc774f8a"
+      ]
+    },
+    {
+      "instance_id": "django__django-11848",
+      "repo": "django/django",
+      "base_commit": "f0adf3b9b7a19cdee05368ff0c0c2d087f011180",
+      "resolved": false,
+      "exit_status": "Submitted",
+      "calls": 11,
+      "actual_tokens": 54986,
+      "charged_tokens": 54986,
+      "budget_stop_reason": null,
+      "patch_sha256": "6534801bec263114472afc0bb0b577067d5b9d66b0e483994a56b3f55668ef74",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11848/trial-0/official/acl-03fab9d999a8/deepseek-flash/django__django-11848/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-11848@sha256:08eac9219e5d4b15b445fde26c587157a0ad8a2d9209e4b1e266259edf51bb4b"
+      ]
+    },
+    {
+      "instance_id": "django__django-11880",
+      "repo": "django/django",
+      "base_commit": "06909fe084f87a65459a83bd69d7cdbe4fce9a7c",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 11,
+      "actual_tokens": 37394,
+      "charged_tokens": 37394,
+      "budget_stop_reason": null,
+      "patch_sha256": "15473af6dc9920a23e55cbd3ea844e394fe3b06cec9aaeed427e8d79d2e3ea3b",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11880/trial-0/official/acl-4f36571c36ef/deepseek-flash/django__django-11880/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-11880@sha256:ce0c7fd75b0fe8d24632c627359c5e2bc1a4922843d889870931f80f2f98c311"
+      ]
+    },
+    {
+      "instance_id": "django__django-11885",
+      "repo": "django/django",
+      "base_commit": "04ac9b45a34440fa447feb6ae934687aacbfc5f4",
+      "resolved": false,
+      "exit_status": "BudgetExceeded",
+      "calls": 41,
+      "actual_tokens": 851336,
+      "charged_tokens": 851336,
+      "budget_stop_reason": "token_reservation",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "official_report": null,
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-11885@sha256:dcc7a94bc42733bb59e7ce45a83e7df1f203ae55ad570a1a1f098c438c5f5ca2"
+      ]
+    },
+    {
+      "instance_id": "django__django-11951",
+      "repo": "django/django",
+      "base_commit": "312049091288dbba2299de8d07ea3e3311ed7238",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 10,
+      "actual_tokens": 59963,
+      "charged_tokens": 59963,
+      "budget_stop_reason": null,
+      "patch_sha256": "3cc0b623a4393acf23f2426804f91ba7a471b940d928d93b072d6163d0cffd86",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11951/trial-0/official/acl-18e97f5f9ef5/deepseek-flash/django__django-11951/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-11951@sha256:8b2b92376eadf6ac500e6c79798d18e46c506a76508fbb4417fde91c29cf1239"
+      ]
+    },
+    {
+      "instance_id": "django__django-11964",
+      "repo": "django/django",
+      "base_commit": "fc2b1cc926e34041953738e58fa6ad3053059b22",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 8,
+      "actual_tokens": 27748,
+      "charged_tokens": 27748,
+      "budget_stop_reason": null,
+      "patch_sha256": "1b282f0c024afff7d99826fb1ce710903764a63539b840ccd821c42b0fa041a6",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11964/trial-0/official/acl-9dab68d698f1/deepseek-flash/django__django-11964/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-11964@sha256:098474801410af7303f0814d0d8557791ca2f55e455e5db766c3b3d0a9826df2"
+      ]
+    },
+    {
+      "instance_id": "django__django-11999",
+      "repo": "django/django",
+      "base_commit": "84633905273fc916e3d17883810d9969c03f73c2",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 13,
+      "actual_tokens": 54599,
+      "charged_tokens": 54599,
+      "budget_stop_reason": null,
+      "patch_sha256": "15b527f50ecdd781c354c23826b7950e127096ae85e5a3030f05f751273aa3e8",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11999/trial-0/official/acl-00ee264e0eab/deepseek-flash/django__django-11999/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-11999@sha256:3c7e7f035f611b17f2093ee6409364bc28cce8b9bac266b9590db762d197607e"
+      ]
+    },
+    {
+      "instance_id": "django__django-12039",
+      "repo": "django/django",
+      "base_commit": "58c1acb1d6054dfec29d0f30b1033bae6ef62aec",
+      "resolved": false,
+      "exit_status": "Submitted",
+      "calls": 9,
+      "actual_tokens": 39487,
+      "charged_tokens": 39487,
+      "budget_stop_reason": null,
+      "patch_sha256": "db87721a2649d62835d86195b3babb1816caa5d056ebe2127d913b987e6f2cb9",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12039/trial-0/official/acl-779d4a899fc2/deepseek-flash/django__django-12039/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12039@sha256:bd4dc8875144f8f3e0b8866575f9ab564b51774a71fa954cb8e4a9d34484a90c"
+      ]
+    },
+    {
+      "instance_id": "django__django-12050",
+      "repo": "django/django",
+      "base_commit": "b93a0e34d9b9b99d41103782b7e7aeabf47517e3",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 13,
+      "actual_tokens": 86903,
+      "charged_tokens": 86903,
+      "budget_stop_reason": null,
+      "patch_sha256": "08af6e22fa66b28c47c3cd61192637cdcf2fca544718dc4d48f8f01fb469e63f",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12050/trial-0/official/acl-347d797802f0/deepseek-flash/django__django-12050/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12050@sha256:34773901589784072af940b29697018dc17b32e37b4ff135a153c99ac2c38dec"
+      ]
+    },
+    {
+      "instance_id": "django__django-12143",
+      "repo": "django/django",
+      "base_commit": "5573a54d409bb98b5c5acdb308310bed02d392c2",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 9,
+      "actual_tokens": 30378,
+      "charged_tokens": 30378,
+      "budget_stop_reason": null,
+      "patch_sha256": "8511bf88eb17d36bce59a65bcba3081d48f4be056f0422f55506fabd7ece1899",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12143/trial-0/official/acl-17965dad1ead/deepseek-flash/django__django-12143/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12143@sha256:c1b074e08c0e181ade18e1469908457b35de6ca5a2029dba393e32ba100aef0f"
+      ]
+    },
+    {
+      "instance_id": "django__django-12155",
+      "repo": "django/django",
+      "base_commit": "e8fcdaad5c428878d0a5d6ba820d957013f75595",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 8,
+      "actual_tokens": 20905,
+      "charged_tokens": 20905,
+      "budget_stop_reason": null,
+      "patch_sha256": "11f03c5b4a6c948d47db139f12901365b976e113194c3cb8f638cb97e72bc208",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12155/trial-0/official/acl-aa34a5c43162/deepseek-flash/django__django-12155/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12155@sha256:e039b37f460b99a0cf541ea6759ac5a31e94ce9959d3755d99775792421e44dc"
+      ]
+    },
+    {
+      "instance_id": "django__django-12193",
+      "repo": "django/django",
+      "base_commit": "3fb7c12158a2402f0f80824f6778112071235803",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 19,
+      "actual_tokens": 117605,
+      "charged_tokens": 117605,
+      "budget_stop_reason": null,
+      "patch_sha256": "4cb9fd1a5c7ef55e0ace8ce597bf219fcba53da88e236f44913bc2a36c4d36a7",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12193/trial-0/official/acl-f614216d19a0/deepseek-flash/django__django-12193/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12193@sha256:f2f0882bb350e6c7b073569444629513f4c0bd6821f3610d243a26b2b4eae26e"
+      ]
+    },
+    {
+      "instance_id": "django__django-12209",
+      "repo": "django/django",
+      "base_commit": "5a68f024987e6d16c2626a31bf653a2edddea579",
+      "resolved": false,
+      "exit_status": "LimitsExceeded",
+      "calls": 50,
+      "actual_tokens": 801595,
+      "charged_tokens": 801595,
+      "budget_stop_reason": "call_limit",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "official_report": null,
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12209@sha256:6781fe1de96e581d385aa7797a580274023f7a625a891f1ecd751ff303e6a256"
+      ]
+    },
+    {
+      "instance_id": "django__django-12262",
+      "repo": "django/django",
+      "base_commit": "69331bb851c34f05bc77e9fc24020fe6908b9cd5",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 12,
+      "actual_tokens": 46246,
+      "charged_tokens": 46246,
+      "budget_stop_reason": null,
+      "patch_sha256": "5d88778dfe971e8c88543474dd42e6ee648088f0144f667161a1dcce6dfd49e6",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12262/trial-0/official/acl-0de1b5d7c17f/deepseek-flash/django__django-12262/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12262@sha256:23c0777e08a37bd0643f7638eaca9c57d1ee16fca79b6312b8d6de7fd1b5e7da"
+      ]
+    },
+    {
+      "instance_id": "django__django-12273",
+      "repo": "django/django",
+      "base_commit": "927c903f3cd25c817c21738328b53991c035b415",
+      "resolved": false,
+      "exit_status": "Submitted",
+      "calls": 24,
+      "actual_tokens": 205047,
+      "charged_tokens": 205047,
+      "budget_stop_reason": null,
+      "patch_sha256": "40a7e09ed1a477a4c6b97caf0ef8891077f7f458a072a94091c98233f7266d03",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12273/trial-0/official/acl-03c229216491/deepseek-flash/django__django-12273/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12273@sha256:ceea46664eff0d02e627ee17f0f9230e5c20a1debf3eb1ca2b53c7ca476210aa"
+      ]
+    },
+    {
+      "instance_id": "django__django-12276",
+      "repo": "django/django",
+      "base_commit": "53d8646f799de7f92ab9defe9dc56c6125448102",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 9,
+      "actual_tokens": 41358,
+      "charged_tokens": 41358,
+      "budget_stop_reason": null,
+      "patch_sha256": "923d3fa3e3e53af0ca997c847694d70a5a95120b8e72e09912b1ca443b1cb5fa",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12276/trial-0/official/acl-418f2cb2129e/deepseek-flash/django__django-12276/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12276@sha256:903942f778dbcf0b61c62031697c4a5f3655569c11c84204bdfa307b844ec2ae"
+      ]
+    },
+    {
+      "instance_id": "django__django-12304",
+      "repo": "django/django",
+      "base_commit": "4c1b401e8250f9f520b3c7dc369554477ce8b15a",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 9,
+      "actual_tokens": 33942,
+      "charged_tokens": 33942,
+      "budget_stop_reason": null,
+      "patch_sha256": "1a62f676ad38de19812ef43c0e50db2f714ed9b0e03900bb157a544b46e4b136",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12304/trial-0/official/acl-c3ed1c07872c/deepseek-flash/django__django-12304/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12304@sha256:46ad662e0ab1ab9417a26ceae392395f255634a054c25faf0fcfcd43aa52702c"
+      ]
+    },
+    {
+      "instance_id": "django__django-12308",
+      "repo": "django/django",
+      "base_commit": "2e0f04507b17362239ba49830d26fec504d46978",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 11,
+      "actual_tokens": 51590,
+      "charged_tokens": 51590,
+      "budget_stop_reason": null,
+      "patch_sha256": "05df4b60776969fc0e8a0a76b793404c03ad9cbdbb761f4b74389f7903c1f318",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12308/trial-0/official/acl-5c0b17caaa24/deepseek-flash/django__django-12308/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12308@sha256:6250d2a608d52b82cd4eb03eb33082bb9927397c01876025499430b782cce9a6"
+      ]
+    },
+    {
+      "instance_id": "django__django-12325",
+      "repo": "django/django",
+      "base_commit": "29c126bb349526b5f1cd78facbe9f25906f18563",
+      "resolved": false,
+      "exit_status": "Submitted",
+      "calls": 17,
+      "actual_tokens": 101023,
+      "charged_tokens": 101023,
+      "budget_stop_reason": null,
+      "patch_sha256": "0eb92a4b146125b2168483c44f8be3179ee3859dbf4bbf965448e7265640944a",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12325/trial-0/official/acl-74d0e9a7d9c7/deepseek-flash/django__django-12325/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12325@sha256:9c15847c3fd7d269adf15233bd7034bb9e0491e45fefe87454013d2bdf7a6efe"
+      ]
+    },
+    {
+      "instance_id": "django__django-12406",
+      "repo": "django/django",
+      "base_commit": "335c9c94acf263901fb023404408880245b0c4b4",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 30,
+      "actual_tokens": 472249,
+      "charged_tokens": 472249,
+      "budget_stop_reason": null,
+      "patch_sha256": "1b251d62e8015de4bcbfbc2a02071cb1fa1b3a6be158d28fe5283666ef88e3ba",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12406/trial-0/official/acl-71cd66273031/deepseek-flash/django__django-12406/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12406@sha256:7d3be89e5d04229df52612992c678659e25a38908edbb465f9b83549a54d9294"
+      ]
+    },
+    {
+      "instance_id": "django__django-12708",
+      "repo": "django/django",
+      "base_commit": "447980e72ac01da1594dd3373a03ba40b7ee6f80",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 20,
+      "actual_tokens": 228197,
+      "charged_tokens": 228197,
+      "budget_stop_reason": null,
+      "patch_sha256": "ef7dfaa993494e74c06adbff77d3576fd116c5ab793f7b65b0ba5186c57ec5a9",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12708/trial-0/official/acl-d5e0abad5ff6/deepseek-flash/django__django-12708/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12708@sha256:3722a130f618602e5636c8c7ddd821550e2c2462b569907c4140fc162e24671e"
+      ]
+    },
+    {
+      "instance_id": "django__django-12713",
+      "repo": "django/django",
+      "base_commit": "5b884d45ac5b76234eca614d90c83b347294c332",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 12,
+      "actual_tokens": 54871,
+      "charged_tokens": 54871,
+      "budget_stop_reason": null,
+      "patch_sha256": "a6e4ca7baf68cf3c220de6c4a2cac765e5355778fc32cec94dea33c3400d8af4",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12713/trial-0/official/acl-73a9d249a767/deepseek-flash/django__django-12713/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12713@sha256:cc6a38b67ce149e7db25db27dfd0075a3c28e4b85bc17c46f2606a3558a970eb"
+      ]
+    },
+    {
+      "instance_id": "django__django-12774",
+      "repo": "django/django",
+      "base_commit": "67f9d076cfc1858b94f9ed6d1a5ce2327dcc8d0d",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 8,
+      "actual_tokens": 23763,
+      "charged_tokens": 23763,
+      "budget_stop_reason": null,
+      "patch_sha256": "ee28fe2270a85dbd42bb02c306575b70af3b3bcbd91f1b829013ec80df468384",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12774/trial-0/official/acl-4fd8367e0796/deepseek-flash/django__django-12774/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-12774@sha256:c3d0148636ca1fc2170212ba6cc2c3c2df470ccca9e2e6b755447e3e51abd9f6"
+      ]
+    },
+    {
+      "instance_id": "django__django-9296",
+      "repo": "django/django",
+      "base_commit": "84322a29ce9b0940335f8ab3d60e55192bef1e50",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 7,
+      "actual_tokens": 21515,
+      "charged_tokens": 21515,
+      "budget_stop_reason": null,
+      "patch_sha256": "f49100feccede88ad670867bc1387ce68849fafee26183a4382b493d072a6129",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-9296/trial-0/official/acl-3fc2d6628b3b/deepseek-flash/django__django-9296/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.django_1776_django-9296@sha256:c63adb629b6dafbb12aa506778e27b02f06387c64df3f2cebaba47f9b5f26150"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10323",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "31eba1a76dd485dc633cae48227b46879eda5df4",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 21,
+      "actual_tokens": 219943,
+      "charged_tokens": 219943,
+      "budget_stop_reason": null,
+      "patch_sha256": "7866c384eccec8301fc909afdf9203f063c88bdb4f17ff8131e60a64ff0c402e",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-10323/trial-0/official/acl-dee2d2bafa24/deepseek-flash/sphinx-doc__sphinx-10323/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10323@sha256:b27e055730cb8a826e4e2cf0503d03c6770d537ab29cb6df8caa93ef5db51e8f"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10435",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "f1061c012e214f16fd8790dec3c283d787e3daa8",
+      "resolved": false,
+      "exit_status": "Submitted",
+      "calls": 19,
+      "actual_tokens": 118035,
+      "charged_tokens": 118035,
+      "budget_stop_reason": null,
+      "patch_sha256": "ad2079fdfbd25f1aaec79cbf6b0043671eacc577ff3f9f687812720b77d99ef0",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-10435/trial-0/official/acl-85a1f395a60a/deepseek-flash/sphinx-doc__sphinx-10435/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10435@sha256:30d33734839d5f49cb85de2ef78d99a2c8869693b72c9abeb4d999bf1ffc830f"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10466",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "cab2d93076d0cca7c53fac885f927dde3e2a5fec",
+      "resolved": false,
+      "exit_status": "Submitted",
+      "calls": 13,
+      "actual_tokens": 80692,
+      "charged_tokens": 80692,
+      "budget_stop_reason": null,
+      "patch_sha256": "8c3c27299888c5aff0791d492eed14233dcd8f3113fe915357b2a90c1d3e69cf",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-10466/trial-0/official/acl-c22b020e8f82/deepseek-flash/sphinx-doc__sphinx-10466/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10466@sha256:c02edca2a92a3353e0780dcd1b1a3ba2349245d7aa4e5fc6bc8f2a5327691452"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10673",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "f35d2a6cc726f97d0e859ca7a0e1729f7da8a6c8",
+      "resolved": false,
+      "exit_status": "BudgetExceeded",
+      "calls": 46,
+      "actual_tokens": 883672,
+      "charged_tokens": 883672,
+      "budget_stop_reason": "token_reservation",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "official_report": null,
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10673@sha256:4654890cc32945f5021445040ad6f2efd3b651f1c9efe679021d3b3da5375eb0"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-11510",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "6cb783c0024a873722952a67ebb9f41771c8eb6d",
+      "resolved": false,
+      "exit_status": "LimitsExceeded",
+      "calls": 50,
+      "actual_tokens": 875229,
+      "charged_tokens": 875229,
+      "budget_stop_reason": "call_limit",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "official_report": null,
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-11510@sha256:01bf15e77e5d0f6988c8107bf81a5091900228ca0d160bf677d9b07dd17e1a0f"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7590",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "2e506c5ab457cba743bb47eb5b8c8eb9dd51d23d",
+      "resolved": false,
+      "exit_status": "BudgetExceeded",
+      "calls": 40,
+      "actual_tokens": 864441,
+      "charged_tokens": 864441,
+      "budget_stop_reason": "token_reservation",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "official_report": null,
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-7590@sha256:5c86dab7120b83b3bdb4af86743a3910da328029ed92183477fe9865ea76cb2f"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7748",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "9988d5ce267bf0df4791770b469431b1fb00dcdd",
+      "resolved": false,
+      "exit_status": "BudgetExceeded",
+      "calls": 43,
+      "actual_tokens": 876722,
+      "charged_tokens": 876722,
+      "budget_stop_reason": "token_reservation",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "official_report": null,
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-7748@sha256:572d11650dea6831a1c81bb31ed468c49370f607b9af7dd762b16283c47bbd27"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7757",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "212fd67b9f0b4fae6a7c3501fdf1a9a5b2801329",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 10,
+      "actual_tokens": 53638,
+      "charged_tokens": 53638,
+      "budget_stop_reason": null,
+      "patch_sha256": "36b05be1f9dc2e255319cd022eb3e0e6a3855706844aa83bf417c4fff9f3dde8",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-7757/trial-0/official/acl-399315102890/deepseek-flash/sphinx-doc__sphinx-7757/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-7757@sha256:afdd76c95a6cc039f5f2aa49ba8f66da3eddc72a0c11bbc32666b99496f237c0"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7985",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "f30284ef926ebaf04b176f21b421e2dffc679792",
+      "resolved": false,
+      "exit_status": "BudgetExceeded",
+      "calls": 46,
+      "actual_tokens": 860055,
+      "charged_tokens": 860055,
+      "budget_stop_reason": "token_reservation",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "official_report": null,
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-7985@sha256:c82a2b449cb7709d069a6bf6a623ca8063ebdbbce3ded5ce6a066d24ac3816c1"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8035",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "5e6da19f0e44a0ae83944fb6ce18f18f781e1a6e",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 34,
+      "actual_tokens": 467627,
+      "charged_tokens": 467627,
+      "budget_stop_reason": null,
+      "patch_sha256": "0dd07f78b91a74d02659ad0ac2d4f5929815062338bfe04217f38fdbd66cea71",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-8035/trial-0/official/acl-989258b979af/deepseek-flash/sphinx-doc__sphinx-8035/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8035@sha256:8f0c620e13fade585f0be2ed8f9d394319c63f33729e2fe4780360dca7871c19"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8056",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "e188d56ed1248dead58f3f8018c0e9a3f99193f7",
+      "resolved": false,
+      "exit_status": "BudgetExceeded",
+      "calls": 45,
+      "actual_tokens": 862893,
+      "charged_tokens": 862893,
+      "budget_stop_reason": "token_reservation",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "official_report": null,
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8056@sha256:c5d72616211c546700776a1d7c2aceac6cb602518faa5f9d46b87a2701d71111"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8265",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "b428cd2404675475a5c3dc2a2b0790ba57676202",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 35,
+      "actual_tokens": 568826,
+      "charged_tokens": 568826,
+      "budget_stop_reason": null,
+      "patch_sha256": "111eb69dc8bb3462387bebc3215eb94a116be2b84de4f0ea02b3c0b802b55ad2",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-8265/trial-0/official/acl-586633fdc79e/deepseek-flash/sphinx-doc__sphinx-8265/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8265@sha256:31ac9a0a59b7e065eb7c662d9f5f8e4f33c7ba1bdf40913cfbdad93c576a9f4d"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8269",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "1e2ccd8f0eca0870cf6f8fce6934e2da8eba9b72",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 10,
+      "actual_tokens": 70599,
+      "charged_tokens": 70599,
+      "budget_stop_reason": null,
+      "patch_sha256": "9930867fb908ee61de61b9c00b4c164af96faef1d5d6a0b9fa8e956ea8a22c26",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-8269/trial-0/official/acl-30b938d291ce/deepseek-flash/sphinx-doc__sphinx-8269/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8269@sha256:463ca25b904e464131cad1b7cb3f9e5f1db830967fd1d9aa1526fd44c7bfc997"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8475",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "3ea1ec84cc610f7a9f4f6b354e264565254923ff",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 13,
+      "actual_tokens": 63926,
+      "charged_tokens": 63926,
+      "budget_stop_reason": null,
+      "patch_sha256": "8a9725217a4d60e5794753427717c89fa9dd4de3b5d3a743bb4e728ae7efa317",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-8475/trial-0/official/acl-0a6fc38f01a9/deepseek-flash/sphinx-doc__sphinx-8475/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8475@sha256:36012a43df40098aa0e7027c9ae1f14d4ffde426e09b695bfe0b395f853fa4fa"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8548",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "dd1615c59dc6fff633e27dbb3861f2d27e1fb976",
+      "resolved": false,
+      "exit_status": "LimitsExceeded",
+      "calls": 50,
+      "actual_tokens": 872786,
+      "charged_tokens": 872786,
+      "budget_stop_reason": "call_limit",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "official_report": null,
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8548@sha256:2a068d5390185b7b54da95f749fab5fc9e3bcfc4c182a4132d6cf57207d6385a"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8551",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "57ed10c68057c96491acbd3e62254ccfaf9e3861",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 41,
+      "actual_tokens": 600358,
+      "charged_tokens": 600358,
+      "budget_stop_reason": null,
+      "patch_sha256": "3acd157685e333847341d259e08bd10714c297ff3efa886b5e83a1c1a0f709b3",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-8551/trial-0/official/acl-60fae4aff1ac/deepseek-flash/sphinx-doc__sphinx-8551/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8551@sha256:7ef3c26b1f402bcae518faddbdea62e12496a29b8d49b582a752874df1a5cd57"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8638",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "4b452338f914d4f6b54704222d70ae8a746e3db5",
+      "resolved": false,
+      "exit_status": "BudgetExceeded",
+      "calls": 41,
+      "actual_tokens": 848202,
+      "charged_tokens": 848202,
+      "budget_stop_reason": "token_reservation",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "official_report": null,
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8638@sha256:704547bd5fff87b0485309ce562e5df09edb84525569d72e5786c14c6c8a772c"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-8721",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "82ef497a8c88f0f6e50d84520e7276bfbf65025d",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 25,
+      "actual_tokens": 270188,
+      "charged_tokens": 270188,
+      "budget_stop_reason": null,
+      "patch_sha256": "a4e6aed3bb7ad7e1e63ccf858aa032352dfb359e56ee207082ae1da58f43bffa",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-8721/trial-0/official/acl-acb08af49cc4/deepseek-flash/sphinx-doc__sphinx-8721/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-8721@sha256:8f02afdb324767a2e56b7940569ea822cfa58c3c1f0ef9a910162d21cf52c3f5"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9229",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "876fa81e0a038cda466925b85ccf6c5452e0f685",
+      "resolved": false,
+      "exit_status": "LimitsExceeded",
+      "calls": 50,
+      "actual_tokens": 855727,
+      "charged_tokens": 855727,
+      "budget_stop_reason": "call_limit",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "official_report": null,
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-9229@sha256:63840fa7b92aa018cc9d45344872ebb241951a44c05c41fa8e6a038c28ffb6b8"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9230",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "567ff22716ac258b9edd2c1711d766b440ac0b11",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 20,
+      "actual_tokens": 114865,
+      "charged_tokens": 114865,
+      "budget_stop_reason": null,
+      "patch_sha256": "24d6ec070eb6620b4c79efb8cf1fcda3c8d64da0aa430779d796b90d1ee37ef4",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-9230/trial-0/official/acl-76d4ea9f5445/deepseek-flash/sphinx-doc__sphinx-9230/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-9230@sha256:2a18fa57b69c646bf0e1916f1df157a62de80ca8b55325738f9c9eeff9c38c86"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9281",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "8ec06e9a1bd862cd713b9db748e039ccc7b3e15b",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 17,
+      "actual_tokens": 114428,
+      "charged_tokens": 114428,
+      "budget_stop_reason": null,
+      "patch_sha256": "16f3039f426908b34c4338631df54e494782f0b6b7b79e4556feae2d5af49cc5",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-9281/trial-0/official/acl-f190c9afc614/deepseek-flash/sphinx-doc__sphinx-9281/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-9281@sha256:08c9e293bbc73d548670319b2d37ef8eef6bf528b995959f361159c505355f2d"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9320",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "e05cef574b8f23ab1b57f57e7da6dee509a4e230",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 14,
+      "actual_tokens": 73377,
+      "charged_tokens": 73377,
+      "budget_stop_reason": null,
+      "patch_sha256": "81e86ae8c478a8d6bfe3b0cedbdf37487446b3a49ff78aece3345377ce21bb6d",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-9320/trial-0/official/acl-1833dc878cb9/deepseek-flash/sphinx-doc__sphinx-9320/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-9320@sha256:0dd7b74de29c5734fbcd2fb9ab5295f610b5b281bd2fdd87e9c3c1d3f272f28a"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9367",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "6918e69600810a4664e53653d6ff0290c3c4a788",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 10,
+      "actual_tokens": 47086,
+      "charged_tokens": 47086,
+      "budget_stop_reason": null,
+      "patch_sha256": "a433729bfd53e548773710b908529ea4f340b0bda586ebedff772c6306f0b547",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-9367/trial-0/official/acl-ef8b8d9c1603/deepseek-flash/sphinx-doc__sphinx-9367/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-9367@sha256:ce3659548ac712a11d3c45a9c47fe8010de0e3a83efee229dcdd9646069dfec1"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9461",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "939c7bb7ff7c53a4d27df067cea637540f0e1dad",
+      "resolved": false,
+      "exit_status": "BudgetExceeded",
+      "calls": 44,
+      "actual_tokens": 855579,
+      "charged_tokens": 855579,
+      "budget_stop_reason": "token_reservation",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "official_report": null,
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-9461@sha256:5927ba1f035f87117341343035f83150ab5a57fbdbaf49db13a36b809baaa8c7"
+      ]
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-9698",
+      "repo": "sphinx-doc/sphinx",
+      "base_commit": "f050a7775dfc9000f55d023d36d925a8d02ccfa8",
+      "resolved": true,
+      "exit_status": "Submitted",
+      "calls": 12,
+      "actual_tokens": 49697,
+      "charged_tokens": 49697,
+      "budget_stop_reason": null,
+      "patch_sha256": "7f3312b604a63ff2b71609559c5d01c02a8223778e1dad1dba53be722d38282a",
+      "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-9698/trial-0/official/acl-eec0f6010b90/deepseek-flash/sphinx-doc__sphinx-9698/report.json",
+      "image_digests": [
+        "swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-9698@sha256:38120cc331db6bb9d962101a6795a515d56c8a4ace9983f17afede39fd926d5b"
+      ]
+    }
+  ],
+  "limitations": [
+    "One execution per task, no repeated-run uncertainty estimate.",
+    "All Mini tasks are development/calibration assets; this is not unseen evaluation.",
+    "No RSI search or learned improvement is measured in this baseline.",
+    "Budget preflight remains conservative and may stop before actual token/call ceilings."
+  ],
+  "cleanup": {
+    "preexisting_image_ids": 82,
+    "preexisting_image_ids_still_present": 82,
+    "owned_image_tags_remaining": 0,
+    "running_task_containers": 0
+  },
+  "completed_resume_additional_api_calls": 0,
+  "workspace_size_approx_MiB": 27,
+  "recovery": "43 complete cases preserved; case 44 graded from its saved model result; last 6 executed without repeating earlier API calls"
+}

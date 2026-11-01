@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "reason": "Register new research sources without changing the historical migration snapshot.",
+  "sources": [
+    {"name": "HarnessFix", "category": "framework", "legacy": "repos/harnessfix", "canonical": "frameworks/harnessfix"},
+    {"name": "RSIHub", "category": "framework", "legacy": "repos/rsihub", "canonical": "frameworks/rsihub"}
+  ]
+}

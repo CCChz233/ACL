@@ -11,6 +11,7 @@ import urllib.parse
 import urllib.request
 
 from verify_benchmarks import ROOT, digest, load_lock, safe_path, verify_download, verify_tree
+from project_paths import source_location
 
 CACHE = ROOT / '.cache/benchmark_sources'
 
@@ -47,7 +48,8 @@ def download(url, destination):
 
 
 def prepare(item):
-    directory = safe_path(ROOT, item['local_dir'])
+    directory = (source_location(item['local_dir']) if item['local_dir'].startswith('repos/')
+                 else safe_path(ROOT, item['local_dir']))
     if item['kind'] == 'github_archive':
         tree_file = CACHE / (item['id'] + '-tree.json')
         if tree_file.exists():

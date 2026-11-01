@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-17",
+  "purpose": "engineering_full_cycle_50_score_first",
+  "status": "completed",
+  "scope": "one development task, one fresh baseline, one new candidate, one RSI round",
+  "config": "configs/full-cycle-50.json",
+  "workspace": "work/rrsi-full-cycle-50",
+  "task": "django__django-11790",
+  "model": "deepseek-flash",
+  "api_base": "https://api.deepseek.com",
+  "thinking": false,
+  "target_limits": {
+    "max_calls": 50,
+    "max_tokens": 1000000,
+    "max_output_tokens": 4096,
+    "wall_seconds": 1200,
+    "command_seconds": 60
+  },
+  "search_limits": {
+    "max_calls": 160,
+    "max_tokens": 2000000,
+    "max_output_tokens": 4096
+  },
+  "selection_config": {
+    "delta": 0,
+    "w_c": 0,
+    "w_n": 0
+  },
+  "evaluations": {
+    "baseline": {
+      "job": "base",
+      "exit_status": "Submitted",
+      "calls": 13,
+      "actual_tokens": 67696,
+      "resolved": true,
+      "official_report": "work/rrsi-full-cycle-50/runs/swe/jobs/base/django__django-11790/trial-0/official/acl-bc006f613b6b/deepseek-flash/django__django-11790/report.json"
+    },
+    "new_candidate": {
+      "job": "r0A",
+      "exit_status": "Submitted",
+      "calls": 22,
+      "actual_tokens": 210055,
+      "resolved": true,
+      "official_report": "work/rrsi-full-cycle-50/runs/swe/jobs/r0A/django__django-11790/trial-0/official/acl-33fe40b56e69/deepseek-flash/django__django-11790/report.json"
+    }
+  },
+  "search_usage": {
+    "calls": 17,
+    "completed": 17,
+    "charged_tokens": 110854,
+    "actual_tokens": 110854
+  },
+  "search_roles": {
+    "analyst": 2,
+    "digester": 8,
+    "propose": 6,
+    "critic": 1
+  },
+  "final_commit": "43c7e75",
+  "final_job": "base",
+  "new_candidate_commit": "5ebe4d2",
+  "decision": {
+    "variant": "A",
+    "admissible": false,
+    "reason": "cost rule failed: gain +0.0000 within delta 0.0000; shaped 100.0*dS - 0.0*dC + 0.0*nu = +0.0000 <= 0 (nu=0)",
+    "S": 1.0,
+    "C": 210055.0,
+    "delta_S": 0.0,
+    "delta_C": 2.1029159773103285,
+    "novelty": 0,
+    "guards": []
+  },
+  "improvement_demonstrated": false,
+  "tests_passed": 15,
+  "total_api_calls": 52,
+  "total_actual_tokens": 388605,
+  "limitations": [
+    "Single-task, single-run engineering check; baseline score is already 1/1.",
+    "No heldout evaluation or repeated search estimate.",
+    "Cost and novelty weights disabled; declared RRSI adaptation rather than exact original objective.",
+    "Candidate prompt guidance is derived from the allowed development trajectory, not independent test evidence."
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "purpose": "terminal-bench-2.1-mini-deepseek-baseline-pilot",
+  "benchmark_commit": "7131e4375048a0e408a8fb404b5f499d726b695b",
+  "workspace": "work/terminal-pilot-v1",
+  "api_base": "https://api.deepseek.com",
+  "model": "deepseek-flash",
+  "thinking": false,
+  "selection": "2/category sorted by SHA256(acl-terminal-pilot-v1:ID), metadata eligibility only",
+  "tasks": [
+    {
+      "id": "make-mips-interpreter",
+      "category": "software-engineering",
+      "difficulty": "hard",
+      "image": "alexgshaw/make-mips-interpreter:20251031",
+      "wall_seconds": 1200,
+      "official_agent_seconds": 1800.0,
+      "files": {
+        ".gitignore": "9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+        "README.md": "c7d7bcdd6a6af42d92a36a4d8b04833cbb3038f99548583c7bacc1a9aeb41b3d",
+        "environment/Dockerfile": "7fe6814c68c28d907e72ac05176ba8f9f493d7eb6693bef96c97126462b8fedf",
+        "environment/task-deps/mips.patch": "63d84570d9c94fb2b82bf745c827656211a7cfb2d8b31c9191cad7c61e19b559",
+        "instruction.md": "d25c0ed6d4697c2b2e6fe047b6cd7317f640dc84d7457ccc9d3d1b4cf8021ffd",
+        "solution/solve.sh": "94063278c36e848006bcc3381d347af4dea066d3eff4da3ba29538922f6c22a1",
+        "task.toml": "3fda43066642fd38516d07b2679f9813bdb3f1a42bc80b0c06151f60b9210e82",
+        "tests/reference.jpg": "d1909be8f3266a72686c3945029a553b82e5b46acd624eda65f3fdd5eb339574",
+        "tests/test.sh": "25809a2ebcb714b1c4e55563b0db16add23e2fd9b68d03e51b1734f8dbb392e1",
+        "tests/test_outputs.py": "f1748ff20bfd670af1e1cb935647503eb176a4a14dd15f20935264ad7e4a98f6"
+      }
+    },
+    {
+      "id": "headless-terminal",
+      "category": "software-engineering",
+      "difficulty": "medium",
+      "image": "alexgshaw/headless-terminal:20251031",
+      "wall_seconds": 900,
+      "official_agent_seconds": 900.0,
+      "files": {
+        ".gitignore": "9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+        "README.md": "16098e30130fb0c02a3db124460386aca105ea5f409b297dabf537265d350769",
+        "environment/Dockerfile": "c17679907b17671ab6e363aebaa26464dac2d3d0cfd5680cb0bbe6160af17481",
+        "environment/base_terminal.py": "697fd6435a5df3ee8c6f6f2546340c0609a424e53cb8fe80fdb131fe1e9f050f",
+        "instruction.md": "004ac3efa98dd4c564f3888fe199962772d23de405c96ec9232c1eab1a2089e8",
+        "solution/headless_terminal.py": "4e9006fca4a70acefd214644aa66607bdc632e7f9cbc63e9d878fa36c6c097a2",
+        "solution/solve.sh": "fbfc2d1f9fb861422055d4b968a5089874ade0f65da04e44eb4d13bc71a93fd7",
+        "task.toml": "abe0de1ac3adff1fbf0e22e1765efbc061a412891fd255926ed92a5ccacf69e6",
+        "tests/test.sh": "bfaa32131cbbef985f9b0bbc3cb231ac51eb90579e6e3db55a2f09b5fa0f46b7",
+        "tests/test_outputs.py": "c6998195e29efb64f41f903b6a727059c4f0ee267f730cd7ffca5c1f7d99ab78"
+      }
+    },
+    {
+      "id": "merge-diff-arc-agi-task",
+      "category": "debugging",
+      "difficulty": "medium",
+      "image": "alexgshaw/merge-diff-arc-agi-task:20251031",
+      "wall_seconds": 900,
+      "official_agent_seconds": 900.0,
+      "files": {
+        ".gitignore": "9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+        "README.md": "d6b48ed0890b12eb68f72c12cd02689bd6bfae2191dd2688949cde6fe77f6a94",
+        "environment/Dockerfile": "4a03ae6f0c60b9c2f45c33f0413b5aa75c9811870254e3ff1968fd0119173fc6",
+        "environment/task-deps/bundle1.bundle": "a759f9b6ffc1a2eee50778d72a1899ad7d724becab84fa30e7aac71ee9e443a5",
+        "environment/task-deps/bundle2.bundle": "75e3e3916a01c980a03715de67b16c729e03661d94a694b5f4223d229bd6593a",
+        "environment/task-deps/examples.json": "5426569e4ea078bbb74039ec712a2d4d35f1f9fa3a5f26bf2a0de4a2c8ef5db8",
+        "instruction.md": "2d826479873e5ac1c94c1f802763bf85c22bb04624384685ebdf6b153fe0278e",
+        "solution/solve.sh": "48d4becc41fda5b6063fe96947474ffe778a29d6924d7b2bb235eb61e5ce555d",
+        "task.toml": "6ced40e06b43b169857509765eb7f07791db558f9437cc7367d2536771c2ca5b",
+        "tests/test.json": "20f116a6b718bbf4874bbe203d15a5c0f85a1d88cb622e2d7529c7e4fb2d4c28",
+        "tests/test.sh": "c9052954cd6ce25c4a375a2fb48e765b1efa5b39f7991b93993cc793af8ab9d2",
+        "tests/test_outputs.py": "2754ba6c5c5f75c9db5ed2c5729d9f5d7e21cb7fdb18aa0c65abdc3e7e85c149"
+      }
+    },
+    {
+      "id": "build-cython-ext",
+      "category": "debugging",
+      "difficulty": "medium",
+      "image": "alexgshaw/build-cython-ext:20251031",
+      "wall_seconds": 900,
+      "official_agent_seconds": 900.0,
+      "files": {
+        ".gitignore": "9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+        "README.md": "d5f5113941c3963292bae396baa9369571026f46e59437f98ddcc93475dd7729",
+        "environment/Dockerfile": "cb6cf421cb9b69d43bd25cd491e49bda982fbb865d47515178d017eda727194e",
+        "instruction.md": "7e52874e45f88505bd21540229719de6639a401477557d814489981d472f0e34",
+        "solution/solve.sh": "41bbdde88617070366a70e518eedca466a4ea1acd7e96899b2fb7da988e40abc",
+        "task.toml": "c472f0e7522c128fb7f03e00b50c8cdf2e5e6474daa1e094e7441f4b54e770b2",
+        "tests/test.sh": "0156c9c4085258b696ce424cf1ce96cba44d1263c5d73bdf54083fd80237f915",
+        "tests/test_outputs.py": "6549f1a8e04b6163ec08877e6f6b9868bf94563f3a3c72ac1fba9c512c31689e"
+      }
+    },
+    {
+      "id": "nginx-request-logging",
+      "category": "system-administration",
+      "difficulty": "medium",
+      "image": "alexgshaw/nginx-request-logging:20251031",
+      "wall_seconds": 900,
+      "official_agent_seconds": 900.0,
+      "files": {
+        ".gitignore": "9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+        "README.md": "d79997586d1c14ed8dbfea050e3580b25500e04c8345acfd3f294152433c795a",
+        "environment/Dockerfile": "43003466d89ab83484a3fa618e35b58cdb74a002b1e8716ef30f12b3ac8302d8",
+        "instruction.md": "26a7ac98aced6107f147206790ada77bbf8ed3c25fb360cf323d5fc6889edf99",
+        "solution/solve.sh": "2454bbbf7c201a9a778165f286373ba2cb991a0eb1d026a8005d57ae71250dd9",
+        "task.toml": "b7a78d00be13656f75069197100b7b8c4fd268decf6f78929c853b3222a2729d",
+        "tests/test.sh": "27761195f53cbfe5941fe39b573631f6c926869e64b7c43220377e1e116528e7",
+        "tests/test_outputs.py": "045cc716c14efde3b0dcff5fc7c85ec5d18bfc6ce66f8b40a418fa2a3a4acda0"
+      }
+    },
+    {
+      "id": "configure-git-webserver",
+      "category": "system-administration",
+      "difficulty": "hard",
+      "image": "alexgshaw/configure-git-webserver:20251031",
+      "wall_seconds": 900,
+      "official_agent_seconds": 900.0,
+      "files": {
+        ".gitignore": "9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+        "README.md": "d1db8dfb8883e39adf902eced862bfd7bf8240f2fc7eb6364a74d77b09b899b5",
+        "environment/Dockerfile": "8c87039a43581841b7ef11d80c4ff1a5c5f43011877e167403063d55435aaa19",
+        "instruction.md": "62151b7371bc364277a3c118bba755334c640fb0cefc7a5af106e6e763cf1d97",
+        "solution/solve.sh": "921ff9c1dabdbd130e1a6616c24b236b7ba9a1517b3dff4c33fe8c8a129e2e7a",
+        "task.toml": "ebb40d72f689512cbd90d865d88ef966b6665ab215544f9247b898b7fa94751b",
+        "tests/test.sh": "afafc3ffdaf911f7a93003c0746f217188099c174e5d3eb7dada17133df15895",
+        "tests/test_outputs.py": "526aee3dfe952cc4c7574361012712e389d6fba7222c005fc3e939fc53346b37",
+        "tests/verify.sh": "49a02f5267a892824e023ce05eb1ac6132a44854cc47f20feba312c4a3d05568"
+      }
+    },
+    {
+      "id": "gcode-to-text",
+      "category": "file-operations",
+      "difficulty": "medium",
+      "image": "alexgshaw/gcode-to-text:20251031",
+      "wall_seconds": 900,
+      "official_agent_seconds": 900.0,
+      "files": {
+        ".gitignore": "9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+        "README.md": "06f4c8b746d5509618247dbff0ff7474ef95813a8c6f161b0a0955c020a9fe53",
+        "environment/Dockerfile": "5383f514233180e5a264c1b3180d33b00f14f622217c5062a96d4aa970d4102e",
+        "environment/text.gcode.gz": "edc008516eb0c30cd2540649642c52f78894b99dc4f79547064e9ffbfbc0e55f",
+        "instruction.md": "ee524a8f846b35f1784a7c9fb01c17f077f6b3b61c8b61d0d2f2a87c0be3166b",
+        "solution/solve.sh": "22dbd3a33750fae3c9e15c669e0f0dcbc2262434fb534bf0c2019269c044792b",
+        "task.toml": "3aa7a504fe5b3c6eaab16881b0e6dbbe8ac6d4f59084fa49b1e98ad9c71ea00c",
+        "tests/test.sh": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+        "tests/test_outputs.py": "6b049dc626aa103b20d165552e5cb39ba02c6803b04ba06a43d79435b5f701a6"
+      }
+    },
+    {
+      "id": "db-wal-recovery",
+      "category": "file-operations",
+      "difficulty": "medium",
+      "image": "alexgshaw/db-wal-recovery:20251031",
+      "wall_seconds": 900,
+      "official_agent_seconds": 900.0,
+      "files": {
+        ".gitignore": "9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+        "README.md": "600762031a1a02ecc3b46d70f7683f3ff930b47c8a3d0e27cc31b146158c3126",
+        "environment/Dockerfile": "63a260531c62f4ae72060db17f295c0aa03cfc6321f8162c324b7aa6b3f81302",
+        "environment/main.db": "68cb288eb29e76d814b4e7ee6887b37c415675e644f88173bc191348e290d119",
+        "environment/main.db-wal.encrypted": "68753bdce26196a53194260d001544cc6bb8f9f38e2f2f6826d09798e31e6e26",
+        "instruction.md": "5a20375162921b8911c67035d1905df7fd335d1bed03044271e608b2c3c93b26",
+        "solution/solve.sh": "ed8530c94103bf19783a1d41bc63fe4db478cdd9629f22fee25c45a45699f5e8",
+        "task.toml": "1cdc2c615e259bc10265efbe71b518332070c1c002e226566399e9788f18d0aa",
+        "tests/test.sh": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+        "tests/test_outputs.py": "88dc5c2a3abba75bca0e0f9136223ae5bb585d5984b8d9eba51a7829c1d2ba49"
+      }
+    },
+    {
+      "id": "financial-document-processor",
+      "category": "data-processing",
+      "difficulty": "medium",
+      "image": "alexgshaw/financial-document-processor:20251031",
+      "wall_seconds": 1200,
+      "official_agent_seconds": 1200.0,
+      "files": {
+        ".gitignore": "9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+        "README.md": "32438e7780d235dd609f4740e36512c4cd2f34ef26842ea52c5bbde46fcf5e86",
+        "environment/Dockerfile": "2ea485aead008998d7a551e8c80b6bd354a74cbffc310a1f4b88d0b7c53d23ff",
+        "environment/documents/1t2tala7.jpg": "d5fc89cdc92240baa7fc6506237e3841af88880a6f57fa6e3f60b925e605fd22",
+        "environment/documents/41ibljh7.pdf": "bc95a144939b7f21abd832019625a3f2c182a7abe8d57f9bd25e7c6f5d6b3ba5",
+        "environment/documents/53lc58dr.jpg": "2c8607b9c75907077e23f45ce7bc75335a4a46e9f9aab5ee0d901b86b63e7a8e",
+        "environment/documents/5lxo6qji.pdf": "0b3873d45510867d3063637d01f8e9255c4be96586b1f6b06682a208877d441c",
+        "environment/documents/8mdd4v30.jpg": "56238d4d934c433c24e53d0674f0530e11024f284e8ffcb3bb0bcc0d58850740",
+        "environment/documents/9t84azyt.pdf": "d46a7397df8e7903ddef31b76c1633c4989f09b8c301e0cf87dab00cd08a4663",
+        "environment/documents/c11ertj5.pdf": "570adcb1be1800cca727420b543e9c68bb7607ebaddf80524c7380560e549434",
+        "environment/documents/dbdw2pcn.pdf": "ad8f14ad77a98d0926a68d17e5ce822c2f9d3a355ccf4a6b1ded5327c31cbb87",
+        "environment/documents/g0fn9xuy.jpg": "807a6b0b942eb2ce406db3c57a833bba539e165017c81e2b1a0a98104d213677",
+        "environment/documents/hv3a3zmf.jpg": "c212aa5440b23e4b5e97af3c271685769b1050edd73a1ee461acce2c5998eb3c",
+        "environment/documents/jxepq85j.jpg": "a51b4a78c278c1b755e674511729d8514681b94094a4130c457ed71c533a0083",
+        "environment/documents/pbhsahxt.jpg": "badb1930a086c35b1484463098cbfb7823beb21abae71a9fe95bf90807fa9e41",
+        "environment/documents/sg65kxvf.jpg": "53d8335a156bd0b18bd1808693cc805c39e013d9768fd7eb7497f22e18b1c5cb",
+        "environment/documents/ujv6oh9s.jpg": "ad3359faf1126b33fc587098ed3f5b722734eeb4364794eea66e10112014f25a",
+        "environment/documents/wnnhj7xv.pdf": "5ee01b997176b9124302899471651ce4d4b160f292caf79f2250e2e8324e3480",
+        "environment/documents/xaji0y6d.jpg": "e0b8a2c7078efe82d7657f5023f01ff5498d59cca54a74ef2b6983bc979a1c54",
+        "environment/documents/zbikcidk.jpg": "862f7d313f1233f3e44a89610a4015d861dc771ad2ba8028ad56e2d4fd37ac71",
+        "environment/randomize_filenames.py": "09828ee53e8f2165a9888c5de84e40fcb057bb889d93bfc90d9aeca8c4e23be4",
+        "instruction.md": "b21cf2af1891922732327bf586d14b250d36d96de7867479c15bd1c58ef0db58",
+        "solution/solve.sh": "8d7ca9ab25d9334c045b72e1045131a4b0ea5f5e4e99bff52be9d5da910f7dcb",
+        "task.toml": "163ee252895c05d36ca37137dba4d6c24b46be28d56ce84ef8bb35bb5b894bda",
+        "tests/test.sh": "48abbda713ace5cee00dd28c7398959f28280062350eb88206a6697a28c72790",
+        "tests/test_outputs.py": "978f506ad5c1bfaf28f9bc774dfe4347d33d046ca009b8496eb513956b7f5a9a"
+      }
+    },
+    {
+      "id": "regex-log",
+      "category": "data-processing",
+      "difficulty": "medium",
+      "image": "alexgshaw/regex-log:20251031",
+      "wall_seconds": 900,
+      "official_agent_seconds": 900.0,
+      "files": {
+        ".gitignore": "9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+        "README.md": "29ffd98c55dbb6f4844f1b9d8c1769b2155c117ee475e0df6bbc5ef330d239b3",
+        "environment/Dockerfile": "5f264ff0bf62a49aee3c6398447de5108df141e7a2ad35c6de8ef39fa62049c6",
+        "instruction.md": "4f7ac05e70cf9220ea0f1e5a052c5f908cd0fa884e847d80b0bd51bae2e96f9c",
+        "solution/solve.sh": "7e670d4f2b4bccb1e4db38f2a173e085ceda028c38167912b466b0a84fcc0999",
+        "task.toml": "6bc98525852755caf1fe34c174c2f10f4328adb4ce6c1968dcafe1c877e4e160",
+        "tests/test.sh": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+        "tests/test_outputs.py": "345c3bd09ab6f6fe8c8361a58c0a47bf0a13b3fcb38a5ac7824e44ff855e8f72"
+      }
+    },
+    {
+      "id": "adaptive-rejection-sampler",
+      "category": "scientific-computing",
+      "difficulty": "medium",
+      "image": "alexgshaw/adaptive-rejection-sampler:20251031",
+      "wall_seconds": 900,
+      "official_agent_seconds": 900.0,
+      "files": {
+        ".gitignore": "9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+        "README.md": "95408217b9c484ffc18a02a91b7706323b6902919c72b24866a32e27a23543e2",
+        "environment/Dockerfile": "e644a3343e339303230f1441b7383f076d21c69a5a7aa6430b4f8a9d27f15c8b",
+        "environment/protected.tar.gz.enc": "7fc9bf1347bb97da8dede04b2c58638f225070913e222d76627068aebd1b1df2",
+        "instruction.md": "e6d28c28acd76bef61817427c74c2a29e3e8d75f535cbd708afcbfd02c54013f",
+        "solution/solve.sh": "fe443a8082b5183ba1623311ba0ee958888aefa633eff93766b9ae14e9bdd84d",
+        "task.toml": "6ed7b37f74beb46e9d47b0f5fad53025667c9548baff4e96d467b56d429fab1a",
+        "tests/test.sh": "38b43560d173cc2b952c3a3e17b8a480216d84e33450515e047bcb0d806b1e0a",
+        "tests/test_outputs.py": "547dc6e107f034f41703722aeceb6d0236e3fb69116fc3f2fbaba11884de352f"
+      }
+    },
+    {
+      "id": "raman-fitting",
+      "category": "scientific-computing",
+      "difficulty": "medium",
+      "image": "alexgshaw/raman-fitting:20251031",
+      "wall_seconds": 900,
+      "official_agent_seconds": 900.0,
+      "files": {
+        ".gitignore": "9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+        "README.md": "483e913750bb6bc035b00277a689eca4354324b3cbe035eca31da291f420cfc6",
+        "environment/Dockerfile": "8fd5c0f21a6914cd440d10c84c9db06fec606f20dc3e0363b17a3b8c220dc4d9",
+        "environment/task-deps/graphene.dat": "cac96a29e73251e625cb2d17b5079250071b148e6792e0aa349632953dbfa094",
+        "instruction.md": "1fa59a89d88daf6a4b2d422955f53779b461880b527f40d79c71b16e0ee52433",
+        "solution/solve.sh": "cc803d3c254063f82ab1da5b59f276951d50d1f307657606027a45dc035a53ee",
+        "task.toml": "0f3f6b580d7435954b3a114e77cdfb6cd0a856f15cc0ad83cd1b69c48492dfed",
+        "tests/test.sh": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+        "tests/test_outputs.py": "171fae772ccf262aec8ddac5bd2c6c731eed842421f5d8439a330b158c9f8c13"
+      }
+    }
+  ],
+  "target": {
+    "max_calls": 50,
+    "max_tokens": 1000000,
+    "max_output_tokens": 4096,
+    "command_seconds": 60
+  },
+  "agent": {
+    "system_template": "You are a helpful assistant that can interact with a computer shell to solve programming tasks.\n",
+    "instance_template": "<task>\n{{task}}\n</task>\n\nSolve this task in the provided Linux environment using the bash tool.\nFor each response, explain your reasoning briefly and make at least one bash tool call.\nEach command runs in a fresh subshell. Use explicit paths or cd as needed.\nYou may inspect and modify files, install tools, and run services as required by the task.\nVerify your work before finishing. When complete, issue this command:\necho COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT\nThe final environment state is your submission. You cannot continue after finishing.\n"
+  },
+  "templates": {
+    "observation_template": "{% if output.exception_info -%}\n<exception>{{output.exception_info}}</exception>\n{% endif -%}\n<returncode>{{output.returncode}}</returncode>\n{% if output.output | length < 10000 -%}\n<output>\n{{ output.output -}}\n</output>\n{%- else -%}\n<warning>\nThe output of your last command was too long.\nPlease try a different command that produces less output.\nIf you're looking at a file you can try use head, tail or sed to view a smaller number of lines selectively.\nIf you're using grep or find and it produced too much output, you can use a more selective search pattern.\nIf you really need to see something from the full command's output, you can redirect output to a file and then search in that file.\n</warning>\n{%- set elided_chars = output.output | length - 10000 -%}\n<output_head>\n{{ output.output[:5000] }}\n</output_head>\n<elided_chars>\n{{ elided_chars }} characters elided\n</elided_chars>\n<output_tail>\n{{ output.output[-5000:] }}\n</output_tail>\n{%- endif -%}\n",
+    "format_error_template": "{% if finish_reason is defined and (finish_reason == \"length\" or (finish_reason == \"tool_calls\" and not has_tool_calls)) -%}\nYour previous response reached the output token limit (finish_reason={{ finish_reason }}) before you produced a tool call, so it was cut off. Respond more concisely and finish with exactly one bash tool call. If you need to think more, do so briefly.\n{%- else -%}\nTool call error:\n\n<error>\n{{error}}\n</error>\n\nHere is general guidance on how to submit correct toolcalls:\n\nEvery response needs to use the 'bash' tool at least once to execute commands.\n\nCall the bash tool with your command as the argument:\n- Tool: bash\n- Arguments: {\"command\": \"your_command_here\"}\n\nIf you have completed your assignment, please consult the first message about how to\nsubmit your solution (you will not be able to continue working on this task after that).\n{%- endif %}\n"
+  },
+  "min_free_bytes": 4294967296,
+  "retries": 0,
+  "rrsi_rounds": 0,
+  "platform": "linux/amd64",
+  "seed": null,
+  "sampling": "provider defaults; thinking disabled; max_tokens=4096"
+}

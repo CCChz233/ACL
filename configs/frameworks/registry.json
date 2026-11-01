@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "provider": {
+    "model": "deepseek-flash",
+    "api_base": "https://api.deepseek.com",
+    "thinking": false,
+    "context_strategy": "full",
+    "limits": {
+      "max_calls": 0,
+      "max_tokens": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "scope": "framework integration only; real experiments disabled pending a versioned budget/split",
+  "agent": {
+    "source": "agents/mini-swe-agent",
+    "version": "2.4.6",
+    "harnessfix_vendored_version": "2.2.7",
+    "replace_installed_agent": false
+  },
+  "context_boundary": {
+    "private_grader_artifacts": false,
+    "history": "allowlisted public development snapshot",
+    "strategies_implemented": [
+      "full_filesystem_access"
+    ],
+    "eaec_implemented": false
+  },
+  "frameworks": {
+    "harnessfix": {
+      "source": "frameworks/harnessfix",
+      "url": "https://github.com/HarnessFix/HarnessFix.git",
+      "revision": "9167a0b9a58748c73b56c3ee04fdc3437ba0c56e",
+      "files": {
+        "README.md": "cf13b74548e367e70d7bbd89db69430473fe7b8cd46912d4545210d27c687012",
+        "requirements.txt": "9dd68f7b89c3cc6bb336d8b94d5dc0391893b20b57406f796e7e4b98b2bd46fc",
+        "run_pipeline_swe.py": "804d95e9bff5a6754f4bd18cf2f29ed2f84a2866cdb8b5150f48cd7b937bce62",
+        "failure_analysis/htir.py": "cff97f21d89978a5236ee7c8025970ec1ae79ff806af5238940f0b32fdf31d25",
+        "failure_analysis/run_analysis.py": "bacfac921a6a9b96e6b8526bcbee8978602346f0586dc1faf039eab5d154d9bf",
+        "failure_analysis/aggregate_results.py": "0e84cef21cfdddc4e190621f23a272e395fc472bea68dfbdfc88da99409dc7d7",
+        "failure_analysis/validation_metrics.py": "38cb57ba935e0f15db71e1f747f3726225c024193d34313e3352d674b6b47dbe",
+        "failure_analysis/plan_diff_audit.py": "538cdd4cc04b7a4461849a4def22039e6732e2aee676fbc1b7ce2e7af5763ace"
+      },
+      "license": "No root license file supplied by upstream; do not assume MIT.",
+      "status": "new_native_htir_and_pipeline_adapter"
+    },
+    "meta-harness": {
+      "source": "frameworks/meta-harness",
+      "url": "https://github.com/stanford-iris-lab/meta-harness.git",
+      "revision": "8123ccabe2b19fa1123090b2e5f1bacc20963ce8",
+      "files": {
+        "README.md": "4f8c70a0e19127198d7165a7f2f4db1c41710dfbce485f4302ab1f8aec2d5584",
+        "ONBOARDING.md": "47f0071dae73937b23ea24c48580b5e07381224764ea3e3aeb8a8c9721ac96b3",
+        "reference_examples/terminal_bench_2/meta_harness.py": "9b03eae7dfc8723c2aa06b24be5a0b85ede1c4f00c728ee80a2842488ccd10aa",
+        "reference_examples/terminal_bench_2/claude_wrapper.py": "5ff005d6c1d2f8500b643f71432a9649fc425503f7fee2183df858a95b33de3e"
+      },
+      "license": "See pinned upstream license",
+      "status": "new_native_controller_and_deepseek_proposer_adapter"
+    },
+    "gepa": {
+      "source": "frameworks/gepa",
+      "url": "https://github.com/gepa-ai/gepa.git",
+      "revision": "f1cfdee2856e9dc4b5b4dc5cc2e391d0aa20d819",
+      "files": {
+        "README.md": "10d7f30035b21bb38fde51fb3ccc0fc64d5e8b64ab51c09731606132782a57b2",
+        "pyproject.toml": "e244032a50d44ad7d033298a0a05ef4e0085207632c6a32cf032ae512cb64e6d"
+      },
+      "license": "MIT",
+      "status": "existing_frozen_swe_adapter_reused"
+    },
+    "rrsi": {
+      "source": "frameworks/rrsi",
+      "url": "https://github.com/google-research/rrsi.git",
+      "revision": "be50316e1db05914068a973f322770ef08ed7ba1",
+      "files": {
+        "pyproject.toml": "bd637e87f27fa2a3b89ace2e34dd7b2fdad9562e8ba3b716ca1a95932666677a",
+        "rrsi/loop.py": "6062392571acb42391f9246ff64e9aea20772b243567317a011b91ea7c9e8071"
+      },
+      "license": "See pinned upstream license",
+      "status": "existing_frozen_swe_adapter_reused"
+    }
+  }
+}

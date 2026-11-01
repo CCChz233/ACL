@@ -1,0 +1,40 @@
+{
+  "purpose": "engineering_full_cycle_50_score_first",
+  "dataset": "benchmarks/datasets/swe-bench-verified-mini/test.json",
+  "evolve_ids": [
+    "django__django-11790"
+  ],
+  "heldout_ids": [],
+  "workspace": "work/rrsi-full-cycle-50",
+  "thinking": false,
+  "search": {
+    "max_calls": 160,
+    "max_tokens": 2000000,
+    "max_output_tokens": 4096
+  },
+  "target": {
+    "max_calls": 50,
+    "max_tokens": 1000000,
+    "max_output_tokens": 4096,
+    "wall_seconds": 1200,
+    "command_seconds": 60
+  },
+  "grading_seconds": 900,
+  "rrsi": {
+    "T": 1,
+    "k": 1,
+    "m": 1,
+    "b_min": 1,
+    "b_max": 1,
+    "delta": 0.0,
+    "w_s": 100.0,
+    "w_c": 0.0,
+    "w_n": 0.0,
+    "m_draft": 0,
+    "repair_rounds": 1,
+    "n_fail_traces": 1,
+    "n_success_traces": 1,
+    "invalid_missing_frac": 0.0,
+    "eval_parallel": 1
+  }
+}

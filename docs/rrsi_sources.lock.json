@@ -1,0 +1,9 @@
+{
+  "url": "https://github.com/google-research/rrsi",
+  "revision": "be50316e1db05914068a973f322770ef08ed7ba1",
+  "local_path": "repos/rrsi",
+  "download_kind": "official_git_clone",
+  "pinned_on": "2026-10-17",
+  "upstream_modified": false
+}
+

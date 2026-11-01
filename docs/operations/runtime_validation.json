@@ -1,0 +1,206 @@
+{
+  "updated": "2026-10-17",
+  "purpose": "engineering_smoke_only",
+  "pipeline_complete": true,
+  "task": "django__django-11790",
+  "provider": "https://api.deepseek.com",
+  "model": "deepseek-flash",
+  "thinking": false,
+  "versions": {
+    "mini-swe-agent": "2.4.6",
+    "rrsi": "0.1.0",
+    "swebench": "4.1.0",
+    "openai": "2.54.0"
+  },
+  "task_image_digest": "sha256:061b5e37b0dfc15512b9604c843618b47aece8e603d08d0926c3990e0e9b3ac4",
+  "grader_controls": {
+    "reference": true,
+    "no_fix": false,
+    "completed": true,
+    "evidence": "work/rrsi-smoke/grader_checks/summary.json"
+  },
+  "baselines": [
+    {
+      "workspace": "work/rrsi-smoke",
+      "exit_status": "Submitted",
+      "resolved": true,
+      "usage": {
+        "calls": 11,
+        "completed": 11,
+        "charged_tokens": 52371,
+        "actual_tokens": 52371
+      }
+    },
+    {
+      "workspace": "work/rrsi-smoke-v2",
+      "exit_status": "BudgetExceeded",
+      "resolved": false,
+      "usage": {
+        "calls": 22,
+        "completed": 22,
+        "charged_tokens": 190998,
+        "actual_tokens": 190998
+      }
+    }
+  ],
+  "failed_search_attempts": [
+    {
+      "id": "text-v1",
+      "status": "search_budget_exhausted_no_candidate_evaluated",
+      "search_calls": 50,
+      "search_actual_tokens": 765418,
+      "roles": {
+        "analyst": 3,
+        "digester": 17,
+        "propose": 29,
+        "critic": 1
+      },
+      "ledger": "work/rrsi-smoke/search_usage.json"
+    },
+    {
+      "id": "text-v2",
+      "status": "search_budget_exhausted_no_candidate_evaluated",
+      "search_calls": 60,
+      "search_actual_tokens": 334035,
+      "roles": {
+        "analyst": 5,
+        "digester": 54,
+        "propose": 1
+      },
+      "ledger": "work/rrsi-smoke-v2/failed-text-search/search_usage.json"
+    },
+    {
+      "id": "native-v2",
+      "status": "search_budget_exhausted_no_candidate_evaluated",
+      "search_calls": 60,
+      "search_actual_tokens": 534341,
+      "roles": {
+        "analyst": 3,
+        "digester": 44,
+        "propose": 12,
+        "critic": 1
+      },
+      "ledger": "work/rrsi-smoke-v2/failed-native-search/search_usage.json"
+    }
+  ],
+  "next_attempt": {
+    "workspace": "work/rrsi-smoke-v3",
+    "status": "completed",
+    "search_max_calls": 160,
+    "search_max_tokens": 2000000,
+    "target_max_calls_per_trial": 24,
+    "target_max_tokens_per_trial": 250000
+  },
+  "tests": {
+    "passed": 18,
+    "command": ".venv/bin/python -m pytest -q tests repos/rrsi/tests"
+  },
+  "limitations": [
+    "One development task, no heldout data or repeated search estimate.",
+    "Native DeepSeek action adapter; original RRSI search/selection source unchanged.",
+    "Candidate Python runs on host; not a full malicious-code sandbox.",
+    "No formal improvement or training result.",
+    "The UTF-8-byte budget reservation is conservative and may stop before actual token/call ceilings; observed baseline and candidate stopped at 22 of 24 calls."
+  ],
+  "pipeline_completion_scope": "one actual candidate execution, deterministic zero score for empty submission, and persisted upstream selection; candidate official tests were not run",
+  "improvement_demonstrated": false,
+  "completed_round": {
+    "workspace": "work/rrsi-smoke-v3",
+    "config_sha256": "1f2e26a6c71c66a2f394a1daf9930a6a26afd80e4f4aef6667489d7e56753005",
+    "baseline": {
+      "t": 0,
+      "S": 0.0,
+      "C": 192139.0,
+      "commit": "4ff14f4",
+      "job": "base"
+    },
+    "candidate": {
+      "t": 1,
+      "S": 0.0,
+      "C": 185599.0,
+      "commit": "568ec2d",
+      "job": "r0A"
+    },
+    "candidate_exit_status": "BudgetExceeded",
+    "candidate_grade_reason": "empty_submission",
+    "candidate_official_tests_run": false,
+    "critic": "accept",
+    "smoke_passed": true,
+    "accepted_by_upstream": true,
+    "acceptance_basis": "equal zero score, 3.4038% lower measured execution token usage",
+    "search_usage": {
+      "calls": 51,
+      "completed": 51,
+      "charged_tokens": 531242,
+      "actual_tokens": 531242
+    },
+    "total_actual_tokens": 908980,
+    "total_api_calls": 95,
+    "diff": "work/rrsi-smoke-v3/runs/swe/r0/A/diff.patch",
+    "decision": "work/rrsi-smoke-v3/runs/swe/r0/decisions.json",
+    "summary": "work/rrsi-smoke-v3/summary.json",
+    "completed_resume_additional_calls": 0
+  },
+  "followup_config": {
+    "path": "configs/smoke-score-first.json",
+    "run": false,
+    "change": "w_c=0, w_n=0 and delta=0; equal score cannot be accepted merely for lower cost",
+    "offline_replay_winner": null,
+    "offline_replay_new_api_calls": 0
+  },
+  "budget_recheck": {
+    "status": "completed",
+    "record": "docs/budget_recheck.json",
+    "total_api_calls": 20,
+    "total_actual_tokens": 102826,
+    "base_resolved": true,
+    "candidate_resolved": true,
+    "new_search_calls": 0,
+    "improvement_demonstrated": false
+  },
+  "latest_full_cycle": {
+    "record": "docs/full_cycle_50.json",
+    "status": "completed",
+    "baseline_resolved": true,
+    "candidate_resolved": true,
+    "candidate_accepted": false,
+    "final_job": "base",
+    "total_api_calls": 52,
+    "total_actual_tokens": 388605,
+    "improvement_demonstrated": false
+  },
+  "latest_mini50_baseline": {
+    "status": "completed",
+    "record": "docs/mini50_results.json",
+    "n_tasks": 50,
+    "n_resolved": 31,
+    "resolved_rate": 0.62,
+    "api_calls": 1153,
+    "actual_tokens": 15443407,
+    "infrastructure_failures": 0,
+    "rsi_rounds": 0
+  },
+  "latest_mini50_rsi_round": {
+    "status": "completed",
+    "report": "docs/mini50_round1.md",
+    "results": "docs/mini50_round1_results.json",
+    "rsi_rounds": 1,
+    "candidate_count": 1,
+    "baseline_resolved": 31,
+    "candidate_resolved": 29,
+    "n_tasks": 50,
+    "baseline_rate": 0.62,
+    "candidate_rate": 0.58,
+    "final_selected_rate": 0.62,
+    "decision": "rejected; keep original",
+    "new_passes": 2,
+    "regressions": 4,
+    "search_calls": 168,
+    "search_actual_tokens": 1067853,
+    "candidate_calls": 1317,
+    "candidate_actual_tokens": 19005386,
+    "tests_passed": 22,
+    "infrastructure_failures": 0,
+    "recovery": "single aggregation of saved digests after diagnostic call-limit exhaustion"
+  }
+}

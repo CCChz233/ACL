@@ -1,0 +1,451 @@
+{
+  "benchmark": "Terminal-Bench 2.1 operationally filtered 12-task pilot",
+  "model": "deepseek-flash",
+  "harness": "mini-SWE-agent 2.4.6 + frozen terminal adapter v1",
+  "rrsi_rounds": 0,
+  "completed": 12,
+  "planned": 12,
+  "validly_graded": 12,
+  "passed": 7,
+  "score_on_planned": 0.5833333333333334,
+  "score_on_completed": 0.5833333333333334,
+  "calls": 381,
+  "tokens": 4967447,
+  "input_tokens": 4870491,
+  "output_tokens": 96956,
+  "cache_hit_tokens": 4647680,
+  "cache_miss_tokens": 222811,
+  "exit_status_counts": {
+    "token_reservation": 2,
+    "Submitted": 7,
+    "call_limit": 2,
+    "RepeatedFormatError": 1
+  },
+  "passed_without_submission": 1,
+  "all_recorded_requests_have_payload": true,
+  "all_completed_calls_have_response": true,
+  "all_recorded_calls_have_latency": true,
+  "runtime_hashes_match": true,
+  "by_category": {
+    "software-engineering": {
+      "n": 2,
+      "passed": 1,
+      "tokens": 984725
+    },
+    "debugging": {
+      "n": 2,
+      "passed": 2,
+      "tokens": 1007353
+    },
+    "system-administration": {
+      "n": 2,
+      "passed": 2,
+      "tokens": 215570
+    },
+    "file-operations": {
+      "n": 2,
+      "passed": 0,
+      "tokens": 1707622
+    },
+    "data-processing": {
+      "n": 2,
+      "passed": 2,
+      "tokens": 402510
+    },
+    "scientific-computing": {
+      "n": 2,
+      "passed": 0,
+      "tokens": 649667
+    }
+  },
+  "results": [
+    {
+      "id": "make-mips-interpreter",
+      "category": "software-engineering",
+      "reward": 0.0,
+      "exit_status": "token_reservation",
+      "exception": null,
+      "calls": 32,
+      "completed_calls": 32,
+      "input_tokens": 899042,
+      "output_tokens": 3768,
+      "total_tokens": 902810,
+      "cache_hit_tokens": 846592,
+      "cache_miss_tokens": 52450,
+      "api_seconds": 35.687405586242676,
+      "agent_seconds": 44.50259470939636,
+      "request_records": 32,
+      "response_records": 32,
+      "latency_records": 32,
+      "provider_models": {
+        "deepseek-flash": 32
+      },
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 32
+      },
+      "tool_error_observations": 0,
+      "failed_tests": [
+        "test_outputs.py::test_vm_execution",
+        "test_outputs.py::test_frame_bmp_exists",
+        "test_outputs.py::test_frame_bmp_similar_to_reference"
+      ],
+      "passed_tests": 0,
+      "test_count": 3,
+      "trajectory": "work/terminal-pilot-v1/trials/make-mips-interpreter/agent/trajectory.json"
+    },
+    {
+      "id": "headless-terminal",
+      "category": "software-engineering",
+      "reward": 1.0,
+      "exit_status": "Submitted",
+      "exception": null,
+      "calls": 17,
+      "completed_calls": 17,
+      "input_tokens": 76884,
+      "output_tokens": 5031,
+      "total_tokens": 81915,
+      "cache_hit_tokens": 72192,
+      "cache_miss_tokens": 4692,
+      "api_seconds": 28.228030681610107,
+      "agent_seconds": 54.35749101638794,
+      "request_records": 17,
+      "response_records": 17,
+      "latency_records": 17,
+      "provider_models": {
+        "deepseek-flash": 17
+      },
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 17
+      },
+      "tool_error_observations": 2,
+      "failed_tests": [],
+      "passed_tests": 7,
+      "test_count": 7,
+      "trajectory": "work/terminal-pilot-v1/trials/headless-terminal/agent/trajectory.json"
+    },
+    {
+      "id": "merge-diff-arc-agi-task",
+      "category": "debugging",
+      "reward": 1.0,
+      "exit_status": "Submitted",
+      "exception": null,
+      "calls": 32,
+      "completed_calls": 32,
+      "input_tokens": 157364,
+      "output_tokens": 5287,
+      "total_tokens": 162651,
+      "cache_hit_tokens": 148992,
+      "cache_miss_tokens": 8372,
+      "api_seconds": 41.346434354782104,
+      "agent_seconds": 324.0926730632782,
+      "request_records": 32,
+      "response_records": 32,
+      "latency_records": 32,
+      "provider_models": {
+        "deepseek-flash": 32
+      },
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 32
+      },
+      "tool_error_observations": 6,
+      "failed_tests": [],
+      "passed_tests": 5,
+      "test_count": 5,
+      "trajectory": "work/terminal-pilot-v1/trials/merge-diff-arc-agi-task/agent/trajectory.json"
+    },
+    {
+      "id": "build-cython-ext",
+      "category": "debugging",
+      "reward": 1.0,
+      "exit_status": "call_limit",
+      "exception": null,
+      "calls": 50,
+      "completed_calls": 50,
+      "input_tokens": 836014,
+      "output_tokens": 8688,
+      "total_tokens": 844702,
+      "cache_hit_tokens": 810496,
+      "cache_miss_tokens": 25518,
+      "api_seconds": 66.10075640678406,
+      "agent_seconds": 426.2139778137207,
+      "request_records": 50,
+      "response_records": 50,
+      "latency_records": 50,
+      "provider_models": {
+        "deepseek-flash": 50
+      },
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 50
+      },
+      "tool_error_observations": 5,
+      "failed_tests": [],
+      "passed_tests": 11,
+      "test_count": 11,
+      "trajectory": "work/terminal-pilot-v1/trials/build-cython-ext/agent/trajectory.json"
+    },
+    {
+      "id": "nginx-request-logging",
+      "category": "system-administration",
+      "reward": 1.0,
+      "exit_status": "Submitted",
+      "exception": null,
+      "calls": 9,
+      "completed_calls": 9,
+      "input_tokens": 23861,
+      "output_tokens": 2093,
+      "total_tokens": 25954,
+      "cache_hit_tokens": 20096,
+      "cache_miss_tokens": 3765,
+      "api_seconds": 13.23760461807251,
+      "agent_seconds": 37.55440592765808,
+      "request_records": 9,
+      "response_records": 9,
+      "latency_records": 9,
+      "provider_models": {
+        "deepseek-flash": 9
+      },
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 9
+      },
+      "tool_error_observations": 0,
+      "failed_tests": [],
+      "passed_tests": 8,
+      "test_count": 8,
+      "trajectory": "work/terminal-pilot-v1/trials/nginx-request-logging/agent/trajectory.json"
+    },
+    {
+      "id": "configure-git-webserver",
+      "category": "system-administration",
+      "reward": 1.0,
+      "exit_status": "Submitted",
+      "exception": null,
+      "calls": 34,
+      "completed_calls": 34,
+      "input_tokens": 183256,
+      "output_tokens": 6360,
+      "total_tokens": 189616,
+      "cache_hit_tokens": 174592,
+      "cache_miss_tokens": 8664,
+      "api_seconds": 49.61606454849243,
+      "agent_seconds": 365.6892840862274,
+      "request_records": 34,
+      "response_records": 34,
+      "latency_records": 34,
+      "provider_models": {
+        "deepseek-flash": 34
+      },
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 34
+      },
+      "tool_error_observations": 10,
+      "failed_tests": [],
+      "passed_tests": 1,
+      "test_count": 1,
+      "trajectory": "work/terminal-pilot-v1/trials/configure-git-webserver/agent/trajectory.json"
+    },
+    {
+      "id": "gcode-to-text",
+      "category": "file-operations",
+      "reward": 0.0,
+      "exit_status": "call_limit",
+      "exception": null,
+      "calls": 50,
+      "completed_calls": 50,
+      "input_tokens": 768129,
+      "output_tokens": 16478,
+      "total_tokens": 784607,
+      "cache_hit_tokens": 741632,
+      "cache_miss_tokens": 26497,
+      "api_seconds": 94.33248376846313,
+      "agent_seconds": 228.76553392410278,
+      "request_records": 50,
+      "response_records": 50,
+      "latency_records": 50,
+      "provider_models": {
+        "deepseek-flash": 50
+      },
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 50
+      },
+      "tool_error_observations": 7,
+      "failed_tests": [
+        "test_outputs.py::test_hello_file_exists",
+        "test_outputs.py::test_hello_file_content"
+      ],
+      "passed_tests": 0,
+      "test_count": 2,
+      "trajectory": "work/terminal-pilot-v1/trials/gcode-to-text/agent/trajectory.json"
+    },
+    {
+      "id": "db-wal-recovery",
+      "category": "file-operations",
+      "reward": 0.0,
+      "exit_status": "token_reservation",
+      "exception": null,
+      "calls": 41,
+      "completed_calls": 41,
+      "input_tokens": 914415,
+      "output_tokens": 8600,
+      "total_tokens": 923015,
+      "cache_hit_tokens": 876160,
+      "cache_miss_tokens": 38255,
+      "api_seconds": 60.95857501029968,
+      "agent_seconds": 71.95931911468506,
+      "request_records": 41,
+      "response_records": 41,
+      "latency_records": 41,
+      "provider_models": {
+        "deepseek-flash": 41
+      },
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 41
+      },
+      "tool_error_observations": 5,
+      "failed_tests": [
+        "test_outputs.py::test_recovered_json_exists",
+        "test_outputs.py::test_recovered_json_is_valid",
+        "test_outputs.py::test_recovered_data_structure",
+        "test_outputs.py::test_recovered_data_sorted",
+        "test_outputs.py::test_recovered_data_completeness",
+        "test_outputs.py::test_no_duplicate_ids",
+        "test_outputs.py::test_wal_was_decrypted"
+      ],
+      "passed_tests": 0,
+      "test_count": 7,
+      "trajectory": "work/terminal-pilot-v1/trials/db-wal-recovery/agent/trajectory.json"
+    },
+    {
+      "id": "financial-document-processor",
+      "category": "data-processing",
+      "reward": 1.0,
+      "exit_status": "Submitted",
+      "exception": null,
+      "calls": 40,
+      "completed_calls": 40,
+      "input_tokens": 334262,
+      "output_tokens": 7770,
+      "total_tokens": 342032,
+      "cache_hit_tokens": 317568,
+      "cache_miss_tokens": 16694,
+      "api_seconds": 50.52568340301514,
+      "agent_seconds": 760.8286848068237,
+      "request_records": 40,
+      "response_records": 40,
+      "latency_records": 40,
+      "provider_models": {
+        "deepseek-flash": 40
+      },
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 40
+      },
+      "tool_error_observations": 13,
+      "failed_tests": [],
+      "passed_tests": 7,
+      "test_count": 7,
+      "trajectory": "work/terminal-pilot-v1/trials/financial-document-processor/agent/trajectory.json"
+    },
+    {
+      "id": "regex-log",
+      "category": "data-processing",
+      "reward": 1.0,
+      "exit_status": "Submitted",
+      "exception": null,
+      "calls": 15,
+      "completed_calls": 15,
+      "input_tokens": 54781,
+      "output_tokens": 5697,
+      "total_tokens": 60478,
+      "cache_hit_tokens": 49408,
+      "cache_miss_tokens": 5373,
+      "api_seconds": 26.992757320404053,
+      "agent_seconds": 90.3771870136261,
+      "request_records": 15,
+      "response_records": 15,
+      "latency_records": 15,
+      "provider_models": {
+        "deepseek-flash": 15
+      },
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 15
+      },
+      "tool_error_observations": 2,
+      "failed_tests": [],
+      "passed_tests": 1,
+      "test_count": 1,
+      "trajectory": "work/terminal-pilot-v1/trials/regex-log/agent/trajectory.json"
+    },
+    {
+      "id": "adaptive-rejection-sampler",
+      "category": "scientific-computing",
+      "reward": 0.0,
+      "exit_status": "RepeatedFormatError",
+      "exception": null,
+      "calls": 34,
+      "completed_calls": 34,
+      "input_tokens": 354076,
+      "output_tokens": 15268,
+      "total_tokens": 369344,
+      "cache_hit_tokens": 336384,
+      "cache_miss_tokens": 17692,
+      "api_seconds": 81.24014091491699,
+      "agent_seconds": 590.3394691944122,
+      "request_records": 34,
+      "response_records": 34,
+      "latency_records": 34,
+      "provider_models": {
+        "deepseek-flash": 34
+      },
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 34
+      },
+      "tool_error_observations": 6,
+      "failed_tests": [
+        "test_outputs.py::test_ars_function_exists",
+        "test_outputs.py::test_can_generate_standard_distribution_samples",
+        "test_outputs.py::test_has_test_function",
+        "test_outputs.py::test_formal_testing_with_known_truth",
+        "test_outputs.py::test_sample_files_generated",
+        "test_outputs.py::test_implementation_is_modular",
+        "test_outputs.py::test_implementation_handles_errors",
+        "test_outputs.py::test_input_validation_functionality",
+        "test_outputs.py::test_log_concavity_functionality"
+      ],
+      "passed_tests": 0,
+      "test_count": 9,
+      "trajectory": "work/terminal-pilot-v1/trials/adaptive-rejection-sampler/agent/trajectory.json"
+    },
+    {
+      "id": "raman-fitting",
+      "category": "scientific-computing",
+      "reward": 0.0,
+      "exit_status": "Submitted",
+      "exception": null,
+      "calls": 27,
+      "completed_calls": 27,
+      "input_tokens": 268407,
+      "output_tokens": 11916,
+      "total_tokens": 280323,
+      "cache_hit_tokens": 253568,
+      "cache_miss_tokens": 14839,
+      "api_seconds": 63.59521698951721,
+      "agent_seconds": 99.09198093414307,
+      "request_records": 27,
+      "response_records": 27,
+      "latency_records": 27,
+      "provider_models": {
+        "deepseek-flash": 27
+      },
+      "system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 27
+      },
+      "tool_error_observations": 1,
+      "failed_tests": [
+        "test_outputs.py::test_G_Peak",
+        "test_outputs.py::test_2D_Peak"
+      ],
+      "passed_tests": 1,
+      "test_count": 3,
+      "trajectory": "work/terminal-pilot-v1/trials/raman-fitting/agent/trajectory.json"
+    }
+  ]
+}

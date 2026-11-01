@@ -6,9 +6,9 @@
 
 | Benchmark | 数量 | 本地位置 | 固定版本与验证 |
 |---|---:|---|---|
-| SWE-bench Pro V2 | 642 | `../repos/SWE-bench_Pro-os/v2/tasks/` | commit `66f92766bba642462d4bbe5479e83f91f9211862`；全部 6,436 项官方 SHA256 通过 |
-| Terminal-Bench 4.0.0 | 66 | `../repos/terminal-bench-4/tasks/` | v4.0.0、commit `452bf305c6daa62fc59061d22133a7cbc7c1572e`；全部 3,200 个官方 Git blob 验证通过，补齐原先缺失的 181 个大型资源 |
-| Terminal-Bench 2.1 | 89 | `../repos/terminal-bench-2-1/tasks/` | commit `7131e4375048a0e408a8fb404b5f499d726b695b`；全部 1,101 个官方 Git blob 验证通过 |
+| SWE-bench Pro V2 | 642 | `sources/swe-bench-pro/v2/tasks/` | commit `66f92766bba642462d4bbe5479e83f91f9211862`；全部 6,436 项官方 SHA256 通过 |
+| Terminal-Bench 4.0.0 | 66 | `sources/terminal-bench-4/tasks/` | v4.0.0、commit `452bf305c6daa62fc59061d22133a7cbc7c1572e`；全部 3,200 个官方 Git blob 验证通过，补齐原先缺失的 181 个大型资源 |
+| Terminal-Bench 2.1 | 89 | `sources/terminal-bench-2.1/tasks/` | commit `7131e4375048a0e408a8fb404b5f499d726b695b`；全部 1,101 个官方 Git blob 验证通过 |
 | SWE-bench Verified | 500 | `datasets/swe-bench-verified/` | 完整 test Parquet、JSON；官方 SHA256、实际行数、ID 唯一性通过 |
 | SWE-bench Verified Mini | 50 | `datasets/swe-bench-verified-mini/` | 完整 test Parquet、JSON；官方 SHA256、实际行数、ID 唯一性通过 |
 
@@ -36,4 +36,4 @@ Terminal-Bench 4 原有 Git checkout 保留在原路径，稀疏检出已关闭�
 
 Pro V2 官方镜像为 Linux/amd64。正式运行前应确定支持这些环境的执行后端，并保留官方网络限制、补丁捕获与干净容器重评分协议。
 
-下一步建议见 [下一步方案](../docs/next_steps.md)。
+下一步建议见 [下一步方案](../docs/research/next_steps.md)。

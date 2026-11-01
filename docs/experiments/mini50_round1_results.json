@@ -1,0 +1,1273 @@
+{
+  "status": "completed",
+  "config": "configs/mini50-round1-recovery.json",
+  "workspace": "work/verified-mini-50-round1-recovery",
+  "rsi_rounds": 1,
+  "candidate_count": 1,
+  "baseline_reused": true,
+  "evaluations": {
+    "base": {
+      "n_tasks": 50,
+      "n_resolved": 31,
+      "rate": 0.62,
+      "calls": 1153,
+      "actual_tokens": 15443407,
+      "official_test_reports": 38,
+      "by_repository": {
+        "django/django": {
+          "n": 25,
+          "resolved": 18
+        },
+        "sphinx-doc/sphinx": {
+          "n": 25,
+          "resolved": 13
+        }
+      },
+      "exit_status_counts": {
+        "Submitted": 38,
+        "BudgetExceeded": 8,
+        "LimitsExceeded": 4
+      },
+      "budget_stop_counts": {
+        "token_reservation": 8,
+        "call_limit": 4
+      },
+      "tasks": [
+        {
+          "instance_id": "django__django-11790",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 35,
+          "actual_tokens": 387247,
+          "patch_sha256": "d3c38125d9ecf27293ecaa684fb40dff4eb19fb59c151fa4c4944565df5b3b2b",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11790/trial-0/official/acl-b3c81e3098a7/deepseek-flash/django__django-11790/report.json"
+        },
+        {
+          "instance_id": "django__django-11815",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 8,
+          "actual_tokens": 24869,
+          "patch_sha256": "e83dc1c9a5ddd5ba3dcc7c9b6ddfa4f60cc30d1d26924d849cfca561f8223b3b",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11815/trial-0/official/acl-ecf57caa3043/deepseek-flash/django__django-11815/report.json"
+        },
+        {
+          "instance_id": "django__django-11848",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 11,
+          "actual_tokens": 54986,
+          "patch_sha256": "6534801bec263114472afc0bb0b577067d5b9d66b0e483994a56b3f55668ef74",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11848/trial-0/official/acl-03fab9d999a8/deepseek-flash/django__django-11848/report.json"
+        },
+        {
+          "instance_id": "django__django-11880",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 11,
+          "actual_tokens": 37394,
+          "patch_sha256": "15473af6dc9920a23e55cbd3ea844e394fe3b06cec9aaeed427e8d79d2e3ea3b",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11880/trial-0/official/acl-4f36571c36ef/deepseek-flash/django__django-11880/report.json"
+        },
+        {
+          "instance_id": "django__django-11885",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 41,
+          "actual_tokens": 851336,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "django__django-11951",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 10,
+          "actual_tokens": 59963,
+          "patch_sha256": "3cc0b623a4393acf23f2426804f91ba7a471b940d928d93b072d6163d0cffd86",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11951/trial-0/official/acl-18e97f5f9ef5/deepseek-flash/django__django-11951/report.json"
+        },
+        {
+          "instance_id": "django__django-11964",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 8,
+          "actual_tokens": 27748,
+          "patch_sha256": "1b282f0c024afff7d99826fb1ce710903764a63539b840ccd821c42b0fa041a6",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11964/trial-0/official/acl-9dab68d698f1/deepseek-flash/django__django-11964/report.json"
+        },
+        {
+          "instance_id": "django__django-11999",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 13,
+          "actual_tokens": 54599,
+          "patch_sha256": "15b527f50ecdd781c354c23826b7950e127096ae85e5a3030f05f751273aa3e8",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-11999/trial-0/official/acl-00ee264e0eab/deepseek-flash/django__django-11999/report.json"
+        },
+        {
+          "instance_id": "django__django-12039",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 9,
+          "actual_tokens": 39487,
+          "patch_sha256": "db87721a2649d62835d86195b3babb1816caa5d056ebe2127d913b987e6f2cb9",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12039/trial-0/official/acl-779d4a899fc2/deepseek-flash/django__django-12039/report.json"
+        },
+        {
+          "instance_id": "django__django-12050",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 13,
+          "actual_tokens": 86903,
+          "patch_sha256": "08af6e22fa66b28c47c3cd61192637cdcf2fca544718dc4d48f8f01fb469e63f",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12050/trial-0/official/acl-347d797802f0/deepseek-flash/django__django-12050/report.json"
+        },
+        {
+          "instance_id": "django__django-12143",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 9,
+          "actual_tokens": 30378,
+          "patch_sha256": "8511bf88eb17d36bce59a65bcba3081d48f4be056f0422f55506fabd7ece1899",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12143/trial-0/official/acl-17965dad1ead/deepseek-flash/django__django-12143/report.json"
+        },
+        {
+          "instance_id": "django__django-12155",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 8,
+          "actual_tokens": 20905,
+          "patch_sha256": "11f03c5b4a6c948d47db139f12901365b976e113194c3cb8f638cb97e72bc208",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12155/trial-0/official/acl-aa34a5c43162/deepseek-flash/django__django-12155/report.json"
+        },
+        {
+          "instance_id": "django__django-12193",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 19,
+          "actual_tokens": 117605,
+          "patch_sha256": "4cb9fd1a5c7ef55e0ace8ce597bf219fcba53da88e236f44913bc2a36c4d36a7",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12193/trial-0/official/acl-f614216d19a0/deepseek-flash/django__django-12193/report.json"
+        },
+        {
+          "instance_id": "django__django-12209",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "LimitsExceeded",
+          "budget_stop_reason": "call_limit",
+          "calls": 50,
+          "actual_tokens": 801595,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "django__django-12262",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 12,
+          "actual_tokens": 46246,
+          "patch_sha256": "5d88778dfe971e8c88543474dd42e6ee648088f0144f667161a1dcce6dfd49e6",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12262/trial-0/official/acl-0de1b5d7c17f/deepseek-flash/django__django-12262/report.json"
+        },
+        {
+          "instance_id": "django__django-12273",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 24,
+          "actual_tokens": 205047,
+          "patch_sha256": "40a7e09ed1a477a4c6b97caf0ef8891077f7f458a072a94091c98233f7266d03",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12273/trial-0/official/acl-03c229216491/deepseek-flash/django__django-12273/report.json"
+        },
+        {
+          "instance_id": "django__django-12276",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 9,
+          "actual_tokens": 41358,
+          "patch_sha256": "923d3fa3e3e53af0ca997c847694d70a5a95120b8e72e09912b1ca443b1cb5fa",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12276/trial-0/official/acl-418f2cb2129e/deepseek-flash/django__django-12276/report.json"
+        },
+        {
+          "instance_id": "django__django-12304",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 9,
+          "actual_tokens": 33942,
+          "patch_sha256": "1a62f676ad38de19812ef43c0e50db2f714ed9b0e03900bb157a544b46e4b136",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12304/trial-0/official/acl-c3ed1c07872c/deepseek-flash/django__django-12304/report.json"
+        },
+        {
+          "instance_id": "django__django-12308",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 11,
+          "actual_tokens": 51590,
+          "patch_sha256": "05df4b60776969fc0e8a0a76b793404c03ad9cbdbb761f4b74389f7903c1f318",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12308/trial-0/official/acl-5c0b17caaa24/deepseek-flash/django__django-12308/report.json"
+        },
+        {
+          "instance_id": "django__django-12325",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 17,
+          "actual_tokens": 101023,
+          "patch_sha256": "0eb92a4b146125b2168483c44f8be3179ee3859dbf4bbf965448e7265640944a",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12325/trial-0/official/acl-74d0e9a7d9c7/deepseek-flash/django__django-12325/report.json"
+        },
+        {
+          "instance_id": "django__django-12406",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 30,
+          "actual_tokens": 472249,
+          "patch_sha256": "1b251d62e8015de4bcbfbc2a02071cb1fa1b3a6be158d28fe5283666ef88e3ba",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12406/trial-0/official/acl-71cd66273031/deepseek-flash/django__django-12406/report.json"
+        },
+        {
+          "instance_id": "django__django-12708",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 20,
+          "actual_tokens": 228197,
+          "patch_sha256": "ef7dfaa993494e74c06adbff77d3576fd116c5ab793f7b65b0ba5186c57ec5a9",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12708/trial-0/official/acl-d5e0abad5ff6/deepseek-flash/django__django-12708/report.json"
+        },
+        {
+          "instance_id": "django__django-12713",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 12,
+          "actual_tokens": 54871,
+          "patch_sha256": "a6e4ca7baf68cf3c220de6c4a2cac765e5355778fc32cec94dea33c3400d8af4",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12713/trial-0/official/acl-73a9d249a767/deepseek-flash/django__django-12713/report.json"
+        },
+        {
+          "instance_id": "django__django-12774",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 8,
+          "actual_tokens": 23763,
+          "patch_sha256": "ee28fe2270a85dbd42bb02c306575b70af3b3bcbd91f1b829013ec80df468384",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-12774/trial-0/official/acl-4fd8367e0796/deepseek-flash/django__django-12774/report.json"
+        },
+        {
+          "instance_id": "django__django-9296",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 7,
+          "actual_tokens": 21515,
+          "patch_sha256": "f49100feccede88ad670867bc1387ce68849fafee26183a4382b493d072a6129",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/django__django-9296/trial-0/official/acl-3fc2d6628b3b/deepseek-flash/django__django-9296/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-10323",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 21,
+          "actual_tokens": 219943,
+          "patch_sha256": "7866c384eccec8301fc909afdf9203f063c88bdb4f17ff8131e60a64ff0c402e",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-10323/trial-0/official/acl-dee2d2bafa24/deepseek-flash/sphinx-doc__sphinx-10323/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-10435",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 19,
+          "actual_tokens": 118035,
+          "patch_sha256": "ad2079fdfbd25f1aaec79cbf6b0043671eacc577ff3f9f687812720b77d99ef0",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-10435/trial-0/official/acl-85a1f395a60a/deepseek-flash/sphinx-doc__sphinx-10435/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-10466",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 13,
+          "actual_tokens": 80692,
+          "patch_sha256": "8c3c27299888c5aff0791d492eed14233dcd8f3113fe915357b2a90c1d3e69cf",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-10466/trial-0/official/acl-c22b020e8f82/deepseek-flash/sphinx-doc__sphinx-10466/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-10673",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 46,
+          "actual_tokens": 883672,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-11510",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "LimitsExceeded",
+          "budget_stop_reason": "call_limit",
+          "calls": 50,
+          "actual_tokens": 875229,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-7590",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 40,
+          "actual_tokens": 864441,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-7748",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 43,
+          "actual_tokens": 876722,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-7757",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 10,
+          "actual_tokens": 53638,
+          "patch_sha256": "36b05be1f9dc2e255319cd022eb3e0e6a3855706844aa83bf417c4fff9f3dde8",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-7757/trial-0/official/acl-399315102890/deepseek-flash/sphinx-doc__sphinx-7757/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-7985",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 46,
+          "actual_tokens": 860055,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8035",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 34,
+          "actual_tokens": 467627,
+          "patch_sha256": "0dd07f78b91a74d02659ad0ac2d4f5929815062338bfe04217f38fdbd66cea71",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-8035/trial-0/official/acl-989258b979af/deepseek-flash/sphinx-doc__sphinx-8035/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8056",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 45,
+          "actual_tokens": 862893,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8265",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 35,
+          "actual_tokens": 568826,
+          "patch_sha256": "111eb69dc8bb3462387bebc3215eb94a116be2b84de4f0ea02b3c0b802b55ad2",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-8265/trial-0/official/acl-586633fdc79e/deepseek-flash/sphinx-doc__sphinx-8265/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8269",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 10,
+          "actual_tokens": 70599,
+          "patch_sha256": "9930867fb908ee61de61b9c00b4c164af96faef1d5d6a0b9fa8e956ea8a22c26",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-8269/trial-0/official/acl-30b938d291ce/deepseek-flash/sphinx-doc__sphinx-8269/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8475",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 13,
+          "actual_tokens": 63926,
+          "patch_sha256": "8a9725217a4d60e5794753427717c89fa9dd4de3b5d3a743bb4e728ae7efa317",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-8475/trial-0/official/acl-0a6fc38f01a9/deepseek-flash/sphinx-doc__sphinx-8475/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8548",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "LimitsExceeded",
+          "budget_stop_reason": "call_limit",
+          "calls": 50,
+          "actual_tokens": 872786,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8551",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 41,
+          "actual_tokens": 600358,
+          "patch_sha256": "3acd157685e333847341d259e08bd10714c297ff3efa886b5e83a1c1a0f709b3",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-8551/trial-0/official/acl-60fae4aff1ac/deepseek-flash/sphinx-doc__sphinx-8551/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8638",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 41,
+          "actual_tokens": 848202,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8721",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 25,
+          "actual_tokens": 270188,
+          "patch_sha256": "a4e6aed3bb7ad7e1e63ccf858aa032352dfb359e56ee207082ae1da58f43bffa",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-8721/trial-0/official/acl-acb08af49cc4/deepseek-flash/sphinx-doc__sphinx-8721/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9229",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "LimitsExceeded",
+          "budget_stop_reason": "call_limit",
+          "calls": 50,
+          "actual_tokens": 855727,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9230",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 20,
+          "actual_tokens": 114865,
+          "patch_sha256": "24d6ec070eb6620b4c79efb8cf1fcda3c8d64da0aa430779d796b90d1ee37ef4",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-9230/trial-0/official/acl-76d4ea9f5445/deepseek-flash/sphinx-doc__sphinx-9230/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9281",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 17,
+          "actual_tokens": 114428,
+          "patch_sha256": "16f3039f426908b34c4338631df54e494782f0b6b7b79e4556feae2d5af49cc5",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-9281/trial-0/official/acl-f190c9afc614/deepseek-flash/sphinx-doc__sphinx-9281/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9320",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 14,
+          "actual_tokens": 73377,
+          "patch_sha256": "81e86ae8c478a8d6bfe3b0cedbdf37487446b3a49ff78aece3345377ce21bb6d",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-9320/trial-0/official/acl-1833dc878cb9/deepseek-flash/sphinx-doc__sphinx-9320/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9367",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 10,
+          "actual_tokens": 47086,
+          "patch_sha256": "a433729bfd53e548773710b908529ea4f340b0bda586ebedff772c6306f0b547",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-9367/trial-0/official/acl-ef8b8d9c1603/deepseek-flash/sphinx-doc__sphinx-9367/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9461",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 44,
+          "actual_tokens": 855579,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9698",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 12,
+          "actual_tokens": 49697,
+          "patch_sha256": "7f3312b604a63ff2b71609559c5d01c02a8223778e1dad1dba53be722d38282a",
+          "official_report": "work/verified-mini-50-baseline-v2/runs/swe/jobs/base/sphinx-doc__sphinx-9698/trial-0/official/acl-eec0f6010b90/deepseek-flash/sphinx-doc__sphinx-9698/report.json"
+        }
+      ]
+    },
+    "r0A": {
+      "n_tasks": 50,
+      "n_resolved": 29,
+      "rate": 0.58,
+      "calls": 1317,
+      "actual_tokens": 19005386,
+      "official_test_reports": 37,
+      "by_repository": {
+        "django/django": {
+          "n": 25,
+          "resolved": 17
+        },
+        "sphinx-doc/sphinx": {
+          "n": 25,
+          "resolved": 12
+        }
+      },
+      "exit_status_counts": {
+        "Submitted": 37,
+        "BudgetExceeded": 9,
+        "LimitsExceeded": 4
+      },
+      "budget_stop_counts": {
+        "token_reservation": 9,
+        "call_limit": 4
+      },
+      "tasks": [
+        {
+          "instance_id": "django__django-11790",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 14,
+          "actual_tokens": 82508,
+          "patch_sha256": "d819b822bedc7421fe2d9a9941063185ab7a76e126c0ada5f184bed1b8580dd9",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-11790/trial-0/official/acl-10f2778859f1/deepseek-flash/django__django-11790/report.json"
+        },
+        {
+          "instance_id": "django__django-11815",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 10,
+          "actual_tokens": 41795,
+          "patch_sha256": "f7d93ecd2485c3a9acb18332857570799a886fb61d95697d1b15b7c2bbbe300f",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-11815/trial-0/official/acl-00ba52cf62a8/deepseek-flash/django__django-11815/report.json"
+        },
+        {
+          "instance_id": "django__django-11848",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 10,
+          "actual_tokens": 36843,
+          "patch_sha256": "ab60d287aadd2d1f097680121ddbc8494df6435cb03890584196d1b455bc70d8",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-11848/trial-0/official/acl-b35fcafde55c/deepseek-flash/django__django-11848/report.json"
+        },
+        {
+          "instance_id": "django__django-11880",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 11,
+          "actual_tokens": 46061,
+          "patch_sha256": "601fe65161c928d0cb2e2ca71a2745d68eed5fe35a44e6c07c8e13b5c7fd6c81",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-11880/trial-0/official/acl-fc9f03423fd5/deepseek-flash/django__django-11880/report.json"
+        },
+        {
+          "instance_id": "django__django-11885",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 45,
+          "actual_tokens": 800534,
+          "patch_sha256": "21ebc00ec5d1880eab36886ec8387c86d2155fab9aa064ce4dbaffd89b2bc67f",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-11885/trial-0/official/acl-5db86f94688d/deepseek-flash/django__django-11885/report.json"
+        },
+        {
+          "instance_id": "django__django-11951",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 6,
+          "actual_tokens": 24531,
+          "patch_sha256": "3cc0b623a4393acf23f2426804f91ba7a471b940d928d93b072d6163d0cffd86",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-11951/trial-0/official/acl-96ea69faabe4/deepseek-flash/django__django-11951/report.json"
+        },
+        {
+          "instance_id": "django__django-11964",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 12,
+          "actual_tokens": 90027,
+          "patch_sha256": "1b282f0c024afff7d99826fb1ce710903764a63539b840ccd821c42b0fa041a6",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-11964/trial-0/official/acl-45c8e186158b/deepseek-flash/django__django-11964/report.json"
+        },
+        {
+          "instance_id": "django__django-11999",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 14,
+          "actual_tokens": 67805,
+          "patch_sha256": "15b527f50ecdd781c354c23826b7950e127096ae85e5a3030f05f751273aa3e8",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-11999/trial-0/official/acl-4de5d86c3591/deepseek-flash/django__django-11999/report.json"
+        },
+        {
+          "instance_id": "django__django-12039",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 8,
+          "actual_tokens": 41467,
+          "patch_sha256": "745777f15ac14e8a146eccfdd5ff04b072b086cf5de78a7be3f5412fd2912287",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-12039/trial-0/official/acl-80a9b3d4a6b6/deepseek-flash/django__django-12039/report.json"
+        },
+        {
+          "instance_id": "django__django-12050",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 8,
+          "actual_tokens": 24627,
+          "patch_sha256": "091bd43971d581fc8795f7e191e7993fc805e6f817d2f09020cff137030b1769",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-12050/trial-0/official/acl-0e36095a19d0/deepseek-flash/django__django-12050/report.json"
+        },
+        {
+          "instance_id": "django__django-12143",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 14,
+          "actual_tokens": 59579,
+          "patch_sha256": "8511bf88eb17d36bce59a65bcba3081d48f4be056f0422f55506fabd7ece1899",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-12143/trial-0/official/acl-fe93accc5e66/deepseek-flash/django__django-12143/report.json"
+        },
+        {
+          "instance_id": "django__django-12155",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 13,
+          "actual_tokens": 89480,
+          "patch_sha256": "11f03c5b4a6c948d47db139f12901365b976e113194c3cb8f638cb97e72bc208",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-12155/trial-0/official/acl-569390b500a2/deepseek-flash/django__django-12155/report.json"
+        },
+        {
+          "instance_id": "django__django-12193",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 24,
+          "actual_tokens": 231471,
+          "patch_sha256": "2705aa26ec472f0359cd7f21783c3427e757d32f0a2654acbd2673cce46e6fa6",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-12193/trial-0/official/acl-d7ed0404c254/deepseek-flash/django__django-12193/report.json"
+        },
+        {
+          "instance_id": "django__django-12209",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 48,
+          "actual_tokens": 874622,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "django__django-12262",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 9,
+          "actual_tokens": 36535,
+          "patch_sha256": "5d88778dfe971e8c88543474dd42e6ee648088f0144f667161a1dcce6dfd49e6",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-12262/trial-0/official/acl-5c5650a0cd41/deepseek-flash/django__django-12262/report.json"
+        },
+        {
+          "instance_id": "django__django-12273",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "LimitsExceeded",
+          "budget_stop_reason": "call_limit",
+          "calls": 50,
+          "actual_tokens": 829347,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "django__django-12276",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 11,
+          "actual_tokens": 56957,
+          "patch_sha256": "923d3fa3e3e53af0ca997c847694d70a5a95120b8e72e09912b1ca443b1cb5fa",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-12276/trial-0/official/acl-f3f55620b03f/deepseek-flash/django__django-12276/report.json"
+        },
+        {
+          "instance_id": "django__django-12304",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 16,
+          "actual_tokens": 83052,
+          "patch_sha256": "1a62f676ad38de19812ef43c0e50db2f714ed9b0e03900bb157a544b46e4b136",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-12304/trial-0/official/acl-2dcada6768d0/deepseek-flash/django__django-12304/report.json"
+        },
+        {
+          "instance_id": "django__django-12308",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 16,
+          "actual_tokens": 103433,
+          "patch_sha256": "045e403b628737ba5f76f2ad2a75a7c2e7416bd054d8dec5c8d1141f702c1cae",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-12308/trial-0/official/acl-548a5c255b1d/deepseek-flash/django__django-12308/report.json"
+        },
+        {
+          "instance_id": "django__django-12325",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "LimitsExceeded",
+          "budget_stop_reason": "call_limit",
+          "calls": 50,
+          "actual_tokens": 695708,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "django__django-12406",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 34,
+          "actual_tokens": 582692,
+          "patch_sha256": "544502afbaea6c7d39420a240266f934619a365c9cbb0a2d8562ae9188a0343e",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-12406/trial-0/official/acl-93233366f45c/deepseek-flash/django__django-12406/report.json"
+        },
+        {
+          "instance_id": "django__django-12708",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 34,
+          "actual_tokens": 662719,
+          "patch_sha256": "553aa22fc3df34d011d90f4c115a135d46db85170b905c64320711f5e6735bba",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-12708/trial-0/official/acl-7a091187e5d7/deepseek-flash/django__django-12708/report.json"
+        },
+        {
+          "instance_id": "django__django-12713",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 8,
+          "actual_tokens": 41858,
+          "patch_sha256": "b2ed6e5160772ae2fe006c0ba7dab14112b35a0ef0fe01b04101c6b585948c23",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-12713/trial-0/official/acl-c8e8e5c742c7/deepseek-flash/django__django-12713/report.json"
+        },
+        {
+          "instance_id": "django__django-12774",
+          "repo": "django/django",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 21,
+          "actual_tokens": 148411,
+          "patch_sha256": "cae8e9170fcb641b2316a3b061898ad618a8a559ca232cd3231c4d584f85122b",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-12774/trial-0/official/acl-fbbc0f02031e/deepseek-flash/django__django-12774/report.json"
+        },
+        {
+          "instance_id": "django__django-9296",
+          "repo": "django/django",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 9,
+          "actual_tokens": 35017,
+          "patch_sha256": "f49100feccede88ad670867bc1387ce68849fafee26183a4382b493d072a6129",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/django__django-9296/trial-0/official/acl-feea9ca0d5bd/deepseek-flash/django__django-9296/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-10323",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 46,
+          "actual_tokens": 869054,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-10435",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 30,
+          "actual_tokens": 311233,
+          "patch_sha256": "03f56a0004ac61a9a84cf6c0005ed7a6e41bbdfbf3dd0934542bfd84fea202e9",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-10435/trial-0/official/acl-b25f32bbf020/deepseek-flash/sphinx-doc__sphinx-10435/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-10466",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 49,
+          "actual_tokens": 872198,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-10673",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 47,
+          "actual_tokens": 873746,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-11510",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "LimitsExceeded",
+          "budget_stop_reason": "call_limit",
+          "calls": 50,
+          "actual_tokens": 889555,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-7590",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 49,
+          "actual_tokens": 891164,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-7748",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 30,
+          "actual_tokens": 531689,
+          "patch_sha256": "df54543949d05f35954af487e13bc13f1b7ec642765b8294c5dd62e47f81bd2e",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-7748/trial-0/official/acl-b3cb13ba416c/deepseek-flash/sphinx-doc__sphinx-7748/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-7757",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 24,
+          "actual_tokens": 203113,
+          "patch_sha256": "d74570e50a1652a4b942714add5806dbc5da450b0cdfdf5c62da9f416f996722",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-7757/trial-0/official/acl-b7931c0d94c7/deepseek-flash/sphinx-doc__sphinx-7757/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-7985",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 48,
+          "actual_tokens": 851998,
+          "patch_sha256": "ed76937b34069d096f68493a4fdc8c783df0c04a827e3c1c4897380f4bc519a3",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-7985/trial-0/official/acl-1d8b1fdfeb9b/deepseek-flash/sphinx-doc__sphinx-7985/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8035",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 29,
+          "actual_tokens": 491859,
+          "patch_sha256": "7e95f3431c6e6cb0ebc15649baaf1712774e6657e82997bc9eea504d2b037c36",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-8035/trial-0/official/acl-96ee9ac53cf8/deepseek-flash/sphinx-doc__sphinx-8035/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8056",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "LimitsExceeded",
+          "budget_stop_reason": "call_limit",
+          "calls": 50,
+          "actual_tokens": 855648,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8265",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 32,
+          "actual_tokens": 466059,
+          "patch_sha256": "81ea44d119767cf8bb06425130da8ca78edc668680445196d033e82b3cc32ecb",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-8265/trial-0/official/acl-0c338a4ec174/deepseek-flash/sphinx-doc__sphinx-8265/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8269",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 13,
+          "actual_tokens": 99048,
+          "patch_sha256": "9930867fb908ee61de61b9c00b4c164af96faef1d5d6a0b9fa8e956ea8a22c26",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-8269/trial-0/official/acl-ff1f3c297485/deepseek-flash/sphinx-doc__sphinx-8269/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8475",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 10,
+          "actual_tokens": 52972,
+          "patch_sha256": "8a9725217a4d60e5794753427717c89fa9dd4de3b5d3a743bb4e728ae7efa317",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-8475/trial-0/official/acl-455bdf3d02bb/deepseek-flash/sphinx-doc__sphinx-8475/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8548",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 46,
+          "actual_tokens": 865898,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8551",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 34,
+          "actual_tokens": 455685,
+          "patch_sha256": "6bd3793671826706017388448f415fe54614791aefbb299ed46845140e11ed1c",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-8551/trial-0/official/acl-f31e5a2d0f89/deepseek-flash/sphinx-doc__sphinx-8551/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8638",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 49,
+          "actual_tokens": 884169,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-8721",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 19,
+          "actual_tokens": 184357,
+          "patch_sha256": "7cbaf271207b582c856032ea9ff8e547177a8501f0ee25a0f892fed9cc1dac96",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-8721/trial-0/official/acl-ad2825fe4aac/deepseek-flash/sphinx-doc__sphinx-8721/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9229",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 45,
+          "actual_tokens": 888964,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9230",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 37,
+          "actual_tokens": 544391,
+          "patch_sha256": "123ff544610e4ada0761a2f9b6c4d172fb9f8145c78c7a9d8083c152dcc4d11c",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-9230/trial-0/official/acl-f0ab675c49d1/deepseek-flash/sphinx-doc__sphinx-9230/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9281",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 9,
+          "actual_tokens": 44715,
+          "patch_sha256": "0229f73ea7048cf35b8cc60d1705d183ab757d83e5140c595d437f003091ebf0",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-9281/trial-0/official/acl-763a30fce8d4/deepseek-flash/sphinx-doc__sphinx-9281/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9320",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 8,
+          "actual_tokens": 53180,
+          "patch_sha256": "17e301459eafea9a9564bac360a548d08ea979160f5f48c83f39604a294a8444",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-9320/trial-0/official/acl-b7c9f9c6767c/deepseek-flash/sphinx-doc__sphinx-9320/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9367",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 10,
+          "actual_tokens": 61844,
+          "patch_sha256": "b056816107245bb2f85e3e3de3b6595ee1711579065d129292378ec99ad73f51",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-9367/trial-0/official/acl-57590c3cd977/deepseek-flash/sphinx-doc__sphinx-9367/report.json"
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9461",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": false,
+          "exit_status": "BudgetExceeded",
+          "budget_stop_reason": "token_reservation",
+          "calls": 42,
+          "actual_tokens": 860287,
+          "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "official_report": null
+        },
+        {
+          "instance_id": "sphinx-doc__sphinx-9698",
+          "repo": "sphinx-doc/sphinx",
+          "resolved": true,
+          "exit_status": "Submitted",
+          "budget_stop_reason": null,
+          "calls": 16,
+          "actual_tokens": 115481,
+          "patch_sha256": "f71cd93fc38ce175b684c64dea783a323d8bdfa037474049d6b383d3b8788ced",
+          "official_report": "work/verified-mini-50-round1-recovery/runs/swe/jobs/r0A/sphinx-doc__sphinx-9698/trial-0/official/acl-dc73d5ddf810/deepseek-flash/sphinx-doc__sphinx-9698/report.json"
+        }
+      ]
+    }
+  },
+  "candidate_gain_percentage_points": -4.0,
+  "paired_transitions": {
+    "newly_resolved": [
+      "django__django-12039",
+      "sphinx-doc__sphinx-10435"
+    ],
+    "regressions": [
+      "django__django-12406",
+      "django__django-12774",
+      "sphinx-doc__sphinx-10323",
+      "sphinx-doc__sphinx-8265"
+    ],
+    "both_resolved": [
+      "django__django-11815",
+      "django__django-11880",
+      "django__django-11951",
+      "django__django-11964",
+      "django__django-11999",
+      "django__django-12050",
+      "django__django-12143",
+      "django__django-12155",
+      "django__django-12193",
+      "django__django-12262",
+      "django__django-12276",
+      "django__django-12304",
+      "django__django-12308",
+      "django__django-12708",
+      "django__django-12713",
+      "django__django-9296",
+      "sphinx-doc__sphinx-7757",
+      "sphinx-doc__sphinx-8035",
+      "sphinx-doc__sphinx-8269",
+      "sphinx-doc__sphinx-8475",
+      "sphinx-doc__sphinx-8551",
+      "sphinx-doc__sphinx-8721",
+      "sphinx-doc__sphinx-9230",
+      "sphinx-doc__sphinx-9281",
+      "sphinx-doc__sphinx-9320",
+      "sphinx-doc__sphinx-9367",
+      "sphinx-doc__sphinx-9698"
+    ],
+    "both_failed": [
+      "django__django-11790",
+      "django__django-11848",
+      "django__django-11885",
+      "django__django-12209",
+      "django__django-12273",
+      "django__django-12325",
+      "sphinx-doc__sphinx-10466",
+      "sphinx-doc__sphinx-10673",
+      "sphinx-doc__sphinx-11510",
+      "sphinx-doc__sphinx-7590",
+      "sphinx-doc__sphinx-7748",
+      "sphinx-doc__sphinx-7985",
+      "sphinx-doc__sphinx-8056",
+      "sphinx-doc__sphinx-8548",
+      "sphinx-doc__sphinx-8638",
+      "sphinx-doc__sphinx-9229",
+      "sphinx-doc__sphinx-9461"
+    ]
+  },
+  "search_calls_including_failed_first_attempt": 168,
+  "search_actual_tokens_including_failed_first_attempt": 1067853,
+  "search_roles": {
+    "analyst": 4,
+    "digester": 157,
+    "propose": 6,
+    "critic": 1
+  },
+  "total_new_api_calls": 1485,
+  "total_new_actual_tokens": 20073239,
+  "final_selected_job": "base",
+  "final_selected_rate": 0.62,
+  "decisions": [
+    {
+      "variant": "A",
+      "admissible": false,
+      "reason": "below noise-adjusted floor: S' 0.5800 < S* 0.6200 - delta 0.0000",
+      "S": 0.58,
+      "C": 380107.72,
+      "delta_S": -0.040000000000000036,
+      "delta_C": 0.2306472270011402,
+      "novelty": 0,
+      "guards": []
+    }
+  ],
+  "mechanism": "Prompt-side discipline: extract explicit requirements, locate the shared invariant across all producing code paths, treat skipped/deselected or non-asserting test runs as no-signal, and gate submission on per-requirement observations while avoiding endless post-green deliberation.",
+  "candidate_commit": "45a04e7",
+  "image_digest_mismatches": [],
+  "recovery_protocol": "160-call diagnostic attempt exhausted, then single saved-digest aggregation; total search cap240 calls/2M tokens.",
+  "limitations": [
+    "Visible development tasks, not heldout accuracy.",
+    "One execution per task and one candidate; no repeated-search variance or causal generalization claim."
+  ],
+  "final_validation": "work/verified-mini-50-round1-recovery/final_validation.json",
+  "tests_passed": 22,
+  "cleanup": {
+    "preexisting_image_ids": 82,
+    "preexisting_image_ids_still_present": 82,
+    "missing_preexisting_ids": [],
+    "owned_image_tags_remaining": {},
+    "running_task_containers": [],
+    "host_free_GiB": 18.92
+  },
+  "completed_resume_additional_api_calls": 0
+}

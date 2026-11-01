@@ -1,0 +1,242 @@
+{
+  "status": "read_only_feasibility_audit_complete_no_model_calls",
+  "paper": "https://arxiv.org/html/2609.24972v1",
+  "official_repo_commit": "be50316e1db05914068a973f322770ef08ed7ba1",
+  "released_data_url": "https://regularized-rsi.com/data/evolution.js",
+  "released_data_sha256": "6328ffe686058c2be4eb102527910b30c0ac994715d1bb09bd746cb2a3c89f50",
+  "released_data_bytes": 1254094,
+  "paper_coding_results": {
+    "opus_terminal_base": 74.2,
+    "opus_terminal_rrsi": 80.2,
+    "opus_swe_base": 82.0,
+    "opus_swe_rrsi": 83.8,
+    "gemini_terminal_base": 64.6,
+    "gemini_terminal_rrsi": 78.7,
+    "gemini_swe_base": 76.8,
+    "gemini_swe_rrsi": 79.0
+  },
+  "official_coding_config": {
+    "_doc": "Coding instance: Terminal-Bench 2.1 (89 tasks, evolve set = whole suite), Claude Opus 4.8 policy, Terminus-2 base harness. S = fraction of trials whose hidden tests pass over 89 x k = 178 trials. Paper values: delta = 0.017 (3 passes of 178), beta0 = 0.10, beta1 = 44.5 (25% tokens per additional pass), w_s = 0 (inside the band a candidate is admitted only for a token saving or a new structural component, never for a within-band score gain), w_c = 15 per unit relative cost. Set delta to null to re-estimate it with `calibrate` as delta_z standard deviations of the null score difference of the base evaluation.",
+    "T": 20,
+    "k": 2,
+    "m": 2,
+    "b_min": 1,
+    "b_max": 4,
+    "w": 3,
+    "m_draft": 1,
+    "delta": 0.017,
+    "delta_z": 2.0,
+    "beta0": 0.1,
+    "beta1": 44.5,
+    "w_s": 0.0,
+    "w_c": 15.0,
+    "w_n": 0.5,
+    "n_prune": 4,
+    "repair_rounds": 5,
+    "invalid_missing_frac": 0.2,
+    "n_fail_traces": 30,
+    "n_success_traces": 6,
+    "eval_parallel": 1,
+    "policy_model": "vertex_ai/claude-opus-4-8",
+    "policy_label": "Claude Opus 4.8",
+    "dataset": "terminal-bench/terminal-bench-2-1",
+    "ood_dataset": "swe-bench/swe-bench-verified",
+    "concurrency": 10,
+    "smoke_tasks": [
+      "extract-elf",
+      "fix-git"
+    ]
+  },
+  "our_last_config": {
+    "purpose": "verified_mini_all50_one_rrsi_round_recovery",
+    "dataset": "benchmarks/datasets/swe-bench-verified-mini/test.json",
+    "evolve_ids": [
+      "django__django-11790",
+      "django__django-11815",
+      "django__django-11848",
+      "django__django-11880",
+      "django__django-11885",
+      "django__django-11951",
+      "django__django-11964",
+      "django__django-11999",
+      "django__django-12039",
+      "django__django-12050",
+      "django__django-12143",
+      "django__django-12155",
+      "django__django-12193",
+      "django__django-12209",
+      "django__django-12262",
+      "django__django-12273",
+      "django__django-12276",
+      "django__django-12304",
+      "django__django-12308",
+      "django__django-12325",
+      "django__django-12406",
+      "django__django-12708",
+      "django__django-12713",
+      "django__django-12774",
+      "django__django-9296",
+      "sphinx-doc__sphinx-10323",
+      "sphinx-doc__sphinx-10435",
+      "sphinx-doc__sphinx-10466",
+      "sphinx-doc__sphinx-10673",
+      "sphinx-doc__sphinx-11510",
+      "sphinx-doc__sphinx-7590",
+      "sphinx-doc__sphinx-7748",
+      "sphinx-doc__sphinx-7757",
+      "sphinx-doc__sphinx-7985",
+      "sphinx-doc__sphinx-8035",
+      "sphinx-doc__sphinx-8056",
+      "sphinx-doc__sphinx-8265",
+      "sphinx-doc__sphinx-8269",
+      "sphinx-doc__sphinx-8475",
+      "sphinx-doc__sphinx-8548",
+      "sphinx-doc__sphinx-8551",
+      "sphinx-doc__sphinx-8638",
+      "sphinx-doc__sphinx-8721",
+      "sphinx-doc__sphinx-9229",
+      "sphinx-doc__sphinx-9230",
+      "sphinx-doc__sphinx-9281",
+      "sphinx-doc__sphinx-9320",
+      "sphinx-doc__sphinx-9367",
+      "sphinx-doc__sphinx-9461",
+      "sphinx-doc__sphinx-9698"
+    ],
+    "heldout_ids": [],
+    "workspace": "work/verified-mini-50-round1-recovery",
+    "thinking": false,
+    "search": {
+      "max_calls": 240,
+      "max_tokens": 2000000,
+      "max_output_tokens": 4096
+    },
+    "target": {
+      "max_calls": 50,
+      "max_tokens": 1000000,
+      "max_output_tokens": 4096,
+      "wall_seconds": 1200,
+      "command_seconds": 60
+    },
+    "grading_seconds": 900,
+    "rrsi": {
+      "T": 1,
+      "k": 1,
+      "m": 1,
+      "b_min": 1,
+      "b_max": 1,
+      "delta": 0.0,
+      "w_s": 100.0,
+      "w_c": 0.0,
+      "w_n": 0.0,
+      "m_draft": 0,
+      "repair_rounds": 1,
+      "n_fail_traces": 8,
+      "n_success_traces": 3,
+      "invalid_missing_frac": 0.0,
+      "eval_parallel": 1
+    },
+    "image_cache": {
+      "min_free_bytes": 4294967296,
+      "mode": "sequential_owned_images_only"
+    },
+    "baseline_workspace": "work/verified-mini-50-baseline-v2",
+    "baseline_config": "configs/mini50-baseline.json",
+    "recovery": {
+      "source": "work/verified-mini-50-round1",
+      "mode": "aggregate saved digests once; no repeated digester search",
+      "previous_search_calls": 160,
+      "additional_search_call_cap": 80,
+      "cumulative_search_token_cap": 2000000
+    }
+  },
+  "released_opus_trace": {
+    "T": 20,
+    "m": 2,
+    "delta": 0.03406,
+    "baseline": {
+      "t": 0,
+      "S": 0.7415730337078652,
+      "count": 132,
+      "C": 417222.75483870966
+    },
+    "last": {
+      "t": 20,
+      "S": 0.8089887640449438,
+      "count": 144,
+      "C": 441640.6645962733
+    },
+    "summary": {
+      "rounds": 20,
+      "evaluated": 37,
+      "accepted": 5,
+      "byStatus": {
+        "accepted": 5,
+        "rejected_cost": 8,
+        "rejected_floor": 24,
+        "critic_reject": 1,
+        "smoke_fail": 2
+      }
+    },
+    "champion_diff_stat": {
+      "files": [
+        {
+          "path": "domains/coding/harness/templates/terminus-json-plain.txt",
+          "add": 6,
+          "del": 0
+        },
+        {
+          "path": "domains/coding/harness/terminus_2.py",
+          "add": 130,
+          "del": 2
+        },
+        {
+          "path": "domains/coding/harness/tmux_session.py",
+          "add": 15,
+          "del": 3
+        }
+      ],
+      "add": 151,
+      "del": 5
+    }
+  },
+  "artifact_checks": {
+    "unmodified_released_patch_applies": false,
+    "reason": "author patch paths refer to domains/coding/harness",
+    "mapping": "domains/coding/harness/ -> third_party/harbor_terminus2/",
+    "mapped_patch_git_apply_check": true,
+    "upstream_modified": false,
+    "executable_effect_validated": false
+  },
+  "unresolved": [
+    "Paper/config delta .017 vs published Opus trace .03406; website says recalibrated.",
+    "Paper final Terminal80.2 vs published search endpoint144/178=80.8989; must determine whether paper uses independent reevaluation or different artifact/version.",
+    "Exact hosted model snapshot, task artifact/runtime versions, per-task limits and stochastic repeat protocol must be confirmed before calling the run a strict reproduction."
+  ],
+  "readiness": {
+    "harbor_installed": false,
+    "official_coding_venv_present": false,
+    "paper_vertex_access_configured_and_validated": false,
+    "docker_backend_previously_validated": true,
+    "linux_x86_64_backend_recommended_not_provisioned": true
+  },
+  "nominal_task_executions": {
+    "artifact_terminal_base_vs_champion_89_tasks_k2": 356,
+    "artifact_swe500_base_vs_champion_k1": 1000,
+    "search_if_all40_candidates_fully_evaluated": 7120,
+    "search_baseline": 178,
+    "search_plus_baseline_plus_swe": 8298,
+    "exclusions": [
+      "smoke",
+      "noise calibration beyond specified baseline",
+      "infrastructure retry",
+      "additional independent repetitions"
+    ]
+  },
+  "next_steps": [
+    "Resolve public configuration/trace discrepancies.",
+    "Pin and prepare isolated official coding runtime and model access.",
+    "Smoke released baseline and mapped champion on declared engineering tasks.",
+    "Reevaluate released H0 and champion side by side on Terminal89*k2, then on SWE500*k1 without feeding SWE results into search.",
+    "If artifact effect is established, rerun complete original20-round search, then add independent repeat or ablation as separately scoped experiments."
+  ]
+}

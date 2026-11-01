@@ -1,67 +1,71 @@
-# RSI Code & Terminal
+# ACL：Agent Harness 自改进研究工作区
 
-面向代码与终端 Agent 的持续自改进研究。目标是验证：Agent 累积的经验能否改善后续任务表现，以及负责使用这些经验的训练策略能否随反馈变得更有效。
+这里集中存放 RSI 框架源码、Agent、Benchmark、实验与研究资料。更新：2026-10-20；研究文档、协议及运行说明已实际分目录，早期导出报告已归档。
 
-**当前处于实验准备阶段。Benchmark 源码、任务资源与测试数据已下载并校验；Agent、经验模块、训练和运行验收尚未完成。** 本仓库没有已完成的模型训练或论文结果。
+已落地的研究定义见 [研究故事](docs/research/research_story.md) 和 [深化设计](docs/research/evidence_research_agenda.md)，优化器/执行器固定 DeepSeek Flash，Agent 为 mini-SWE-agent。新上下文方法尚未验证；后续头脑风暴不自动替换当前文档。
 
-## 研究问题
+最新完整实验是五框架、共同十题、高预算两轮，共 100 份候选逐题评分。查看 [最终结果](experiments/runs/full10-highbudget-completion-v1/report.md) 或 [含无 RSI 基线的分析](reports/exports/full10-two-rounds-analysis/analysis.md)。旧 Mini50、四题/六题试跑、低预算两轮及失败恢复均从 [实验索引](experiments/README.md) 查找，不混用成绩。
 
-Solver 解决代码/终端任务；Trainer 决定如何筛选、检索、蒸馏与使用经验。先比较固定模型上的经验效用，再加入参数更新和策略演化。
-
-固定检索带来收益本身不能证明 RSI。后续需要冻结初始与演化后的 Trainer，重置为同一个 fresh Solver，在独立任务与相同预算下比较训练收益，并加入强固定策略和等预算策略搜索基线。
-
-## 当前进度
-
-| 项目 | 状态 |
-|---|---|
-| 研究定位与首轮实验方案 | 已记录，待实验检验 |
-| 五套 benchmark 的完整源码/资源或测试数据 | 本地已验证；大文件通过脚本获取 |
-| 任务清单、固定来源版本、仓库排除清单 | 已有 |
-| 容器镜像、参考解与实际评分 | 待运行验收 |
-| 固定 Solver Agent 与轨迹日志 | 待实现/接入 |
-| 独立 train/dev/meta-val 划分 | 待建立 |
-| 经验提炼、检索与选择策略 | 待实现 |
-| SFT/RL、持续轮次与 fresh Solver 检验 | 待实现 |
-
-## Benchmark
-
-| 角色 | Benchmark | 任务数 |
-|---|---|---:|
-| 代码主测试 | SWE-bench Pro V2 | 642 |
-| 终端主测试 | Terminal-Bench 4.0.0 | 66 |
-| 代码参考测试 | SWE-bench Verified | 500 |
-| 终端参考测试 | Terminal-Bench 2.1 | 89 |
-| 开发检查 | SWE-bench Verified Mini | 50 |
-
-Mini 是 Verified 的子集；若用于方法开发，最终未见 Verified 测试应排除其 50 个任务。不同 benchmark 条目不能直接当作相互独立的样本合并。测试轨迹、参考补丁及隐藏 verifier 不进入训练经验库。
-
-固定提交、官方来源与数据哈希见 [sources.lock.json](benchmarks/sources.lock.json)。[统一任务清单](benchmarks/all_benchmark_tasks.csv)包含 1,347 个条目；不包含参考补丁或任务答案。
-
-## 本地检查与复现
-
-准备脚本使用 Python 3.12+ 标准库，不要求先安装训练依赖。
-
-```sh
-python3 scripts/verify_benchmarks.py
-python3 scripts/prepare_benchmarks.py --only terminal-bench-4.0.0
-python3 scripts/prepare_benchmarks.py
-python3 scripts/verify_benchmarks.py --check-downloads
-```
-
-第一个命令仅检查版本锁和清单。下载命令从固定官方版本恢复数据至忽略目录；最后一个命令检查实际任务文件、数据哈希以及 Pro 官方校验清单。网络不可用时，可将相同版本数据放到清单指定的位置后验证；不能关闭 TLS 校验替代文件验证。
-
-这些检查只验证文件准备，不验证 Docker 镜像可用性、评分正确性或模型能力。正式评测还需要支持任务镜像的容器后端、Harbor、Agent 和模型端点；Pro V2 要保留官方补丁捕获及干净环境重评分协议。
-
-## 目录
+## 项目目录
 
 ```text
-benchmarks/     固定来源版本、任务清单与数据关系
-scripts/        可移植的下载与文件检查工具
-docs/           研究方案、执行顺序和第三方来源说明
-repos/          本地下载的上游源码（不提交）
-benchmarks/datasets/  本地测试数据（不提交）
+ACL/
+├── frameworks/          # 9 套上游 RSI / 自改进框架源码
+├── agents/              # 独立 Agent 官方源码，目前为 mini-swe-agent
+├── benchmarks/
+│   ├── sources/         # Benchmark 官方源码
+│   └── datasets/        # 固定版本数据
+├── experiments/         # README + 全量 CATALOG；runs/ 保留原始实验
+├── configs/             # 实验配置、目录注册和镜像策略
+├── scripts/             # 准备、运行、分析及维护入口
+├── tests/               # 本项目集成层测试
+├── docs/
+│   ├── research/        # 当前故事、研究计划、Baseline 设计
+│   ├── frameworks/      # 框架接入、来源筛选和复现边界
+│   ├── experiments/     # 实验协议与结果说明
+│   ├── operations/      # 运行、资源、镜像与元数据核查
+│   └── archive/         # 已退出的研究故事
+├── references/papers/   # 论文与阅读材料
+├── reports/exports/     # 当前分析、组会报告；archive/ 存早期交付物
+└── acl_*/               # 顶层 12 个历代运行/适配包，不是一个实际父目录
 ```
 
-论文 PDF、模型权重、大型任务附件、服务器连接信息及环境密钥留在本地。上游源码按各自许可证使用，本仓库不重新发布这些材料。
+`repos/`、`work/`、`outputs/` 和 `RSI必看/` 保留为兼容路径，新源码与资料使用正式目录。详细职责和维护约定见 [项目结构](docs/project_structure.md)；目录映射由 [project-layout.json](configs/project-layout.json) 管理。
 
-下一步：[跑通固定无记忆基线，再建立独立训练/开发小集](docs/next_steps.md)。研究定位见 [研究方案](docs/research_plan.md)。
+## 从哪里开始
+
+| 目的 | 入口 |
+|---|---|
+| 看最新十题两轮结果 | [最终汇总](experiments/runs/full10-highbudget-completion-v1/report.md)、[逐题分析](reports/exports/full10-two-rounds-analysis/analysis.md) |
+| 看整个文件夹的结构与维护规则 | [项目结构](docs/project_structure.md) |
+| 找 RSI 框架及接入状态 | [frameworks/](frameworks/README.md) |
+| 找 Agent 和 Harness 的位置 | [agents/](agents/README.md) |
+| 看最新研究故事 | [证据高效上下文主线](docs/research/research_story.md) |
+| 系统了解 RSI 研究发展与相关论文 | [研究脉络](references/papers/rsi-research-lineage-2026-10-21/RSI研究脉络.md)、[40 篇论文资料库](references/papers/rsi-research-lineage-2026-10-21/README.md) |
+| 看实验阶段与最近待办 | [研究计划](docs/research/research_plan.md)、[执行清单](docs/research/next_steps.md) |
+| 查两类 Baseline | [上下文对照 / RSI 框架验证](docs/research/harness_baselines.md) |
+| 看实验及原始证据 | [experiments/](experiments/README.md) |
+| 按用途找全部历史批次 | [全量分类目录](experiments/CATALOG.md) |
+| 找组会、结果分析与专项审计 | [reports/](reports/README.md) |
+| 找冻结配置 | [configs/](configs/README.md) |
+| 找准备、运行和维护命令 | [scripts/](scripts/README.md) |
+| 查其他文档 | [文档导航](docs/README.md) |
+| 恢复源码与依赖 | [运行说明](docs/operations/runtime.md) |
+
+## 只读检查项目
+
+在项目根目录执行，复用现有 `.venv`：
+
+```bash
+# 枚举目录、占用和源码/证据哈希；不调用模型或 Docker，不读取密钥内容
+VIRTUAL_ENV="$PWD/.venv" uv run --active --no-project --no-env-file --offline python scripts/maintenance/audit_workspace.py
+```
+
+## 维护约定
+
+- 上游框架进 frameworks，独立 Agent 进 agents，Benchmark 源码进 benchmarks/sources；研究资料与导出报告分开存放。
+- 历代运行包、配置、失败轨迹、评分及来源锁保留原路径和字节；新协议使用新工作区，具体入口见 scripts/README.md。
+- SWE Mini50 的全部任务镜像本地长期保留，运行后不删除镜像；项目目录占用不包含 Docker 的外部镜像存储。
+- `.venv` 与 `.venv-terminal` 是两套不同运行环境，`.cache` 是缓存；本次不混装依赖或删除资源。
+
+上游源码、下载数据、大型结果、导出文档和密钥不提交 Git；版本与数据来源按固定清单恢复。`.env` 留在根目录，密钥不写入配置、日志或文档。
