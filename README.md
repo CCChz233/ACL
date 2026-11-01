@@ -87,7 +87,22 @@ GitHub 上的 [ACL](https://github.com/CCChz233/ACL) 是项目代码：`acl_*` �
 | `agents/mini-swe-agent/` | 钉住的 mini-SWE-agent 源码 |
 | `.env` | DeepSeek 端点、模型和密钥 |
 
-`work/`、`outputs/`、`RSI必看/` 是指向 `experiments/runs`、`reports/exports`、`references/papers` 的链接，包里没有再放一份。`.venv` 和 `.venv-terminal` 在新机器上重建。SWE Mini50 的 Docker 镜像不在仓库里，也不在这个包里；要在新机器上直接评测，需另行导出本机 Docker 镜像。
+`work/`、`outputs/`、`RSI必看/` 是指向 `experiments/runs`、`reports/exports`、`references/papers` 的链接，包里没有再放一份。`.venv` 和 `.venv-terminal` 在新机器上重建。
+
+SWE Mini50 的 50 个任务镜像不在 Git 里，也不在 `acl-local-assets.tar` 里。标签和 digest 在 [configs/swe-mini-image-cache.json](configs/swe-mini-image-cache.json)。服务器装好 Docker 后，在仓库根目录执行：
+
+```sh
+python3.12 scripts/cache_swe_mini_images.py fill
+python3.12 scripts/cache_swe_mini_images.py status
+```
+
+`fill` 只下载清单里缺失的 `linux/amd64` 镜像，已有且 ID 相符的不重复拉取。本机这 50 个镜像合计约 48 GB，服务器需要留出相应空间；空闲不足 4 GiB 时脚本会停止。服务器访问不了 Docker Hub 时，在已有镜像的机器上导出再拷过去：
+
+```sh
+docker save $(python3.12 -c 'import json; print(" ".join(i["image"] for i in json.load(open("configs/swe-mini-image-cache.json"))["images"]))') -o swe-mini50-images.tar
+```
+
+在服务器上执行 `docker load -i swe-mini50-images.tar`，然后再跑上面的 `status`。这些镜像长期保留，不要放进 `docker image prune`。
 
 ## 到一台新机器
 
